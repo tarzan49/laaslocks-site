@@ -1,0 +1,64 @@
+:root{color-scheme:dark;--deep-teal:#1d5f63;--petrol:#202f30;--chalk:#ececea;--pale-teal:#9bcdd0;--copper:#efb68d;--line:#9bcdd047;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:var(--chalk);background:var(--deep-teal);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;background:var(--deep-teal);-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--copper);outline-offset:5px}[hidden]{display:none!important}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:1rem;top:-5rem;background:var(--chalk);color:var(--petrol);padding:1rem;z-index:10}.skip:focus{top:1rem}
+.page{width:min(100%,1580px);min-height:100svh;margin:auto;padding:0 clamp(24px,5.2vw,84px);display:flex;flex-direction:column}
+.header{min-height:104px;display:flex;align-items:center}.brand{display:inline-flex;align-items:center;flex-shrink:0}.brand img{display:block;width:152px;height:auto}
+.hero{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,4vw,65px);align-items:center;padding:20px 0 40px;min-width:0}.intro{min-width:0}
+.eyebrow{font-family:Poppins,sans-serif;font-size:clamp(1.4rem,2.15vw,2rem);line-height:1.3;font-weight:500;letter-spacing:-.025em;margin:0 0 25px;color:var(--copper)}
+h1{font-family:Poppins,sans-serif;font-size:clamp(3.5rem,6.25vw,6.5rem);font-weight:600;line-height:1.06;letter-spacing:-.045em;margin:0 0 25px;color:var(--pale-teal)}h1 span{color:var(--copper)}
+.features{max-width:510px;font-family:Poppins,sans-serif;font-size:clamp(1.1rem,1.65vw,1.375rem);font-weight:400;line-height:1.55;letter-spacing:-.02em;margin:0}.benefits{margin:12px 0 0;font-size:1rem;line-height:1.5;color:var(--pale-teal)}
+.app-downloads{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin-top:25px}.store-link{display:flex;align-items:center;justify-content:center;flex-shrink:0;height:48px}.apple-store img{display:block;width:auto;height:48px}.google-store img{display:block;width:auto;height:72px;margin:-12px}.store-link:hover{opacity:.85}
+.announcement{margin-top:26px}.announcement>p{font-size:1rem;line-height:1.6;margin:0;color:var(--pale-teal)}
+.approvals{display:grid;grid-template-columns:150px 112px;align-items:center;gap:32px;margin-top:30px;padding-top:25px;border-top:1px solid var(--line)}.findmy-badge{width:150px;max-width:100%;height:auto;display:block}.insurance{display:flex;gap:16px;align-items:center}.insurance p{max-width:235px;font-size:.875rem;line-height:1.5;margin:0}
+.varefakta-mark{position:relative;display:block;flex:0 0 112px;width:112px;height:125px;overflow:hidden;mix-blend-mode:screen}.varefakta-mark img{position:absolute;width:2205.8667%;height:164.12%;max-width:none;left:-518.3778%;top:-34.42%;filter:grayscale(1) contrast(12) invert(1)}
+.product{margin:0;min-width:0;padding:0;align-self:center}.product-image{position:relative;width:100%;aspect-ratio:1}
+/* Align the visible silhouettes, accounting for each file's transparent padding. */
+.lock-art{display:block;position:absolute;left:8%;top:5.7%;width:84%;height:88.6%}.lock-art img{position:absolute;display:block;max-width:none;object-fit:fill}
+.lock-art[data-finish="copper"] img{width:132.278481%;height:125.274725%;left:-18.248945%;top:-11.288711%}
+.lock-art[data-finish="steel"] img{width:120%;height:113.381555%;left:-11.291866%;top:-5.696203%}
+.lock-art[data-finish="black"] img{width:122.700587%;height:116.759777%;left:-12.818004%;top:-9.404097%}
+.product-caption{display:flex;justify-content:center;margin:12px 0 0}.finishes{display:flex;justify-content:center;gap:28px;align-items:center}.finish{display:block;padding:4px 4px 10px;border:0;border-bottom:2px solid transparent;background:none;color:var(--chalk);cursor:pointer}.finish[aria-pressed="true"]{border-bottom-color:var(--copper)}.finish:hover{border-bottom-color:var(--pale-teal)}.thumbnail{display:block;position:relative;width:78px;height:78px}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding:24px 0;font-size:.875rem;line-height:1.6}.footer-contact>p{font-family:Poppins,sans-serif;font-size:1rem;color:var(--copper);margin:0 0 4px}.contact-links{display:flex;flex-wrap:wrap;gap:6px 22px}.contact-links a,.social-links a{display:inline-flex;align-items:center;min-height:44px}.footer a:hover{text-decoration:underline;text-underline-offset:5px}.social-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:0 22px;color:var(--pale-teal)}
+/* Activate only with the owner's verified Mailchimp form details. */
+.newsletter{max-width:510px;margin-top:0}.newsletter fieldset{border:0;padding:0;margin:0;min-width:0}.newsletter legend{padding:0;margin:0 0 12px;font-family:Poppins,sans-serif;font-size:1.125rem;color:var(--copper)}.signup-row{display:flex;gap:8px}.signup-row input{flex:1;min-width:0;min-height:52px;border:1px solid var(--pale-teal);border-radius:2px;background:transparent;color:var(--chalk);padding:13px 15px;font:inherit;font-size:1rem}.signup-row input::placeholder{color:var(--pale-teal);opacity:1}.signup-row button{display:flex;justify-content:center;align-items:center;min-height:52px;padding:12px 18px;border:0;border-radius:2px;background:var(--copper);color:var(--petrol);font:500 .875rem Poppins,sans-serif;cursor:pointer;white-space:nowrap}.signup-row button:hover{background:#f8cdae}.newsletter .signup-note{font-size:.75rem;line-height:1.5;color:var(--pale-teal);margin:10px 0 0}
+@media(min-width:761px) and (max-height:860px){.header{min-height:88px}.hero{padding-top:8px;padding-bottom:30px}.eyebrow{margin-bottom:20px}h1{font-size:clamp(3.5rem,6.25vw,6rem);margin-bottom:20px}.product{width:100%;max-width:540px;justify-self:center}.announcement{margin-top:24px}.approvals{margin-top:24px;padding-top:22px}}
+@media(max-width:1200px) and (min-width:761px){.approvals{grid-template-columns:150px 1fr;gap:14px}.insurance{display:contents}.varefakta-mark{justify-self:end}.insurance p{grid-column:1 / -1;max-width:none}h1{font-size:clamp(3.1rem,6vw,4.5rem)}.footer{align-items:flex-start}.social-links{max-width:290px}}
+@media(max-width:760px){.page{padding:0 23px}.header{min-height:85px}.brand img{width:117px}.hero{grid-template-columns:minmax(0,1fr);padding:20px 0 32px;gap:0}.intro{display:contents}.eyebrow{grid-row:1;margin:0 0 24px;font-size:1.375rem}h1{grid-row:2;font-size:clamp(2.8rem,11.6vw,5rem);line-height:1.08;margin:0}.features{grid-row:3;font-size:1.0625rem;line-height:1.5;margin:21px 0 0}.desktop-break{display:none}.benefits{grid-row:4;margin:10px 0 12px}.product{grid-row:5;width:100%}.product-caption{margin-top:8px}.finishes{gap:28px}.thumbnail{width:75px;height:75px}.approvals{grid-row:6;grid-template-columns:150px 1fr;gap:16px;margin-top:20px;padding:22px 0 0;border-top:0;border-bottom:0}.insurance{display:contents}.insurance p{grid-column:1 / -1;max-width:none;font-size:.875rem;line-height:1.6}.varefakta-mark{justify-self:end}.announcement{grid-row:7;margin-top:24px}.newsletter{max-width:none}.signup-row{flex-direction:row;gap:8px}.signup-row button{font-size:.875rem;padding:12px}.footer{flex-direction:column;align-items:flex-start;padding:25px 0 28px;gap:17px}.footer-contact{width:100%}.contact-links{gap:0 25px}.social-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:none;gap:0 20px}}
+@media(max-width:359px){.page{padding:0 18px}h1{font-size:2.6rem}.finishes{gap:18px}.approvals{grid-template-columns:135px 1fr;gap:10px}}
+@media(max-width:760px){.announcement{grid-row:5;margin:13px 0 25px}.product{grid-row:6}.approvals{grid-row:7}}
+@media(max-width:359px){.app-downloads{gap:12px}.store-link{height:40px}.apple-store img{height:40px}.google-store img{height:60px;margin:-10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Downloads sit quietly in the bottom-left footer. */
+.footer{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:28px}
+.footer .app-downloads{margin:0;gap:12px}
+.footer-contact{justify-self:center}
+.footer .social-links{max-width:none}
+.newsletter fieldset:disabled input{opacity:1;cursor:default}
+.newsletter fieldset:disabled button{opacity:1;cursor:default}
+.newsletter fieldset:disabled button:hover{background:var(--copper)}
+@media(max-width:1200px) and (min-width:761px){.footer{grid-template-columns:auto 1fr;gap:14px 30px}.footer-contact{justify-self:end}.footer .social-links{grid-column:1 / -1;max-width:none;justify-content:flex-start}.approvals{grid-template-columns:150px 112px}}
+@media(max-width:760px){.footer{grid-template-columns:1fr;align-items:start;gap:24px}.footer-contact{justify-self:start}.footer .social-links{max-width:none}.footer .app-downloads{grid-row:auto}.approvals{grid-template-columns:150px 1fr}}
+
+/* App Store and Google Play always side by side. */
+.footer .app-downloads{flex-wrap:nowrap}
+.footer .store-link{height:52px}.footer .apple-store img{height:52px}.footer .google-store img{height:78px;margin:-13px}
+@media(max-width:760px){.footer .app-downloads{justify-self:center;justify-content:center;gap:12px}.footer .store-link{height:48px}.footer .apple-store img{height:48px}.footer .google-store img{height:72px;margin:-12px}}
+
+/* Compact mobile layout. */
+@media(max-width:760px){
+.header{min-height:64px}.brand img{width:96px}
+.hero{padding:4px 0 14px}
+.eyebrow{font-size:1rem;margin:0 0 12px}
+h1{font-size:clamp(2.4rem,10.5vw,3.4rem);line-height:1.04}
+.features{font-size:1rem;margin-top:12px}
+.announcement{margin:20px 0 4px}.signup-row input,.signup-row button{min-height:46px}
+.product{width:min(78%,320px);justify-self:center;margin:4px 0}
+.approvals{grid-template-columns:auto auto;justify-content:space-between;align-items:center;gap:16px;margin-top:4px;padding:16px 0 0;border-top:1px solid var(--line)}
+.findmy-badge{width:124px}.varefakta-mark{flex-basis:68px;width:68px;height:76px}
+.footer{gap:14px;padding:18px 0 22px}
+.footer-contact>p{margin:0}.contact-links{gap:0 20px}.contact-links a,.social-links a{min-height:36px}
+.footer .social-links{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:0 18px}
+}
+@media(max-width:359px){.footer .store-link{height:40px}.footer .apple-store img{height:40px}.footer .google-store img{height:60px;margin:-10px}}

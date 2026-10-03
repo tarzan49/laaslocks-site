@@ -71,6 +71,9 @@ h1{font-size:clamp(2.4rem,10.5vw,3.4rem);line-height:1.04}
 @keyframes signup-in{from{opacity:0;transform:translateY(6px)}}
 @keyframes signup-pop{from{transform:scale(0)}}
 @media(max-width:760px){.signup-done{padding:14px}.signup-done-title{font-size:1rem}.signup-done-text{font-size:.875rem}}
+<<<<<<< ours
 /* Quieter eyebrow so the headline leads. */
 .eyebrow{font-size:clamp(1rem,1.25vw,1.2rem);margin-bottom:16px}
 @media(max-width:760px){.eyebrow{font-size:.9375rem;margin-bottom:10px}}
+=======
+>>>>>>> theirs

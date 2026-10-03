@@ -74,3 +74,10 @@ h1{font-size:clamp(2.4rem,10.5vw,3.4rem);line-height:1.04}
 /* Quieter eyebrow so the headline leads. */
 .eyebrow{font-size:clamp(1rem,1.25vw,1.2rem);margin-bottom:16px}
 @media(max-width:760px){.eyebrow{font-size:.9375rem;margin-bottom:10px}}
+
+/* Varefakta: the upright white mark, sized to sit level with the Find My badge. */
+.approvals{grid-template-columns:auto auto;justify-content:start;align-items:center;gap:40px}
+.varefakta-mark{flex:none;width:66px;height:auto;overflow:visible;mix-blend-mode:normal}
+.varefakta-mark img{position:static;display:block;width:100%;height:auto;filter:none}
+@media(max-width:1200px) and (min-width:761px){.approvals{grid-template-columns:auto auto}}
+@media(max-width:760px){.approvals{justify-content:space-between;gap:16px}.varefakta-mark{width:60px;height:auto}}

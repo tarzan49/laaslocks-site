@@ -91,17 +91,13 @@
     document.body.appendChild(frame);
     form.target = 'signup-frame';
 
-    var sent = false;
-    frame.addEventListener('load', function () {
-      if (!sent) return;
+    // Show the confirmation the moment the form is sent; Mailchimp's page can take
+    // several seconds to load in the frame, and the post carries on regardless.
+    form.addEventListener('submit', function () {
+      button.disabled = true;
       form.hidden = true;
       done.hidden = false;
       done.focus({ preventScroll: true });
-    });
-    form.addEventListener('submit', function () {
-      sent = true;
-      button.disabled = true;
-      button.textContent = 'Signing up…';
     });
   })();
   </script>

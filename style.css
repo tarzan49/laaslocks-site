@@ -62,10 +62,15 @@ h1{font-size:clamp(2.4rem,10.5vw,3.4rem);line-height:1.04}
 .footer .social-links{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:0 18px}
 }
 @media(max-width:359px){.footer .store-link{height:40px}.footer .apple-store img{height:40px}.footer .google-store img{height:60px;margin:-10px}}
-/* Longer headline: smaller type so it reads as one strong statement. */
-h1.h1-long{font-size:clamp(2.4rem,3.8vw,4.4rem);line-height:1.08;max-width:none}
-@media(max-width:760px){h1.h1-long{font-size:clamp(2.1rem,9vw,2.8rem);max-width:none}}
-h1.h1-long span{display:block}
+
+/* Sign-up feedback in place of Mailchimp's own confirmation page. */
+.signup-row button:disabled{cursor:progress;opacity:.8}
+.signup-done{display:flex;gap:14px;align-items:flex-start;max-width:510px;padding:16px 18px;border:1px solid var(--line);border-radius:2px;background:#202f3040;outline:0;animation:signup-in .45s cubic-bezier(.2,.7,.2,1)}
+.signup-check{flex:0 0 32px;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--copper);color:var(--petrol);animation:signup-pop .5s .1s cubic-bezier(.3,1.6,.5,1) both}
+.signup-done p{margin:0}.signup-done-title{font:500 1.125rem/1.4 Poppins,sans-serif;color:var(--copper);letter-spacing:-.01em}.signup-done-text{margin-top:2px!important;font-size:.9375rem;line-height:1.5;color:var(--chalk)}
+@keyframes signup-in{from{opacity:0;transform:translateY(6px)}}
+@keyframes signup-pop{from{transform:scale(0)}}
+@media(max-width:760px){.signup-done{padding:14px}.signup-done-title{font-size:1rem}.signup-done-text{font-size:.875rem}}
 /* Quieter eyebrow so the headline leads. */
 .eyebrow{font-size:clamp(1rem,1.25vw,1.2rem);margin-bottom:16px}
 @media(max-width:760px){.eyebrow{font-size:.9375rem;margin-bottom:10px}}

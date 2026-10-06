@@ -10,13 +10,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=58">
+  <link rel="stylesheet" href="/style.css?v=support-1">
+<link rel="stylesheet" href="/support.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="page">
     <header class="header">
       <a class="brand" href="#main" aria-label="LAAS home"><img src="assets/laas-white.png" alt="LAAS" width="150" height="38"></a>
+      <nav class="support-nav" aria-label="Support navigation"><a href="/app/">Get the app</a><a href="/guides/">Manual &amp; guides</a></nav>
     </header>
     <main id="main" class="hero">
       <div class="intro">
@@ -58,6 +60,14 @@
         </div>
       </figure>
     </main>
+    <section class="owner-support" aria-labelledby="owner-support-title">
+      <div class="owner-support-intro"><h2 id="owner-support-title">Already have a LAAS lock?</h2><p>Everything you need to get moving.</p></div>
+      <nav class="owner-support-links" aria-label="Help for LAAS owners">
+        <a href="/app/"><span>Get the app</span><small>iPhone &amp; Android</small><b aria-hidden="true">↗</b></a>
+        <a href="/guides/"><span>Manual &amp; guides</span><small>Setup, everyday use &amp; help</small><b aria-hidden="true">↗</b></a>
+        <a href="/videos/"><span>Video guides</span><small>Watch each step</small><b aria-hidden="true">↗</b></a>
+      </nav>
+    </section>
     <footer class="footer">
         <nav class="app-downloads" aria-label="Download the LAAS app">
           <a class="store-link apple-store" href="https://apps.apple.com/app/id6779572946" target="_blank" rel="noopener noreferrer" aria-label="Download LAAS on the App Store"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="120" height="40"></a>
@@ -76,6 +86,7 @@
         <a href="https://www.youtube.com/channel/UCB1AyhFwxqpjk-nTInSi66w">YouTube</a>
       </nav>
     </footer>
+    <nav class="legal-nav" aria-label="Legal and support"><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
   </div>
   <script>
   // Post to Mailchimp inside a hidden frame, so people stay on our page and see our own

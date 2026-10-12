@@ -1,0 +1,166 @@
+{
+  "setup": {
+    "title": "Pair your lock and phone.",
+    "href": "/help/app/",
+    "steps": [
+      {
+        "title": "Add New Lock.",
+        "copy": "Open LAAS and tap Add New Lock on the welcome screen. Allow Bluetooth access when your phone asks.",
+        "image": "/help-assets/steps/app-welcome.png"
+      },
+      {
+        "title": "Enter the serial number.",
+        "copy": "Stand beside your lock and enter the 8-digit serial number printed on it.",
+        "image": "/help-assets/steps/serial-number.jpg"
+      },
+      {
+        "title": "Name your lock.",
+        "copy": "Give your lock a name, then tap Continue.",
+        "image": "/help-assets/steps/setup-19.jpg"
+      }
+    ]
+  },
+  "frame-mounting": {
+    "title": "My bike has mounting holes.",
+    "href": "/help/installation/frame/",
+    "steps": [
+      {
+        "title": "Line it up.",
+        "copy": "Hold the lock against the mounting holes. Choose the bracket slots that leave room above the tyre.",
+        "image": "/help-assets/steps/frame-mounting-17.jpg"
+      },
+      {
+        "title": "Put in the screws.",
+        "copy": "Put the supplied screws through the brackets and into the frame.",
+        "image": "/help-assets/steps/frame-mounting-22.jpg"
+      },
+      {
+        "title": "Tighten and check.",
+        "copy": "Centre the lock and tighten the screws with a 4 mm hex key. Check that the lock clears the tire.",
+        "image": "/help-assets/steps/frame-mounting-26.jpg"
+      }
+    ]
+  },
+  "flex-mounting": {
+    "title": "My bike has no mounting holes.",
+    "href": "/help/installation/flex/",
+    "steps": [
+      {
+        "title": "Attach the brackets.",
+        "copy": "Put the metal nuts in the bracket slots. Screw the brackets loosely onto the lock. Leave room to adjust.",
+        "image": "/help-assets/steps/flex-mounting-12.jpg"
+      },
+      {
+        "title": "Bend the strips.",
+        "copy": "Gently bend the plastic strips around the frame.",
+        "image": "/help-assets/steps/flex-mounting-26.jpg"
+      },
+      {
+        "title": "Wrap around the frame.",
+        "copy": "Wrap the strips around the frame. Fit the plastic screws and tighten them lightly with a flathead screwdriver.",
+        "image": "/help-assets/steps/flex-mounting-36.jpg"
+      },
+      {
+        "title": "Align and tighten.",
+        "copy": "Centre the lock and leave room above the tyre. Tighten the screws that hold the lock, then the screws on the strips.",
+        "image": "/help-assets/steps/flex-mounting-44.jpg"
+      },
+      {
+        "title": "Trim the strips.",
+        "copy": "Trim the excess with pliers or a knife. Check that the lock is secure.",
+        "image": "/help-assets/steps/flex-mounting-57.5.jpg"
+      }
+    ]
+  },
+  "find-my": {
+    "title": "Apple Find My.",
+    "href": "/help/find-my/",
+    "steps": [
+      {
+        "title": "Press three times.",
+        "copy": "Press the button on the side of your lock three times.",
+        "image": "/help-assets/steps/find-my-3.jpg"
+      },
+      {
+        "title": "Look for the blinking light.",
+        "copy": "The LED blinks. Pairing mode stays active for ten minutes.",
+        "image": null
+      },
+      {
+        "title": "Open Apple Find My.",
+        "copy": "On your iPhone or iPad, open Find My. Go to Items, tap +, then Add Other Item.",
+        "image": "/help-assets/steps/find-my-30.jpg"
+      },
+      {
+        "title": "Connect your lock.",
+        "copy": "Select Ring-Lock when it appears, tap Connect, then follow the steps to name it.",
+        "image": "/help-assets/steps/find-my-36.jpg"
+      }
+    ]
+  },
+  "sharing": {
+    "title": "Lend your bike.",
+    "href": "/help/sharing/",
+    "steps": [
+      {
+        "title": "Open sharing.",
+        "copy": "Open your lock’s sharing controls in LAAS.",
+        "image": "/help-assets/steps/sharing-2.jpg"
+      },
+      {
+        "title": "Choose access.",
+        "copy": "Choose Guest or Owner and add a name or note so you know who the invitation is for.",
+        "image": "/help-assets/steps/sharing-7.jpg"
+      },
+      {
+        "title": "Send the link.",
+        "copy": "Tap Share and send the invitation in a message.",
+        "image": "/help-assets/steps/sharing-17.jpg"
+      },
+      {
+        "title": "They accept.",
+        "copy": "They open the link and accept it in LAAS. No account is needed.",
+        "image": "/help-assets/steps/sharing-22.jpg"
+      }
+    ]
+  },
+  "app-settings": {
+    "title": "App settings.",
+    "href": "/help/app-settings/",
+    "steps": [
+      {
+        "title": "See your locks.",
+        "copy": "See your locks and their battery levels in LAAS.",
+        "image": "/help-assets/steps/unlock-app.jpg"
+      },
+      {
+        "title": "Open Settings.",
+        "copy": "Use Settings to manage your lock groups and preferences.",
+        "image": "/help-assets/steps/app-settings-15.jpg"
+      },
+      {
+        "title": "Update when prompted.",
+        "copy": "When the app offers a firmware update, follow the instructions on screen.",
+        "image": "/help-assets/steps/app-settings-44.jpg"
+      }
+    ]
+  },
+  "unlocking": {
+    "title": "Unlock with the app.",
+    "href": "/help/locking/",
+    "steps": [
+      {
+        "title": "Open LAAS.",
+        "copy": "Stand beside your bike and open the LAAS app."
+      },
+      {
+        "title": "Tap Unlock.",
+        "copy": "Tap Unlock in the LAAS app."
+      },
+      {
+        "title": "Check it is open.",
+        "copy": "Make sure the shackle is fully open before you ride."
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" fill="none"><rect width="600" height="420" fill="#e8ede5"/><g stroke="#24494a" stroke-linecap="round" stroke-linejoin="round"><path d="M390 44 315 375" stroke-width="78"/><path d="M390 44 315 375" stroke="#b5cbc3" stroke-width="66"/><path d="M373 46 299 374" stroke="#dbe5dc" stroke-width="6"/>
+<ellipse cx="362" cy="165" rx="23" ry="26" fill="#e6eeE7" stroke-width="3"/><ellipse cx="362" cy="165" rx="10" ry="13" fill="#24494a" stroke-width="2"/>
+
+<circle cx="362" cy="165" r="39" stroke="#ca895f" stroke-width="3" stroke-dasharray="5 6"/>
+<path d="M180 168H310" stroke-width="2"/>
+<text x="45" y="125" fill="#24494a" stroke="none" font-family="Arial,sans-serif" font-size="25">A threaded</text><text x="45" y="155" fill="#24494a" stroke="none" font-family="Arial,sans-serif" font-size="25">mounting hole</text></g></svg>

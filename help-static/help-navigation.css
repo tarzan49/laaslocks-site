@@ -1,0 +1,16 @@
+/* Make practical help easy to find on desktop and mobile. */
+.desktop-header nav .nav-help{padding:11px 16px;border-radius:4px;background:#c4ded4;color:#203638;font-weight:600;white-space:nowrap}
+.desktop-header nav .nav-help:hover{background:#d8e9e0;text-decoration:none}
+.desktop-header nav a:not(.nav-help){opacity:.78;font-size:14px}
+.desktop-header nav a:not(.nav-help):hover{opacity:1}
+.header-help{display:none}
+.menu-dialog nav .nav-help{background:#dce9e1;border-radius:4px;padding:18px 16px;font-weight:600;margin-bottom:6px}
+.footer-links a[href="/help/"]{font-weight:600}
+.mount-picture-choices img[src$="flex-mounting-choice.jpg"]{object-fit:cover;object-position:50% 30%}
+@media(max-width:899px){
+.site-header .header-help{display:block;margin-left:auto;padding:9px 10px;border:1px solid currentColor;border-radius:4px;font-size:12px;font-weight:600;line-height:1.15;white-space:nowrap;letter-spacing:0}
+.site-header .header-shop,.site-header .opening-shop{margin-left:0;margin-right:0;font-size:12px}
+.site-header{gap:10px}
+.site-header .brand{flex-shrink:0}.site-header .brand img{width:92px}
+}
+@media(max-width:370px){.site-header{padding-left:16px;padding-right:16px;gap:8px}.site-header .brand img{width:78px}.site-header .header-help{padding:9px 7px;font-size:11px}}

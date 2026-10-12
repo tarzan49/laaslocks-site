@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" fill="none"><rect width="600" height="420" fill="#e8ede5"/><g stroke="#24494a" stroke-linecap="round" stroke-linejoin="round"><path d="M365 44 290 375" stroke-width="78"/><path d="M365 44 290 375" stroke="#b5cbc3" stroke-width="66"/><path d="M348 46 274 374" stroke="#dbe5dc" stroke-width="6"/>
+<path d="M299 154c-1-22 76-9 81 12l-7 26c-11 10-86-6-84-19Z" fill="#406569" stroke-width="3"/><path d="M276 260c-1-22 76-9 81 12l-7 26c-11 10-86-6-84-19Z" fill="#406569" stroke-width="3"/>
+<path d="m377 162 37 8-23 111-38-8Z" fill="#24494a" stroke-width="3"/>
+<path d="m386 189 44 10-11 53-44-10Z" fill="#ccd9d1" stroke-width="3"/><path d="m389 209 23 5m-27 5 23 5m-27 5 23 5" stroke-width="6"/>
+<circle cx="368" cy="179" r="7" fill="#ca895f" stroke-width="2"/><circle cx="346" cy="284" r="7" fill="#ca895f" stroke-width="2"/>
+<path d="M176 169H278 M176 169V276H255" stroke-width="2"/>
+<text x="40" y="122" fill="#24494a" stroke="none" font-family="Arial,sans-serif" font-size="25">Flex-Mount</text></g></svg>

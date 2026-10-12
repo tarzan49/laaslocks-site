@@ -1,0 +1,24 @@
+.manual-motion{color:#202f30;max-width:100%;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(240px,.75fr);border-top:1px solid #c5d2ca;border-bottom:1px solid #c5d2ca;margin:28px 0;overflow:hidden;background:#ececea}
+.manual-motion-visual{width:100%;min-width:0;align-self:center;height:530px;display:flex;align-items:center;justify-content:center;padding:26px 8px;box-sizing:border-box}
+.mm-product-pair{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-sizing:border-box;gap:8px}
+.mm-screen{position:relative;width:37%;max-width:210px;flex-shrink:0;filter:drop-shadow(0 8px 10px #202f3018);z-index:1}
+.mm-screen img{display:block;width:100%;height:auto;border-radius:15px}
+.mm-product{width:69%;margin-left:-9%;align-self:center;mix-blend-mode:multiply}
+.mm-product img{display:block;width:100%;height:auto}
+.mm-source-photo{height:100%;width:100%;display:flex;align-items:center;justify-content:center}
+.mm-source-photo img,.mm-source-photo video{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:6px}
+.mm-app-screen img{filter:drop-shadow(0 8px 10px #202f3018);border-radius:18px}
+.mm-highlight{position:absolute;box-sizing:border-box;border:3px solid #bb744c;box-shadow:0 0 0 3px #fff9;border-radius:50px;pointer-events:none;animation:mm-highlight 2.4s ease-in-out infinite}
+.mm-add{top:64.4%;left:6%;width:88%;height:5.7%}.mm-unlock{top:29.3%;left:12.7%;width:74.5%;height:6.1%}
+@keyframes mm-highlight{0%,100%{opacity:.3}50%{opacity:1}}
+.manual-motion-visual>div{animation:mm-enter .35s ease-out}@keyframes mm-enter{from{opacity:0}to{opacity:1}}
+.manual-motion-info{padding:30px;align-self:center;min-width:0}.manual-motion-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.manual-motion-label{font-size:10px;letter-spacing:.12em;color:#526b61}.manual-motion-play{font:500 13px Inter,Arial,sans-serif;border:1px solid #9aafa3;border-radius:24px;background:transparent;color:#202f30;min-height:44px;padding:8px 17px;cursor:pointer}
+.manual-motion-steps{display:flex;flex-wrap:wrap;gap:9px;margin:23px 0}.manual-motion-steps button{width:42px;height:42px;padding:0;border-radius:50%;background:transparent;border:1px solid #abbcb1;color:#202f30;font:500 13px Inter,Arial,sans-serif;cursor:pointer}.manual-motion-steps button[aria-current=true]{background:#202f30;border-color:#202f30;color:#ececea}.manual-motion h3{font:500 25px/1.2 Poppins,Arial,sans-serif!important;letter-spacing:-.04em;margin:0 0 16px!important;max-width:none!important}.manual-motion p{font:400 16px/1.6 Inter,Arial,sans-serif!important;margin:0!important;max-width:none!important;min-height:100px}.manual-motion-track{height:3px;background:#c5d2ca;margin-top:25px;overflow:hidden}.manual-motion-track span{display:block;height:100%;background:#b07249;transform:scaleX(0);transform-origin:left}.manual-motion button:focus-visible{outline:3px solid #b07249;outline-offset:4px}
+.manual-motion[data-playing=false] *{animation-play-state:paused!important}.manual-motion[hidden]{display:none}
+.guide-directory .manual-motion,.new-lock-flow .manual-motion,.everyday-film .manual-motion{display:block;margin:0;border:0}.guide-directory .manual-motion-info,.new-lock-flow .manual-motion-info,.everyday-film .manual-motion-info{padding:20px}.guide-directory .manual-motion h3,.new-lock-flow .manual-motion h3{font-size:21px!important}
+.guide-actions:has(.manual-motion){display:block}.guide-actions>.manual-motion{width:100%}.new-lock-steps .manual-motion,.start-media .manual-motion,.start-here-steps .manual-motion{display:block}.new-lock-steps .manual-motion-info,.start-media .manual-motion-info{padding:18px}
+@media(max-width:700px){.manual-motion{grid-template-columns:1fr;margin:22px 0}.manual-motion-visual{height:400px;padding:22px 8px 10px}.mm-product-pair{padding:0 8px;max-width:500px}.mm-screen{width:39%;max-width:165px}.mm-screen img{border-radius:10px}.manual-motion-info{padding:18px 22px 26px}.manual-motion p{min-height:78px}.manual-motion-steps{margin:16px 0}.manual-motion h3{font-size:23px!important}}
+@media(max-width:400px){.manual-motion-visual{height:355px}.mm-highlight{border-width:2px;box-shadow:0 0 0 2px #fff9}}
+@media(prefers-reduced-motion:reduce){.manual-motion *{animation:none!important}}
+@media print{.manual-motion{display:none}}
+.mm-product-pair{background:#ececea}

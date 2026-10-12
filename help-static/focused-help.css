@@ -1,0 +1,24 @@
+/* Focused recovery instructions, separate from the manuals. */
+.focused-help-page #page-content{display:block}
+.focused-help-page .support-opening{padding:30px 26px 0}
+.focused-help-page .back-help{display:inline-block;margin:0 0 22px;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.focused-help-page .support-opening h1{font:500 clamp(38px,8vw,58px)/1.12 var(--heading);letter-spacing:-.055em;max-width:800px;margin:0 0 26px}
+.focused-help-page .focused-intro{font-size:16px;line-height:1.6;margin:0 0 18px;max-width:43rem}
+.focused-help-page .focused-steps{max-width:47rem;margin:0}
+.focused-help-page .focused-steps>li{padding:25px 0;gap:18px;border-top:1px solid #b9c8c0}
+.focused-help-page .focused-steps>li>div{min-width:0;flex:1}
+.focused-help-page .focused-steps h2{font:500 22px/1.3 var(--heading);letter-spacing:-.035em;margin:0 0 10px}
+.focused-help-page .focused-steps p{font-size:16px;line-height:1.65;margin:0 0 12px}
+.focused-help-page .focused-steps p:last-child{margin-bottom:0}
+.focused-help-page .focused-steps .focused-note{font-size:14px;color:#425a55}
+.focused-help-page .recovery-contact{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:22px}
+.focused-help-page .recovery-contact a{font-size:16px;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.focused-help-page .help-return{padding:20px 26px 38px}
+@media(min-width:900px){
+.focused-help-page .support-opening{padding:44px var(--desktop-gutter) 0}
+.focused-help-page .support-opening h1{font-size:60px}
+.focused-help-page .focused-steps>li{padding:28px 0}
+.focused-help-page .focused-steps h2{font-size:25px}
+.focused-help-page .focused-steps p{font-size:18px}
+.focused-help-page .help-return{padding:24px var(--desktop-gutter) 48px}
+}

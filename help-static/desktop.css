@@ -1,0 +1,182 @@
+/* Desktop concept: existing LAAS content, photographed scenes and controls. */
+@media(min-width:900px){
+:root{--desktop-gutter:clamp(40px,6vw,100px)}
+body,body.film-home,body.supporting-page{padding:0;background:#202f30}
+.mobile-site{width:100%;max-width:none;margin:0;box-shadow:none;border-radius:0}
+.site-header,.supporting-page .site-header,.opening-sequence .site-header{width:100%;height:104px;padding:30px var(--desktop-gutter);max-width:none}
+.brand,.opening-sequence .brand{width:144px;flex-shrink:0}
+.brand img,.supporting-page .brand img{width:144px}
+.desktop-nav{display:flex;gap:32px;align-items:center;margin-left:auto;font-size:15px;font-weight:400;letter-spacing:0}
+.desktop-nav a{padding:12px 0;white-space:nowrap}
+.desktop-nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.header-shop,.opening-shop{margin-left:32px!important;margin-right:20px;font-size:15px!important}
+.menu-toggle{margin-left:0!important}
+.menu-dialog{max-width:520px;width:520px;left:auto;right:24px;top:24px;height:auto;max-height:calc(100svh - 48px);border-radius:4px}
+.order-dialog{max-width:560px}
+.section{padding:80px var(--desktop-gutter)}
+.section>p{max-width:650px}
+/* Product and purchasing controls share a single screen. */
+.shop{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(370px,.85fr);gap:0 7%;align-content:center;min-height:820px;padding:85px max(var(--desktop-gutter),calc((100vw - 1220px)/2));background:#e8ece9}
+.shop>*{grid-column:2}
+.shop .product-stage{grid-column:1;grid-row:1 / 10;height:610px;width:100%;margin:0;align-self:center}
+.shop .product-image{width:100%;height:100%;object-fit:contain}
+.shop .section-kicker h2{font-size:64px}
+.shop .shop-benefits{font-size:18px;margin:4px 0 28px}
+.shop .shop-title{justify-content:flex-start}
+.shop .price{justify-content:flex-start;text-align:left}
+.shop .price strong{font-size:34px}
+.shop .intro-label{text-align:left;font-size:14px;margin:12px 0 20px}
+.shop .finish-picker{margin:12px 0 10px;gap:16px}
+.shop .finish-picker legend{font-size:15px}
+.shop .finish-lock{height:86px;width:90px}
+.shop .button{font-size:18px;min-height:58px;margin:18px 0 0}
+.shop .details-link{font-size:23px;margin-top:28px;padding-top:23px}
+.shop .shop-reassurance{font-size:14px;gap:24px}
+/* About: story beside photographs, never a stretched phone column. */
+.about-page #page-content{display:grid;grid-template-columns:1fr 1fr}
+.about-page #mission{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;column-gap:8%;padding:100px var(--desktop-gutter)}
+.about-page #mission>.eyebrow,.about-page #mission>h2{grid-column:1}
+.about-page #mission>h2{grid-row:2 / 5;font-size:54px;line-height:1.12}
+.about-page #mission>p{grid-column:2;margin:0 0 22px}
+.about-page #mission>p:first-of-type{grid-row:2}
+.about-page #mission .statement{font-size:26px}
+.about-page .story-section:not(#mission){padding:85px clamp(40px,5vw,80px);display:flex;flex-direction:column;justify-content:center}
+.about-page .story-section h2{font-size:clamp(40px,4vw,58px)}
+.about-page .story-section p{max-width:580px}
+.story-photo{min-height:580px}
+.story-photo>img{height:100%;position:absolute;inset:0;aspect-ratio:auto;object-fit:cover}
+.story-photo figcaption{position:absolute;bottom:0;left:0;width:100%;background:#172928b8;padding:14px 28px}
+/* Help is a practical directory on desktop. */
+.support-page #page-content{display:grid;grid-template-columns:1fr 1fr}
+.support-page .help-first,.support-page .new-owner{padding:70px max(50px,6vw);min-height:530px}
+.support-page .help-first h1{font-size:64px}
+.support-page .help-first .help-primary{width:260px}
+.support-page .new-owner h2{font-size:54px}
+.support-page .new-owner>p{max-width:430px}
+.support-page .new-owner h3{font-size:23px;margin-top:28px}
+.support-page .download-actions{max-width:440px}
+.support-page .guide-directory{grid-column:1/-1;padding:85px var(--desktop-gutter)}
+.support-page .guide-directory h2{font-size:52px;margin-bottom:34px}
+.support-page .guide-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.support-page .guide-symbol{height:165px}
+.support-page .guide-symbol>img{height:65px;width:65px}
+.support-page .guide-symbol .guide-lock-render{height:118px;width:100px}
+.support-page .guide-symbol.guide-lock-only .guide-lock-render{height:135px;width:135px}
+.support-page .guide-card-link strong{font-size:21px}
+.support-page .guide-card-link small{font-size:15px}
+.support-page .guide-watch{font-size:14px}
+.support-page .guide-extras{gap:30px;font-size:16px}
+.support-page .story-section{padding:72px max(50px,6vw)}
+.support-page .story-section h2{font-size:48px}
+.support-page #videos .tutorial{max-width:270px;margin:35px auto 0}
+.support-page #videos>p{max-width:420px}
+.support-page #manual .manual-preview{max-width:365px;margin:35px auto 22px}
+.support-page #manual .manual-preview img{height:300px}
+.support-page #questions{background:#f4f5f1}
+.support-page #questions .support-search{max-width:490px}
+.support-page .contact-number{font-size:36px}
+.support-page .guide-video-dialog{max-width:550px}
+/* Supporting guides, FAQ, app and terms keep readable line lengths. */
+.subpage:not(.support-page):not(.about-page) .mobile-site>main{max-width:1200px;margin:0 auto}
+.subpage:not(.support-page):not(.about-page) .page-intro,.subpage:not(.support-page):not(.about-page) .support-opening{padding:70px 70px 40px}
+.subpage:not(.support-page):not(.about-page) .page-intro h1{max-width:900px;font-size:64px}
+.subpage:not(.support-page):not(.about-page) .page-intro>p{max-width:690px;font-size:18px}
+.subpage:not(.support-page):not(.about-page) main>.section,.subpage:not(.support-page):not(.about-page) main>.story-section{padding:45px 70px 75px}
+.guide-content,.policy,.faq-library,.trouble-steps{max-width:950px;margin:0 auto}
+.guide-step img{max-height:440px;object-fit:contain}
+.video-library{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.video-library>h2,.video-library>.eyebrow,.video-library>.prototype-label{grid-column:1/-1}
+.footer,.supporting-page .footer{padding:65px var(--desktop-gutter);display:grid;grid-template-columns:1fr 2fr;gap:20px 80px}
+.footer>img,.footer>p,.footer>small{grid-column:1;margin:0}
+.footer .footer-links{grid-column:2;grid-row:1/4;grid-template-columns:repeat(3,1fr);margin:0;align-content:start;gap:22px}
+.footer .footer-links>a{font-size:15px}
+.footer>a{grid-column:1;margin:0;font-size:15px}
+.phone-float{right:25px;bottom:25px}
+}
+.desktop-nav{display:none}
+@media(min-width:900px){.desktop-nav{display:flex}}
+
+/* One full-width website. Mobile retains the approved portrait sequence. */
+.desktop-header{display:none}
+@media(min-width:900px){
+html{scroll-padding-top:88px}
+body{--desktop-gutter:clamp(40px,6vw,110px)}
+.desktop-header{position:fixed;inset:0 0 auto;height:88px;z-index:40;display:flex;align-items:center;gap:38px;padding:20px var(--desktop-gutter);background:#203638ed;backdrop-filter:blur(18px);color:#f5f6f0;border-bottom:1px solid #ffffff16}
+.desktop-brand{display:block;width:134px;flex-shrink:0}
+.desktop-brand img{display:block;width:100%;height:auto}
+.desktop-header nav{display:flex;align-items:center;justify-content:center;gap:35px;margin-left:auto;font-size:15px}
+.desktop-header nav a{padding:12px 0}
+.desktop-header nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.desktop-shop-link{background:#bcdad0;color:#203638;padding:13px 21px;border-radius:3px;font-size:15px;font-weight:500;white-space:nowrap}
+.mobile-site>.site-header,.opening-sequence .site-header{display:none!important}
+.subpage .mobile-site{padding-top:88px}
+.about-page .mobile-site{padding-top:0}
+.opening-sequence{height:590svh}
+.opening-viewport{background:#203638;min-height:680px}
+.opening-lock-world,.opening-station-world,.opening-phone-world,.opening-map-world,.opening-rider-world,.opening-ride-world{left:0;right:0;width:100%}
+.opening-lock-world img{object-position:50% 70%}
+.opening-station-world img,.opening-phone-world img,.opening-map-world img{object-position:50% 32%}
+.opening-ride-world img{object-position:50% 56%}
+.opening-shade{background:linear-gradient(90deg,#0a2528aa 0%,#102e2b42 45%,transparent 72%)}
+.opening-shade:before{background:linear-gradient(180deg,#0a252844,transparent 80%)}
+.opening-title,.opening-questions,.opening-answer{left:var(--desktop-gutter);right:auto;width:44%;max-width:660px;top:25%;bottom:auto;text-shadow:0 2px 30px #061b2440;letter-spacing:-.055em}
+.opening-title h1{font-size:clamp(60px,6vw,92px);line-height:1.06}
+.opening-title h1 span+span{font-size:clamp(43px,4.5vw,67px);margin-top:22px;white-space:normal}
+.opening-questions,.opening-answer{font-size:clamp(64px,6.4vw,94px);line-height:1.04}
+.opening-platforms{left:var(--desktop-gutter);right:auto;bottom:48px}
+.opening-platforms .store-badges{justify-content:flex-start;gap:14px}
+.opening-findmy{right:var(--desktop-gutter);left:auto;bottom:48px;width:180px}
+.opening-day{left:var(--desktop-gutter);top:22%;bottom:auto;right:auto;width:50%;max-width:700px;font-size:clamp(45px,4.5vw,68px);line-height:1.09}
+.opening-day span{font-size:28px;margin-top:18px}
+.opening-trust-story{clip-path:inset(88px 0 0)}
+.opening-trust-story:before{background:linear-gradient(90deg,#062220bb,#06222050 65%,transparent)}
+.opening-day-story{left:calc(var(--desktop-gutter) - 25px);width:52%;max-width:740px;right:auto}
+.opening-trust .review-head{margin-bottom:16px}
+.opening-trust .review-card p{font-size:22px;line-height:1.5}
+.opening-trust .review-card small{font-size:14px}
+.opening-insurance.trust-sheet .trust-sheet-row{padding:15px 0;grid-template-columns:82px 1fr;gap:24px}
+.trust-sheet-row h3{font-size:26px;line-height:1.15}
+body.film-home .buy-dock{left:auto;right:32px;bottom:24px;transform:none;width:auto}
+body.film-home .buy-dock .button{width:170px}
+.about-opening{grid-column:1/-1;height:92svh;min-height:680px;max-height:1100px}
+.about-backdrop{inset:0;width:100%;height:100%;object-position:50% 50%}
+.about-page .about-opening:after{background:linear-gradient(90deg,#102f31d9, #102f3155 58%,transparent)}
+.about-page .about-opening-copy{left:var(--desktop-gutter);right:auto;top:26%;bottom:auto;width:47%;max-width:750px}
+.about-page .about-opening-copy h1{font-size:clamp(58px,5.8vw,86px);line-height:1.06}
+.about-opening-copy p{font-size:22px}
+.about-opening .photo-note,.about-opening .opening-next{left:var(--desktop-gutter);right:auto;max-width:520px}
+.about-opening .photo-note{bottom:120px}
+.about-opening .opening-next{bottom:75px}
+.about-page .phone-float{right:24px;left:auto;max-width:240px}
+.footer,.supporting-page .footer{padding-bottom:80px}
+.guide-extras{flex-direction:row}
+.support-page .guide-symbol .guide-icon{width:64px;height:64px}
+.support-page .guide-symbol .guide-lock{width:96px;height:118px}
+.support-page .guide-symbol .solo-lock{width:135px;height:135px}
+.guide-card{scroll-margin-top:110px}
+.support-page .guide-card-grid{gap:26px}
+/* Readable guides: video or still alongside the actual instructions. */
+.real-guide main{max-width:1240px}
+.real-guide .story-section:has(.tutorial){display:grid;grid-template-columns:1.1fr .9fr;column-gap:55px;align-content:start}
+.real-guide .story-section:has(.tutorial)>:not(.tutorial){grid-column:1}
+.real-guide .story-section:has(.tutorial)>.tutorial{grid-column:2;grid-row:1/8;margin:0;align-self:start}
+.real-guide .tutorial-player{max-width:300px}
+.real-guide .story-section h2{font-size:42px}
+.real-guide .guide-chips{padding-left:70px}
+.real-guide .mount-choices{max-width:800px;margin:0 auto;gap:30px}
+.real-guide .mount-choices img{height:300px;object-fit:cover}
+}
+@media(min-width:1800px){.opening-title{top:24%}.opening-day-story{max-width:780px}}
+@media(min-width:600px) and (max-width:899px){body{padding:0}.mobile-site{max-width:none;box-shadow:none}.shop{padding-left:8vw;padding-right:8vw}.shop .product-stage{height:420px}.shop .product-image{width:80%;height:100%}.support-page .guide-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.supporting-page .story-section{padding-left:8vw;padding-right:8vw}.supporting-page .story-section>p{max-width:650px}}
+
+@media(min-width:900px){
+.opening-day-story{left:0;right:0;width:auto;max-width:none}
+.opening-trust .review-head{margin:0 var(--desktop-gutter) 24px}
+.opening-trust .review-track{padding:0 var(--desktop-gutter);grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.opening-trust .review-card{border-bottom:0;padding:0 25px 0 0;border-right:1px solid #ffffff45}
+.opening-trust .review-card:last-child{border-right:0}
+.opening-trust .review-card p{font-size:22px;line-height:1.4}
+.opening-trust .review-card small{font-size:12px;margin-top:16px}
+}
+
+@media(min-width:900px){.opening-sequence{height:560svh}.opening-promises{margin:36px var(--desktop-gutter) 0;gap:64px;padding-top:28px}.opening-promises img{width:200px;height:100px}.opening-promises a:last-child img{height:90px;width:100px}.opening-promises a{font-size:16px}}

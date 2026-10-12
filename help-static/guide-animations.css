@@ -1,0 +1,32 @@
+.laas-animation{color:#202f30;max-width:620px;margin:24px auto}
+.laas-animation-stage{width:100%;aspect-ratio:1;background:#ececea;display:grid;place-items:center;overflow:hidden}
+.laas-animation-stage svg{display:block;width:100%;height:100%;max-width:100%}
+.laas-animation-stage[aria-busy=true]{min-height:220px}
+.laas-animation-caption{font:400 16px/1.65 var(--body,Arial,sans-serif);margin:18px 0!important;color:#42594e}
+.laas-animation-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:20px 0 0}
+.laas-animation-controls button{min-height:44px;border:1px solid #202f30;border-radius:999px;padding:10px 21px;font:500 14px/1.4 var(--body,Arial,sans-serif);background:#202f30;color:#ececea;cursor:pointer}
+.laas-animation-controls button+button{background:transparent;color:#202f30;border-color:#9caea6}
+.laas-animation-controls button:disabled{opacity:.45;cursor:wait}
+.laas-animation button:focus-visible,.laas-animation-dialog a:focus-visible{outline:3px solid #b07249;outline-offset:4px}
+.laas-animation-dialog{border:0;padding:22px 26px 25px;width:min(580px,calc(100vw - 28px));max-height:92svh;overflow:auto;background:#ececea;color:#202f30}
+.laas-animation-dialog::backdrop{background:#122729a8;backdrop-filter:blur(4px)}
+.laas-animation-dialog-top{display:flex;gap:18px;justify-content:space-between;align-items:center}
+.laas-animation-dialog-top h2{font:500 25px/1.2 var(--heading,Arial,sans-serif);letter-spacing:-.04em;margin:0}
+.laas-animation-dialog-top button{background:none;border:0;color:inherit;font-size:32px;cursor:pointer;min-width:44px;min-height:44px}
+.laas-animation-dialog .laas-animation{margin:0}
+.laas-animation-dialog .laas-animation-stage{max-height:53svh}
+.laas-animation-dialog .laas-animation-steps{display:block;margin-top:24px;text-decoration:underline;text-underline-offset:5px;font-size:14px;color:inherit}
+.animation-review{margin:0;background:#ececea;color:#202f30;font:400 16px/1.6 Inter,Arial,sans-serif}
+.animation-review header{display:flex;justify-content:space-between;align-items:center;padding:25px clamp(24px,5vw,72px);border-bottom:1px solid #cad2cb}
+.animation-review header img{width:112px;height:auto;display:block}.animation-review a{color:inherit}
+.animation-review main{padding:42px clamp(24px,5vw,72px) 70px;max-width:1440px;margin:auto}
+.animation-review h1{font:500 clamp(34px,4.5vw,60px)/1.1 Poppins,Arial,sans-serif;letter-spacing:-.055em;margin:0 0 44px;max-width:900px}
+.animation-review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.animation-review-grid article{border-top:2px solid #b07249;padding-top:18px;min-width:0}
+.animation-review-grid h2{font:500 25px/1.2 Poppins,Arial,sans-serif;letter-spacing:-.04em;margin:10px 0 0}
+.animation-review-number{font-size:12px;letter-spacing:.1em;color:#526b61}
+.animation-review-grid .laas-animation{margin-top:14px}.animation-review-grid .laas-animation-caption{min-height:80px}
+.animation-review-grid .animation-guide-link{display:inline-block;font-size:14px;margin-top:26px;text-underline-offset:4px}
+@media(max-width:760px){.animation-review-grid{grid-template-columns:1fr;gap:42px}.animation-review-grid article{max-width:540px;width:100%;margin:auto}.animation-review-grid .laas-animation-caption{min-height:0}.animation-review header a{font-size:14px}.laas-animation-dialog{padding:15px 20px 22px}.laas-animation-dialog .laas-animation-stage{max-height:43svh}.laas-animation-dialog-top h2{font-size:23px}}
+
+.inline-animation-help{margin-top:14px}.inline-animation-help>summary{display:list-item;width:fit-content;cursor:pointer;font-size:14px;text-decoration:underline;text-underline-offset:4px;padding:10px 0}.inline-animation-help .laas-animation{max-width:440px;margin:12px 0 24px}.everyday-film>.laas-animation{margin:0}.everyday-film .laas-animation-controls{padding:0 18px}.laas-animation[hidden]{display:none}

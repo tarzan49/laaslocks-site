@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 112">
+  <title>57 Days to Fall in Love</title>
+  <g fill="#202f30" font-family="Arial,sans-serif" font-weight="700">
+    <g font-style="italic">
+      <text x="5" y="29" font-size="29" letter-spacing="-1">57 DAYS</text>
+      <text x="2" y="65" font-size="38" letter-spacing="-1.7">TO FALL</text>
+    </g>
+    <text x="3" y="107" font-size="32" letter-spacing="-.7">IN LOVE</text>
+  </g>
+  <path stroke="#b07249" stroke-width="4" d="M5 76h198"/>
+</svg>

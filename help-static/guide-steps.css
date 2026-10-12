@@ -1,0 +1,47 @@
+
+/* v83: original screenshots and tutorial stills, with one action per step. */
+.visual-instructions .support-opening{padding-bottom:12px}
+.visual-instructions .support-opening h1{max-width:850px}
+.guide-download-badges{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:24px 0 8px}
+.guide-download-badges>a{display:flex;align-items:center;justify-content:center;width:143px;height:48px;flex:none}
+.guide-download-badges>a>img{width:143px;height:48px;object-fit:contain}
+.guide-download-badges .google-badge{display:block;width:143px;height:48px;overflow:hidden}
+.guide-download-badges .google-badge img{display:block;max-width:none;width:165px;height:auto;transform:translate(-11px,-8px)}
+.guide-format-choice{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:26px 0}
+.watch-guide-button{border:0;padding:16px 20px;background:#1d5f63;color:#fff;display:flex;align-items:center;gap:14px;cursor:pointer;font:500 16px/1.4 var(--body);border-radius:3px;min-height:52px}
+.watch-guide-button small{font-weight:400;opacity:.8}
+.guide-format-choice>a{font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.visual-guide-steps{list-style:none;margin:30px 0;padding:0;display:grid;gap:32px;scroll-margin-top:95px}
+.visual-guide-steps>li{border-top:1px solid #b4c8c0;padding-top:25px;display:grid;grid-template-columns:1fr;gap:20px;min-width:0}
+.visual-step-copy{position:relative;padding-left:40px}
+.visual-step-number{position:absolute;left:0;top:2px;font:500 14px/1.5 var(--body);color:#1d5f63}
+.visual-instructions .visual-step-copy h3{font:500 23px/1.3 var(--heading);letter-spacing:-.025em;margin:0}
+.visual-instructions .visual-step-copy p{font-size:16px;line-height:1.6;margin:10px 0 0}
+.step-image-link{display:block;width:100%;max-width:300px;margin:0 auto;color:#345654;text-align:right}
+.step-image-link img{display:block;width:100%;max-height:510px;object-fit:contain;object-position:center;background:#e3e9e2;border-radius:4px}
+.step-image-link span{display:block;font-size:12px;padding-top:6px}
+.obstruction-visual{width:100%;max-width:300px;margin:25px auto}
+.obstruction-visual img{width:100%;display:block}
+.visual-instructions .story-section{padding-top:26px}
+.visual-instructions .guide-note{font-size:15px}
+.visual-instructions .setup-next{margin-top:40px}
+.visual-instructions .setup-next .mount-picture-choices{margin-top:24px}
+.visual-instructions .setup-next h2{font-size:30px}
+.manual-guides-page .guides-heading{padding-bottom:26px}
+.manual-guides-page #download{padding-top:0}
+.manual-guides-page .visual-setup-flow{margin-top:0}
+.visual-instructions .human-support{padding-top:40px}
+.visual-instructions .mount-choices{gap:24px}
+@media(min-width:760px){
+ .visual-guide-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
+ .visual-guide-steps>li{display:flex;flex-direction:column}
+ .step-image-link{margin-top:auto;padding-top:10px}
+ .visual-step-copy{min-height:130px}
+}
+@media(min-width:1100px){.visual-guide-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}.visual-step-copy{min-height:145px}}
+@media(max-width:380px){.guide-download-badges{gap:10px}.guide-download-badges>a{width:132px}.guide-download-badges>a>img{width:132px}.guide-download-badges .google-badge{width:132px}.guide-download-badges .google-badge img{width:152px;transform:translate(-10px,-5px)}}
+.manual-guides-page .guide-download-badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:298px;gap:12px}
+.manual-guides-page .guide-download-badges>a{width:100%;height:44px}
+.manual-guides-page .guide-download-badges>a>img{width:100%;height:44px;object-fit:contain}
+.manual-guides-page .guide-download-badges .google-badge{width:100%;height:44px}
+.manual-guides-page .guide-download-badges .google-badge img{width:116%;height:auto;transform:translate(-7%,-13%)}

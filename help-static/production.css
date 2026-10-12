@@ -1,2 +1,76 @@
 /* Production support navigation: no unpublished shop links. */
 .site-header .header-help{margin-left:auto}.desktop-header nav{margin-left:auto}.site-header .menu-toggle{margin-left:12px}
+
+/* A compact footer keeps short help pages focused on their instructions. */
+@media screen {
+  .supporting-page .footer,
+  .help-clean #contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 10px 16px;
+    padding: 24px 26px;
+  }
+  .supporting-page .footer > img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 88px;
+    height: auto;
+    margin: 0;
+  }
+  .supporting-page .footer > p {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: right;
+  }
+  .supporting-page .footer .footer-links {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px;
+    margin: 0;
+    align-items: center;
+  }
+  .supporting-page .footer .footer-links > a,
+  .supporting-page .footer > a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  .supporting-page .footer > a {
+    grid-column: auto;
+    grid-row: 3;
+    justify-self: start;
+  }
+}
+@media screen and (min-width: 900px) {
+  .supporting-page .footer,
+  .help-clean #contact {
+    grid-template-columns: 160px minmax(0, 1fr) auto;
+    gap: 6px 36px;
+    padding: 26px var(--desktop-gutter);
+  }
+  .supporting-page .footer > p {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+  }
+  .supporting-page .footer .footer-links {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 20px;
+  }
+  .supporting-page .footer > a {
+    grid-column: 3;
+    grid-row: auto;
+  }
+}

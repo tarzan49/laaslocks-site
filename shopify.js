@@ -25,13 +25,18 @@
   const url = () => {
     const l = lines(read());
     if (!l.length) return null;
-    const lang = (window.LAAS_I18N && window.LAAS_I18N.lang) === 'da' ? 'da' : 'en';
+    // this runs before i18n.js (no stylesheet or script in the way): the stored choice, else the page's own language
+    let lang = document.documentElement.lang === 'da' ? 'da' : 'en';
+    try { const w = localStorage.getItem('laas-lang'); if (w === 'da' || w === 'en') lang = w; } catch {}
     return `https://${SHOP.domain}/cart/${l.join(',')}?locale=${lang}&ref=laaslocks`;
   };
   window.LAAS_SHOPIFY = { ready, url };
   // on the checkout page: straight on to Shopify (back and forward keep working: replace, not push)
   // an empty cart has nothing to check out: back to the cart
   if (ready() && document.documentElement.dataset.checkout === 'shopify') {
-    location.replace(url() || 'cart-v2.html');
+    const to = url();
+    // the time this cart left for Shopify: after the order, cart-nav.js empties it (the laas_ordered cookie)
+    if (to) try { localStorage.setItem('laas.handoff', String(Date.now())); } catch {}
+    location.replace(to || 'cart-v2.html');
   }
 })();

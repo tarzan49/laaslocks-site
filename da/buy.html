@@ -29,8 +29,8 @@
 <link rel="preload" href="../fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/inter-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../images/lock/steel-00-800.webp" as="image" type="image/webp">
-<link rel="stylesheet" href="../darkroom.css?v=1017lang">
-<link rel="stylesheet" href="../buy.css?v=1017seo">
+<link rel="stylesheet" href="../darkroom.css?v=1017ux">
+<link rel="stylesheet" href="../buy.css?v=1017ux">
 </head>
 <body class="buy-page" data-shop>
 <a class="skip label" href="#buy">Spring til indhold</a>
@@ -59,6 +59,8 @@
       <a href="./#help">Hjælp og guides</a>
     </nav>
     <div class="nav__end">
+      <!-- on a computer, once the buy card has scrolled away: one way back to it (a phone has the buy bar) -->
+      <a class="nav__buy nav__buy--pdp label" href="#buy" tabindex="-1"><span>Forudbestil</span><span class="nav__price" data-price="lock">999 kr</span></a>
       <button class="ghost label nav__menu" id="menu-open" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     </div>
   </div>
@@ -117,7 +119,7 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Forudbestilling: sendes i oktober</li>
         </ul>
         <ul class="paywall" aria-label="Betalingsmetoder"><li><img src="../images/icons/mobilepay-mark.svg" alt="MobilePay" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/applepay.svg" alt="Apple Pay" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/googlepay.svg" alt="Google Pay" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/klarna.svg" alt="Klarna" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/visa.svg" alt="Visa" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/mastercard.svg" alt="Mastercard" width="38" height="24" loading="lazy"></li></ul>
-        <div class="badges"><a class="badge badge--trial" href="promises.html#trial"><span>57 dages prøvetid:</span><span>Forelsk dig, eller få pengene tilbage</span></a><a class="badge badge--kym" href="promises.html#keep-moving" aria-label="Keep You Moving-garantien: sådan virker det"><b>Keep You Moving</b><i aria-hidden="true"></i><span>garanti</span></a><a class="badge badge--vf" href="./#insurance" aria-label="Forsikringsgodkendt i Danmark (Varefakta)"><img src="../images/varefakta-badge.webp" width="96" height="96" alt="Varefakta kontrolleret" loading="lazy" decoding="async"></a><a class="badge badge--tp" href="https://dk.trustpilot.com/review/laaslocks.com" target="_blank" rel="noopener"><span class="badge__tp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.8 6.6 7.2.6-5.5 4.7 1.7 7-6.2-3.8-6.2 3.8 1.7-7L2 9.7l7.2-.6z"/></svg>Trustpilot</span><span>Læs vores anmeldelser</span></a></div>
+        <div class="badges"><a class="badge badge--trial" href="promises.html#trial"><span>57 dages prøvetid:</span><span>Forelsk dig, eller få pengene tilbage</span></a><a class="badge badge--kym" href="promises.html#keep-moving" aria-label="Keep You Moving-garantien: sådan virker det"><b>Keep You Moving</b><i aria-hidden="true"></i><span>garanti</span></a><a class="badge badge--vf" href="./#insurance" aria-label="Forsikringsgodkendt i Danmark (Varefakta)"><img src="../images/varefakta-badge.webp?v=2" width="96" height="96" alt="Varefakta kontrolleret" loading="lazy" decoding="async"></a><a class="badge badge--tp" href="https://dk.trustpilot.com/review/laaslocks.com" target="_blank" rel="noopener"><span class="badge__tp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.8 6.6 7.2.6-5.5 4.7 1.7 7-6.2-3.8-6.2 3.8 1.7-7L2 9.7l7.2-.6z"/></svg>Trustpilot</span><span>Læs vores anmeldelser</span></a></div>
       </div>
     </div>
   </section>
@@ -237,7 +239,7 @@
         </p>
       </div>
       <i class="foot2__band" aria-hidden="true"></i>
-      <p class="foot2__legal"><span>Locks you can love. · © 2026 LAAS ApS · Designet i København</span><small>Sankt Hans Gade 24, st., 2200 København N · CVR 40942491 · <a href="tel:+4531338213">+45 31 33 82 13</a> · <a href="terms.html">Handelsbetingelser</a> · <a href="privacy.html">Privatliv</a><br>Apple, Find My, iPhone, iPad, iPadOS, Mac og macOS er varemærker tilhørende Apple Inc., registreret i USA og andre lande og områder. IOS er et varemærke eller registreret varemærke tilhørende Cisco i USA og andre lande og bruges under licens.</small></p>
+      <p class="foot2__legal"><span>Locks you can love. · © 2026 LAAS&nbsp;ApS · Designet i&nbsp;København</span><small>Sankt Hans Gade 24, st., 2200 København&nbsp;N · CVR&nbsp;40942491 · <a href="tel:+4531338213">+45 31 33 82 13</a> · <a href="terms.html">Handelsbetingelser</a> · <a href="privacy.html">Privatliv</a><br>Apple, Find My, iPhone, iPad, iPadOS, Mac og macOS er varemærker tilhørende Apple Inc., registreret i USA og andre lande og områder. IOS er et varemærke eller registreret varemærke tilhørende Cisco i USA og andre lande og bruges under licens.</small></p>
     </div>
   </footer>
 </main>
@@ -251,7 +253,7 @@
 <p class="visually-hidden" id="buy-status" role="status" aria-live="polite"></p>
 
 <script src="../i18n.js?v=1017seo"></script>
-<script src="../buy.js?v=1017seo" defer></script>
-<script src="../cart-nav.js?v=1017seo"></script>
+<script src="../buy.js?v=1017ux" defer></script>
+<script src="../cart-nav.js?v=1017ux"></script>
 </body>
 </html>

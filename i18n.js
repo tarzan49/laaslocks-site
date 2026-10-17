@@ -10,7 +10,6 @@
   const H = document.documentElement;
   const ROOT = H.dataset.root || '';
   window.LAAS_ROOT = ROOT;
-  const lang = H.lang === 'da' ? 'da' : 'en';
   const alt = H.dataset.alt;
   const go = to => { const u = new URL(alt, location.href); u.search = location.search.replace(/[?&]lang=\w+/, '').replace(/^&/, '?'); u.hash = location.hash; location.replace(u.href); };
   let want = null;
@@ -19,6 +18,9 @@
     if (q === 'da' || q === 'en') localStorage.setItem('laas-lang', q);
     want = q || localStorage.getItem('laas-lang');
   } catch {}
+  // a page with one address for both languages (the 404 page) follows the choice and translates itself
+  const lang = alt ? (H.lang === 'da' ? 'da' : 'en') : (want === 'da' ? 'da' : 'en');
+  if (!alt) H.lang = lang;
   if (alt && (want === 'da' || want === 'en') && want !== lang) { go(); return; }
 
   // a lock, every second lock, a Flex-Mount and shipping (Marcus, 16 Oct): the first lock 129 / 999, every second one
@@ -239,7 +241,7 @@
   "Marcus in the workshop, holding a sign that says: You're about to catch feelings for a lock": "Marcus i værkstedet med et skilt, hvor der står: You’re about to catch feelings for a lock",
   "An early prototype of the Ring-Lock, opened up on the workbench": "En tidlig prototype af Ring-Lock, åbnet på arbejdsbænken",
   // the SEO round (17 Oct)
-  "You bet. The Ring-Lock fits nearly every bike, from city bikes to e‑bikes and cargo bikes, with tyres up to 60 mm. The only bike it’s not suitable for is ‘fat bikes’.": "Det kan du tro. Ring-Lock passer til næsten alle cykler, fra bycykler til elcykler og ladcykler, med dæk op til 60 mm. Den eneste cykel, den ikke passer til, er fatbikes.",
+  "You bet. The Ring-Lock fits nearly every bike, from city bikes to e‑bikes and cargo bikes, with tyres up to 60 mm. The only bike it’s not suitable for is ‘fat bikes’.": "Det kan du tro. Ring-Lock passer til næsten alle cykler, fra bycykler til elcykler og ladcykler, med dæk op til 60 mm. Den eneste cykel, den ikke passer til, er fatbikes.",
   "Charge twice a year": "Oplad to gange om året",
   "A 90-minute charge over USB-C lasts about 6 months": "90 minutters opladning via USB-C holder i cirka 6 måneder",
   "Meet LAAS. The keyless ring lock that is insurance-approved in Denmark.": "Mød LAAS. Den nøglefri ringlås, der er forsikringsgodkendt i Danmark.",
@@ -278,7 +280,7 @@
     const p = document.createElement('p');
     p.className = 'lang label' + (cls ? ' ' + cls : ''); p.setAttribute('role', 'group'); p.setAttribute('aria-label', t('Language'));
     p.innerHTML = '<a data-lang="en" hreflang="en">EN</a><i aria-hidden="true">/</i><a data-lang="da" hreflang="da">DA</a>';
-    p.querySelectorAll('a').forEach(a => { if (!a.hasAttribute('href')) a.setAttribute('href', a.dataset.lang === lang ? location.pathname.split('/').pop() || './' : alt || '#'); });
+    p.querySelectorAll('a').forEach(a => { if (!a.hasAttribute('href')) a.setAttribute('href', a.dataset.lang === lang ? location.pathname.split('/').pop() || './' : alt || '?lang=' + a.dataset.lang); });
     return p;
   };
   // every switch on the page (the landing page has its own in the markup): mark the current language, keep the
@@ -289,6 +291,7 @@
       try { localStorage.setItem('laas-lang', a.dataset.lang); } catch {}
       if (a.dataset.lang === lang) { e.preventDefault(); return; }
       if (alt) { e.preventDefault(); const u = new URL(alt, location.href); u.search = location.search; u.hash = location.hash; location.href = u.href; }
+      else { e.preventDefault(); location.reload(); }
     });
   }); }
   const end = document.querySelector('.nav__end');

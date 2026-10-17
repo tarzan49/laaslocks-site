@@ -14,7 +14,6 @@ Key facts:
 ## Pages
 - [Ring-Lock: buy, specs, in the box](https://laaslocks.com/buy.html)
 - [FAQ](https://laaslocks.com/faq.html)
-- [Insurance-approved bike lock: how to check it](https://laaslocks.com/insurance-approved-bike-lock.html)
 - [Shipping and returns](https://laaslocks.com/shipping.html)
 - [About LAAS](https://laaslocks.com/about.html)
 - [Manual and guides](https://laaslocks.com/guides/)
@@ -22,4 +21,3 @@ Key facts:
 
 ## Dansk
 - [LAAS Ring-Lock på dansk](https://laaslocks.com/da/)
-- [Forsikringsgodkendt cykellås: sådan tjekker du den](https://laaslocks.com/da/forsikringsgodkendt-cykellaas.html)

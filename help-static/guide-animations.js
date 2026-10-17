@@ -41,7 +41,7 @@
     const replay=document.createElement('button');replay.type='button';replay.textContent='Replay';replay.disabled=true;
     controls.append(play,replay);host.append(controls);
     try{
-      const [lottie,response]=await Promise.all([loadPlayer(),fetch('/help-assets/animations/'+key+'.json?v=92')]);if(!response.ok)throw Error('Animation unavailable');const data=await response.json();
+      const [lottie,response]=await Promise.all([loadPlayer(),fetch('/help-assets/animations/'+key+'.json?v=94')]);if(!response.ok)throw Error('Animation unavailable');const data=await response.json();
       const animation=lottie.loadAnimation({container:stage,renderer:'svg',loop:true,autoplay:false,animationData:data,rendererSettings:{preserveAspectRatio:'xMidYMid meet'}});
       const item={animation,host,play,started:false,ready:false,visible:false,manualPaused:false,requested:false};instances.add(item);
       const sync=()=>{if(!item.ready)return;const active=item.visible&&!document.hidden&&!item.manualPaused&&(!reduced.matches||item.requested)&&(autoplay||item.requested);if(active){item.started=true;animation.play();play.textContent='Pause';}else{animation.pause();play.textContent=item.started?'Play':'Play animation';}host.dataset.playing=String(active);};

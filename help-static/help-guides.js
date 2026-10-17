@@ -23,7 +23,7 @@
    if(window.LAASGuideAnimations){open();return;}
    if(!window.laasGuideAnimationReady){
     const css=document.createElement('link');css.rel='stylesheet';css.href='/help-static/guide-animations.css?v=93';document.head.append(css);
-    window.laasGuideAnimationReady=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/help-static/guide-animations.js?v=93';script.onload=resolve;script.onerror=()=>{window.laasGuideAnimationReady=null;reject(Error('Animation unavailable'));};document.head.append(script);});
+    window.laasGuideAnimationReady=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/help-static/guide-animations.js?v=94';script.onload=resolve;script.onerror=()=>{window.laasGuideAnimationReady=null;reject(Error('Animation unavailable'));};document.head.append(script);});
    }
    window.laasGuideAnimationReady.then(open).catch(()=>{location.href=button.dataset.guideHref||'/guides/';});return;
   }

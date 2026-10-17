@@ -1,308 +1,308 @@
 [
-  {
-    "title": "Manual & guides",
-    "text": "Setup, everyday use and the full manual.",
-    "url": "/guides/",
-    "keywords": "manual guide setup instructions download pair mount charging"
-  },
-  {
-    "title": "Download the LAAS app",
-    "text": "iPhone and Android downloads. Pair your app and lock before mounting.",
-    "url": "/guides/#download",
-    "keywords": "download install app start setup android iphone"
-  },
-  {
-    "title": "I lost my phone.",
-    "text": "Get access back on a new phone or a phone you borrow.",
-    "keywords": "phone lost replaced stolen recovery owner access",
-    "url": "/help/lost-phone/"
-  },
-  {
-    "title": "My bike is missing.",
-    "text": "Find your bike with Apple Find My.",
-    "keywords": "missing lost stolen bike location find my",
-    "url": "/help/find-my/#locating"
-  },
-  {
-    "title": "Mount your lock.",
-    "text": "Does your bike have mounting holes? Choose the guide for your bike.",
-    "keywords": "mount mounting holes frame screws Flex-Mount installation",
-    "url": "/help/installation/"
-  },
-  {
-    "title": "Pair your lock and phone.",
-    "text": "Add New Lock. Enter the serial number. Name your lock.",
-    "keywords": "pair setup new lock serial number welcome app Bluetooth",
-    "url": "/help/app/"
-  },
-  {
-    "title": "Lock & unlock.",
-    "text": "Close it by hand. Open it with the LAAS app.",
-    "keywords": "Help & supportHELP & SUPPORTLock &unlock.Close it by hand. Open it with the LAAS app.EVERYDAY USELock by hand.Unlock with a tap.Your browser cannot play this video. Open the video.▶Lock & unlock0:19 · LAAS guideLift and rotate the handle until it clicks. The locking bar closes through the wheel.To unlock, stand beside the bike, open LAAS and tap Unlock.Check that the locking bar is fully open before riding.Something in the way? Do not force the handle. Move the wheel so the spoke is clear of the locking bar, then try again.The lock is stuckTALK TO USYou want thebike open.Tell us what’s happening. We’ll start there.+45 31 33 82 13support@laaslocks.com57-day trialKeep You Moving",
-    "url": "/help/locking/"
-  },
-  {
-    "title": "Lend your bike.",
-    "text": "Invitations, access levels, and how to remove access.",
-    "keywords": "Help & supportHELP & SUPPORTLend your bike.Invitations, access levels, and how to remove access.INVITE SOMEONESend a link.Your browser cannot play this video. Open the video.▶Share access0:42 · LAAS guideOpen the lock’s sharing controls in the LAAS app.Choose Owner or Guest access and add a note to identify the invitation.Send the invitation link in a message.The recipient opens the link and accepts it in LAAS. They do not have to create an account.An invitation can be accepted once. It is not a one-use key: the person can keep unlocking until their access is removed.CHOOSE ACCESSOwner or Guest.GuestCan unlock the bike.OwnerCan unlock and manage access. All owners are equal, including the ability to remove other owners.MANAGE ACCESSTake it back.If the link has not been accepted, revoke the invitation. If the person has joined, open the access list, select their name and tap the trash icon.Removing access does not require getting a physical key back.TALK TO USYou want thebike open.Tell us what’s happening. We’ll start there.+45 31 33 82 13support@laaslocks.com57-day trialKeep You Moving",
-    "url": "/help/sharing/"
-  },
-  {
-    "title": "Battery & charging.",
-    "text": "USB-C power, the charging light, and what to do when the battery runs low.",
-    "keywords": "Help & supportHELP & SUPPORTBattery &charging.USB-C power, the charging light, and what to do when the battery runs low.USB-C CHARGINGLeave it onthe bike.Your browser cannot play this video. Open the video.▶Charge your lock0:21 · LAAS guideLift the rubber cover over the USB-C port.Connect a USB-C charger, laptop or power bank. A phone can also supply power if it supports USB-C power output.The LED lights up while charging and switches off when the battery is full.Unplug the cable and close the rubber cover.Wait for the LED to switch off. The battery percentage in the app may show full before charging is finished.A charge lasts roughly six months with normal use. Check its battery level in LAAS; the app also warns you when power is low.LOW BATTERYStill get it open.The app warns you before the battery runs low. If you need power now, connect a USB-C power bank. You can unlock while charging.Do not charge the lock below 2°C. Let it warm up first.TALK TO USYou want thebike open.Tell us what’s happening. We’ll start there.+45 31 33 82 13support@laaslocks.com57-day trialKeep You Moving",
-    "url": "/help/charging/"
-  },
-  {
-    "title": "Apple Find My.",
-    "text": "Set it up, locate your bike, and understand the button functions.",
-    "keywords": "Help & support HELP & SUPPORT Apple Find My. Set it up, locate your bike, and understand the button functions. SETUP Add to Find My. This happens in Apple Find My, separately from the LAAS app. Using Android? An older compatible iPad works too. Set up Apple Find My and check your bike’s location on the iPad. Keep using Android to lock, unlock and share. To use an iPad, you’ll need iPadOS 14.5 or later and an Apple Account. Apple’s setup requirements ↗ Your browser cannot play this video. Open the video . ▶ Add to Apple Find My 0:51 · LAAS guide Locate the button on the side of your lock and press it three times. The LED starts blinking. Pairing mode stays active for ten minutes. Open Apple Find My on your iPhone or iPad. Go to Items, tap +, then Add Other Item. Select Ring-Lock when it appears, tap Connect, and follow the on-screen steps. FIND YOUR BIKE Open Items. Select your Ring-Lock to see its location and when it was last updated. Nearby participating Apple devices help update that location; this is not a continuous live GPS feed. If the bike is missing, you can enable Lost Mode. LAAS does not see your Find My location. BUTTON FUNCTIONS A few useful presses. Look up the serial number + Press the button four times quickly. The LED flashes with each press, then repeats a blink-blink-pause pattern six times. Open Find My to see the serial number. Disable Find My tracking + Press and hold the button for ten seconds. Reset Find My + Press the button five times quickly. The LED flashes rapidly for five seconds, then stays solid for two seconds. If unpaired, the lock then enters pairing mode. If you are transferring ownership or cannot reconnect, contact LAAS for help. TALK TO US You want the bike open. Tell us what’s happening. We’ll start there. +45 31 33 82 13 support@laaslocks.com 57-day trial Keep You Moving",
-    "url": "/help/find-my/"
-  },
-  {
-    "title": "My lock won’t open.",
-    "text": "Check the power, restart the app, check for an obstruction, then call LAAS Support.",
-    "keywords": "Help & support Try this. Press the button. No light? Plug it in and charge it. The battery might be empty. ▶ Show me Force close the LAAS app. Reopen it and try unlocking again. Show me iPhone ▶ Watch · 0:18 Swipe up from the bottom of the screen and pause. Find LAAS, then swipe its preview up and off the screen. Open LAAS again and try unlocking. Have a Home button? Double-click it to see your open apps. Apple’s instructions ↗ Android ▶ Watch · 0:24 Open Settings → Apps → See all apps → LAAS. Tap Force stop and confirm. Open LAAS again and try unlocking. Menu names can vary between Android phones. Google’s instructions ↗ Illustrated demonstrations. Check that nothing is blocking the lock, such as a wheel spoke. Call LAAS Support: +45 31 33 82 13 Can’t reach us? Keep it moving. We cover a shared bike, public transport or another reasonable option, up to €30. If we have local service, we’ll take care of removing the old lock and installing a new one. If we don’t, we’ll cover up to €30 for removal and installation of the new lock we will send you. For two years from purchase. What isn’t covered? Low battery, phone problems, or anything else unrelated to a failure of your LAAS lock. How do I claim my expenses? Contact Support and send us your receipts. Email your receipts to support@laaslocks.com → All help & guides →",
-    "url": "/help/troubleshooting/"
-  },
-  {
-    "title": "Do I need an account?",
-    "text": "No. Signing in with Google or Apple makes it easier to regain access if you lose your phone.",
-    "keywords": "Getting started",
-    "url": "/faq/?q=Do%20I%20need%20an%20account%3F#do-i-need-an-account"
-  },
-  {
-    "title": "Do I need to pair it in Bluetooth settings?",
-    "text": "No. Add your lock in the LAAS app. It will never appear in your phone’s Bluetooth settings.",
-    "keywords": "Getting started",
-    "url": "/faq/?q=Do%20I%20need%20to%20pair%20it%20in%20Bluetooth%20settings%3F#do-i-need-to-pair-it-in-bluetooth-settings"
-  },
-  {
-    "title": "What comes in the box?",
-    "text": "LAAS Ring-Lock, mounting screws, manual on the back of the box, insurance certificate and return shipping label.",
-    "keywords": "Getting started",
-    "url": "/faq/?q=What%20comes%20in%20the%20box%3F#what-comes-in-the-box"
-  },
-  {
-    "title": "What if my bike has no mounting holes?",
-    "text": "Use Flex-Mount. It is an optional accessory for frames without ring-lock mounting holes.",
-    "keywords": "Fitting",
-    "url": "/faq/?q=What%20if%20my%20bike%20has%20no%20mounting%20holes%3F#what-if-my-bike-has-no-mounting-holes"
-  },
-  {
-    "title": "Which bikes does it fit?",
-    "text": "Most city, commuter, hybrid, electric, cargo and family bikes. It is not designed for fat bikes. Try it for 57 days; if it does not fit, send it back.",
-    "keywords": "Fitting",
-    "url": "/faq/?q=Which%20bikes%20does%20it%20fit%3F#which-bikes-does-it-fit"
-  },
-  {
-    "title": "What if it doesn’t fit my bike?",
-    "text": "Send it back using the return shipping label in the box. 57 Days to Fall in Love If you’re not obsessed by then, you’ll get your money back. Full terms →",
-    "keywords": "Fitting",
-    "url": "/faq/?q=What%20if%20it%20doesn%E2%80%99t%20fit%20my%20bike%3F#what-if-it-doesn-t-fit-my-bike"
-  },
-  {
-    "title": "Do I lock it with the app?",
-    "text": "No. Lock it by hand. Use the LAAS app to unlock it over Bluetooth.",
-    "keywords": "Everyday use",
-    "url": "/faq/?q=Do%20I%20lock%20it%20with%20the%20app%3F#do-i-lock-it-with-the-app"
-  },
-  {
-    "title": "Can I unlock from far away?",
-    "text": "Unlocking uses Bluetooth, so you need to be within approximately 10 metres of your bike.",
-    "keywords": "Everyday use",
-    "url": "/faq/?q=Can%20I%20unlock%20from%20far%20away%3F#can-i-unlock-from-far-away"
-  },
-  {
-    "title": "What if the shackle is obstructed?",
-    "text": "Check that nothing is obstructing the shackle, such as a wheel spoke.",
-    "keywords": "Everyday use",
-    "url": "/faq/?q=What%20if%20the%20shackle%20is%20obstructed%3F#what-if-the-shackle-is-obstructed"
-  },
-  {
-    "title": "How do I lend someone my bike?",
-    "text": "Choose Owner or Guest access in the LAAS app and send an invitation link. The other person opens the link to accept.",
-    "keywords": "Sharing",
-    "url": "/faq/?q=How%20do%20I%20lend%20someone%20my%20bike%3F#how-do-i-lend-someone-my-bike"
-  },
-  {
-    "title": "Can an invitation link be used twice?",
-    "text": "No. Each invitation can be accepted once. That does not limit the person to one unlock; their access continues until removed.",
-    "keywords": "Sharing",
-    "url": "/faq/?q=Can%20an%20invitation%20link%20be%20used%20twice%3F#can-an-invitation-link-be-used-twice"
-  },
-  {
-    "title": "Can I cancel an invitation?",
-    "text": "Yes. Revoke an unused invitation link in the app. If it has already been accepted, remove that person’s access instead.",
-    "keywords": "Sharing",
-    "url": "/faq/?q=Can%20I%20cancel%20an%20invitation%3F#can-i-cancel-an-invitation"
-  },
-  {
-    "title": "What is the difference between Owner and Guest?",
-    "text": "A Guest can unlock. An Owner can also manage the lock and access, including removing other owners. All owners are equal.",
-    "keywords": "Sharing",
-    "url": "/faq/?q=What%20is%20the%20difference%20between%20Owner%20and%20Guest%3F#what-is-the-difference-between-owner-and-guest"
-  },
-  {
-    "title": "Does a guest need an account?",
-    "text": "No. They can accept access without creating an account.",
-    "keywords": "Sharing",
-    "url": "/faq/?q=Does%20a%20guest%20need%20an%20account%3F#does-a-guest-need-an-account"
-  },
-  {
-    "title": "How often does it need charging?",
-    "text": "Roughly every six months.",
-    "keywords": "Battery",
-    "url": "/faq/?q=How%20often%20does%20it%20need%20charging%3F#how-often-does-it-need-charging"
-  },
-  {
-    "title": "How do I charge it?",
-    "text": "Lift the rubber cover and plug a USB-C cable into the lock. It can stay on the bike while charging. ▶ Watch the charging animation",
-    "keywords": "Battery",
-    "url": "/faq/?q=How%20do%20I%20charge%20it%3F#how-do-i-charge-it"
-  },
-  {
-    "title": "Can I unlock while charging?",
-    "text": "Yes. Connect a USB-C power bank and unlock through the app.",
-    "keywords": "Battery",
-    "url": "/faq/?q=Can%20I%20unlock%20while%20charging%3F#can-i-unlock-while-charging"
-  },
-  {
-    "title": "Can I charge it from my phone?",
-    "text": "Yes, if your phone can supply power through USB-C. That includes USB-C Android phones with power output and iPhone 15 or newer.",
-    "keywords": "Battery",
-    "url": "/faq/?q=Can%20I%20charge%20it%20from%20my%20phone%3F#can-i-charge-it-from-my-phone"
-  },
-  {
-    "title": "Can I charge my phone from the lock?",
-    "text": "No. LAAS is not a festival power bank.",
-    "keywords": "Battery",
-    "url": "/faq/?q=Can%20I%20charge%20my%20phone%20from%20the%20lock%3F#can-i-charge-my-phone-from-the-lock"
-  },
-  {
-    "title": "Will the app warn me about a low battery?",
-    "text": "Yes. The app provides low-battery notifications.",
-    "keywords": "Battery",
-    "url": "/faq/?q=Will%20the%20app%20warn%20me%20about%20a%20low%20battery%3F#will-the-app-warn-me-about-a-low-battery"
-  },
-  {
-    "title": "What else does the app show?",
-    "text": "Your locks, their battery levels, shared access and available firmware updates.",
-    "keywords": "The app",
-    "url": "/faq/?q=What%20else%20does%20the%20app%20show%3F#what-else-does-the-app-show"
-  },
-  {
-    "title": "How do I update the lock?",
-    "text": "When a firmware update is available, the app notifies you and guides you through it.",
-    "keywords": "The app",
-    "url": "/faq/?q=How%20do%20I%20update%20the%20lock%3F#how-do-i-update-the-lock"
-  },
-  {
-    "title": "Where do I download the app?",
-    "text": "Download on the App Store Get it on Google Play",
-    "keywords": "The app",
-    "url": "/faq/?q=Where%20do%20I%20download%20the%20app%3F#where-do-i-download-the-app"
-  },
-  {
-    "title": "How safe is Ring-Lock?",
-    "text": "Ring-Lock has passed Denmark’s strict Varefakta insurance tests. It is insurance approved in Denmark.",
-    "keywords": "Everyday use",
-    "url": "/faq/?q=How%20safe%20is%20Ring-Lock%3F#how-safe-is-ring-lock"
-  },
-  {
-    "title": "Does it work on Android?",
-    "text": "Yes. Use LAAS on Android to unlock and share your bike. The Android app is available on Google Play. Apple Find My requires an Apple device.",
-    "keywords": "The app",
-    "url": "/faq/?q=Does%20it%20work%20on%20Android%3F#does-it-work-on-android"
-  },
-  {
-    "title": "What if my phone is lost or replaced?",
-    "text": "Signed in with Apple or Google? Install the LAAS app on another phone. Sign in with the same account. Another Owner has access? Have them invite your new phone — or a phone you borrow. Neither of those works? Contact Support. If you’re the only Owner and weren’t signed in, we’ll verify you using information only you would know. There’s then a six-hour security delay before access is reset. Call +45 31 33 82 13 support@laaslocks.com",
-    "keywords": "The app",
-    "url": "/faq/?q=What%20if%20my%20phone%20is%20lost%20or%20replaced%3F#what-if-my-phone-is-lost-or-replaced"
-  },
-  {
-    "title": "Do I find and unlock the bike in the same app?",
-    "text": "No. Locate the bike in Apple Find My. Unlock it in the LAAS app.",
-    "keywords": "Find My",
-    "url": "/faq/?q=Do%20I%20find%20and%20unlock%20the%20bike%20in%20the%20same%20app%3F#do-i-find-and-unlock-the-bike-in-the-same-app"
-  },
-  {
-    "title": "Is Find My live GPS?",
-    "text": "No. Nearby participating Apple devices help update the location. It is not a continuous live GPS feed.",
-    "keywords": "Find My",
-    "url": "/faq/?q=Is%20Find%20My%20live%20GPS%3F#is-find-my-live-gps"
-  },
-  {
-    "title": "Can LAAS see where my bike is?",
-    "text": "No. Your bike’s location is handled through Apple Find My with end-to-end encryption. Neither LAAS nor Apple can see it.",
-    "keywords": "Find My",
-    "url": "/faq/?q=Can%20LAAS%20see%20where%20my%20bike%20is%3F#can-laas-see-where-my-bike-is"
-  },
-  {
-    "title": "What if my bike is missing?",
-    "text": "Check Apple Find My. Open the Apple Find My app , tap Items and select your Ring-Lock. Check the location on the map and the time it was last seen. On Android? Use the iPhone or iPad linked to your lock in Find My. It might have been moved. Look around the place you parked: the next bike rack, the other side of the station, or a nearby parking area. It’s worth checking even if Find My has no new location. No new location? In your Ring-Lock’s details in Find My, turn on Notify When Found . You’ll get a notification when it’s located again. Still missing? Mark it as lost in Find My and add a phone number or email where someone who finds it can reach you. Depending on your version, look for Lost Mode or Show Contact Info .",
-    "keywords": "Find My",
-    "url": "/faq/?q=What%20if%20my%20bike%20is%20missing%3F#what-if-my-bike-is-missing"
-  },
-  {
-    "title": "Can I try it before committing?",
-    "text": "57 Days to Fall in Love If you’re not obsessed by then, you’ll get your money back. Full terms →",
-    "keywords": "Returns & support",
-    "url": "/faq/?q=Can%20I%20try%20it%20before%20committing%3F#can-i-try-it-before-committing"
-  },
-  {
-    "title": "What is the Keep You Moving warranty?",
-    "text": "If our lock is the problem, it’s our job to fix it. We cover a shared bike, public transport or another reasonable option, up to €30. If we have local service, we’ll take care of removing the old lock and installing a new one. If we don’t, we’ll cover up to €30 for removal and installation of the new lock we will send you. For two years from purchase. What isn’t covered? Low battery, phone problems, or anything else unrelated to a failure of your LAAS lock. How do I claim my expenses? Contact Support and send us your receipts. Email your receipts to support@laaslocks.com → Full warranty terms →",
-    "keywords": "Returns & support",
-    "url": "/faq/?q=What%20is%20the%20Keep%20You%20Moving%20warranty%3F#what-is-the-keep-you-moving-warranty"
-  },
-  {
-    "title": "How long is the warranty?",
-    "text": "Two years.",
-    "keywords": "Returns & support",
-    "url": "/faq/?q=How%20long%20is%20the%20warranty%3F#how-long-is-the-warranty"
-  },
-  {
-    "title": "Can I speak to someone?",
-    "text": "Yes. We’re always happy to speak to you, whatever your question. +45 31 33 82 13 support@laaslocks.com",
-    "keywords": "Returns & support",
-    "url": "/faq/?q=Can%20I%20speak%20to%20someone%3F#can-i-speak-to-someone"
-  },
-  {
-    "title": "What tools do I need for frame mounting?",
-    "text": "The supplied M5 screws and a 4 mm hex key. The hex key is not included.",
-    "keywords": "Fitting",
-    "url": "/faq/?q=What%20tools%20do%20I%20need%20for%20frame%20mounting%3F#what-tools-do-i-need-for-frame-mounting"
-  },
-  {
-    "title": "What tools do I need for Flex-Mount?",
-    "text": "A 4 mm hex key, a flathead screwdriver and pliers or a knife to trim the clamp strips.",
-    "keywords": "Fitting",
-    "url": "/faq/?q=What%20tools%20do%20I%20need%20for%20Flex-Mount%3F#what-tools-do-i-need-for-flex-mount"
-  },
-  {
-    "title": "How do I know charging is finished?",
-    "text": "The LED on the lock switches off. The app battery percentage may be inaccurate during charging.",
-    "keywords": "Battery",
-    "url": "/faq/?q=How%20do%20I%20know%20charging%20is%20finished%3F#how-do-i-know-charging-is-finished"
-  },
-  {
-    "title": "Can I charge the lock in freezing weather?",
-    "text": "Do not charge below 2°C. Let the lock warm up first.",
-    "keywords": "Battery",
-    "url": "/faq/?q=Can%20I%20charge%20the%20lock%20in%20freezing%20weather%3F#can-i-charge-the-lock-in-freezing-weather"
-  },
-  {
-    "title": "How do I put it in Find My pairing mode?",
-    "text": "Press the button on the side of the lock three times. The LED blinks and pairing mode stays active for ten minutes.",
-    "keywords": "Find My",
-    "url": "/faq/?q=How%20do%20I%20put%20it%20in%20Find%20My%20pairing%20mode%3F#how-do-i-put-it-in-find-my-pairing-mode"
-  },
-  {
-    "title": "My lock won’t open. What should I do?",
-    "text": "Press the button. No light? Plug it in and charge it. The battery might be empty. ▶ Show me Force close the LAAS app. Reopen it and try unlocking again. Show me iPhone ▶ Watch · 0:18 Swipe up from the bottom of the screen and pause. Find LAAS, then swipe its preview up and off the screen. Open LAAS again and try unlocking. Have a Home button? Double-click it to see your open apps. Apple’s instructions ↗ Android ▶ Watch · 0:24 Open Settings → Apps → See all apps → LAAS. Tap Force stop and confirm. Open LAAS again and try unlocking. Menu names can vary between Android phones. Google’s instructions ↗ Illustrated demonstrations. Check that nothing is blocking the lock, such as a wheel spoke. ▶ Show me Call LAAS Support: +45 31 33 82 13 Can’t reach us? Keep it moving. Keep You Moving warranty We cover a shared bike, public transport or another reasonable option, up to €30. If we have local service, we’ll take care of removing the old lock and installing a new one. If we don’t, we’ll cover up to €30 for removal and installation of the new lock we will send you. For two years from purchase. What isn’t covered? Low battery, phone problems, or anything else unrelated to a failure of your LAAS lock. How do I claim my expenses? Contact Support and send us your receipts. Email your receipts to support@laaslocks.com →",
-    "keywords": "Everyday use",
-    "url": "/faq/?q=My%20lock%20won%E2%80%99t%20open.%20What%20should%20I%20do%3F#my-lock-won-t-open-what-should-i-do"
-  }
+ {
+  "title": "Manual & guides",
+  "text": "Setup, everyday use and the full manual.",
+  "url": "/guides/",
+  "keywords": "manual guide setup instructions download pair mount charging"
+ },
+ {
+  "title": "Download the LAAS app",
+  "text": "iPhone and Android downloads. Pair your app and lock before mounting.",
+  "url": "/guides/#download",
+  "keywords": "download install app start setup android iphone"
+ },
+ {
+  "title": "I lost my phone.",
+  "text": "Get access back on a new phone or a phone you borrow.",
+  "keywords": "phone lost replaced stolen recovery owner access",
+  "url": "/help/lost-phone/"
+ },
+ {
+  "title": "My bike is missing.",
+  "text": "Find your bike with Apple Find My.",
+  "keywords": "missing lost stolen bike location find my",
+  "url": "/help/find-my/#locating"
+ },
+ {
+  "title": "Mount your lock.",
+  "text": "Does your bike have mounting holes? Choose the guide for your bike.",
+  "keywords": "mount mounting holes frame screws Flex-Mount installation",
+  "url": "/help/installation/"
+ },
+ {
+  "title": "Pair your lock and phone.",
+  "text": "Add New Lock. Enter the serial number. Name your lock.",
+  "keywords": "pair setup new lock serial number welcome app Bluetooth",
+  "url": "/help/app/"
+ },
+ {
+  "title": "Lock & unlock.",
+  "text": "Close it by hand. Open it with the LAAS app.",
+  "keywords": "Help & supportHELP & SUPPORTLock &unlock.Close it by hand. Open it with the LAAS app.EVERYDAY USELock by hand.Unlock with a tap.Your browser cannot play this video. Open the video.▶Lock & unlock0:19 · LAAS guideLift and rotate the handle until it clicks. The locking bar closes through the wheel.To unlock, stand beside the bike, open LAAS and tap Unlock.Check that the locking bar is fully open before riding.Something in the way? Do not force the handle. Move the wheel so the spoke is clear of the locking bar, then try again.The lock is stuckTALK TO USYou want thebike open.Tell us what’s happening. We’ll start there.+45 31 33 82 13support@laaslocks.com57-day trialKeep You Moving",
+  "url": "/help/locking/"
+ },
+ {
+  "title": "Lend your bike.",
+  "text": "Invitations, access levels, and how to remove access.",
+  "keywords": "Help & supportHELP & SUPPORTLend your bike.Invitations, access levels, and how to remove access.INVITE SOMEONESend a link.Your browser cannot play this video. Open the video.▶Share access0:42 · LAAS guideOpen the lock’s sharing controls in the LAAS app.Choose Owner or Guest access and add a note to identify the invitation.Send the invitation link in a message.The recipient opens the link and accepts it in LAAS. They do not have to create an account.An invitation can be accepted once. It is not a one-use key: the person can keep unlocking until their access is removed.CHOOSE ACCESSOwner or Guest.GuestCan unlock the bike.OwnerCan unlock and manage access. All owners are equal, including the ability to remove other owners.MANAGE ACCESSTake it back.If the link has not been accepted, revoke the invitation. If the person has joined, open the access list, select their name and tap the trash icon.Removing access does not require getting a physical key back.TALK TO USYou want thebike open.Tell us what’s happening. We’ll start there.+45 31 33 82 13support@laaslocks.com57-day trialKeep You Moving",
+  "url": "/help/sharing/"
+ },
+ {
+  "title": "Battery & charging.",
+  "text": "USB-C power, the charging light, and what to do when the battery runs low.",
+  "keywords": "Help & supportHELP & SUPPORTBattery &charging.USB-C power, the charging light, and what to do when the battery runs low.USB-C CHARGINGLeave it onthe bike.Your browser cannot play this video. Open the video.▶Charge your lock0:21 · LAAS guideLift the rubber cover over the USB-C port.Connect a USB-C charger, laptop or power bank. A phone can also supply power if it supports USB-C power output.The LED lights up while charging and switches off when the battery is full.Unplug the cable and close the rubber cover.Wait for the LED to switch off. The battery percentage in the app may show full before charging is finished.A charge lasts roughly six months with normal use. Check its battery level in LAAS; the app also warns you when power is low.LOW BATTERYStill get it open.The app warns you before the battery runs low. If you need power now, connect a USB-C power bank. You can unlock while charging.Do not charge the lock below 2°C. Let it warm up first.TALK TO USYou want thebike open.Tell us what’s happening. We’ll start there.+45 31 33 82 13support@laaslocks.com57-day trialKeep You Moving",
+  "url": "/help/charging/"
+ },
+ {
+  "title": "Apple Find My.",
+  "text": "Set it up, locate your bike, and understand the button functions.",
+  "keywords": "Help & support HELP & SUPPORT Apple Find My. Set it up, locate your bike, and understand the button functions. SETUP Add to Find My. This happens in Apple Find My, separately from the LAAS app. Using Android? An older compatible iPad works too. Set up Apple Find My and check your bike’s location on the iPad. Keep using Android to lock, unlock and share. To use an iPad, you’ll need iPadOS 14.5 or later and an Apple Account. Apple’s setup requirements ↗ Your browser cannot play this video. Open the video . ▶ Add to Apple Find My 0:51 · LAAS guide Locate the button on the side of your lock and press it three times. The LED starts blinking. Pairing mode stays active for ten minutes. Open Apple Find My on your iPhone or iPad. Go to Items, tap +, then Add Other Item. Select Ring-Lock when it appears, tap Connect, and follow the on-screen steps. FIND YOUR BIKE Open Items. Select your Ring-Lock to see its location and when it was last updated. Nearby participating Apple devices help update that location; this is not a continuous live GPS feed. If the bike is missing, you can enable Lost Mode. LAAS does not see your Find My location. BUTTON FUNCTIONS A few useful presses. Look up the serial number + Press the button four times quickly. The LED flashes with each press, then repeats a blink-blink-pause pattern six times. Open Find My to see the serial number. Disable Find My tracking + Press and hold the button for ten seconds. Reset Find My + Press the button five times quickly. The LED flashes rapidly for five seconds, then stays solid for two seconds. If unpaired, the lock then enters pairing mode. If you are transferring ownership or cannot reconnect, contact LAAS for help. TALK TO US You want the bike open. Tell us what’s happening. We’ll start there. +45 31 33 82 13 support@laaslocks.com 57-day trial Keep You Moving",
+  "url": "/help/find-my/"
+ },
+ {
+  "title": "My lock won’t open.",
+  "text": "Check the power, restart the app, check for an obstruction, then call LAAS Support.",
+  "keywords": "Help & support Try this. Press the button. No light? Plug it in and charge it. The battery might be empty. ▶ Show me Force close the LAAS app. Reopen it and try unlocking again. Show me iPhone ▶ Watch · 0:18 Swipe up from the bottom of the screen and pause. Find LAAS, then swipe its preview up and off the screen. Open LAAS again and try unlocking. Have a Home button? Double-click it to see your open apps. Apple’s instructions ↗ Android ▶ Watch · 0:24 Open Settings → Apps → See all apps → LAAS. Tap Force stop and confirm. Open LAAS again and try unlocking. Menu names can vary between Android phones. Google’s instructions ↗ Illustrated demonstrations. Check that nothing is blocking the lock, such as a wheel spoke. Call LAAS Support: +45 31 33 82 13 Can’t reach us? Keep it moving. We cover a shared bike, public transport or another reasonable option, up to €30. If we have local service, we’ll take care of removing the old lock and installing a new one. If we don’t, we’ll cover up to €30 for removal and installation of the new lock we will send you. For two years from purchase. What isn’t covered? Low battery, phone problems, or anything else unrelated to a failure of your LAAS lock. How do I claim my expenses? Contact Support and send us your receipts. Email your receipts to support@laaslocks.com → All help & guides →",
+  "url": "/help/troubleshooting/"
+ },
+ {
+  "title": "Do I need an account?",
+  "text": "No. Signing in with Google or Apple makes it easier to regain access if you lose your phone.",
+  "keywords": "Getting started",
+  "url": "/faq.html#start/0"
+ },
+ {
+  "title": "Do I need to pair it in Bluetooth settings?",
+  "text": "No. Add your lock in the LAAS app. It will never appear in your phone’s Bluetooth settings.",
+  "keywords": "Getting started",
+  "url": "/faq.html#start/1"
+ },
+ {
+  "title": "What comes in the box?",
+  "text": "LAAS Ring-Lock, mounting screws, manual on the back of the box, insurance certificate and return shipping label.",
+  "keywords": "Getting started",
+  "url": "/faq.html#start/2"
+ },
+ {
+  "title": "What if my bike has no mounting holes?",
+  "text": "Use Flex-Mount. It is an optional accessory for frames without ring-lock mounting holes.",
+  "keywords": "Fitting",
+  "url": "/faq.html#fitting/0"
+ },
+ {
+  "title": "Which bikes does it fit?",
+  "text": "Most city, commuter, hybrid, electric, cargo and family bikes. It is not designed for fat bikes. Try it for 57 days; if it does not fit, send it back.",
+  "keywords": "Fitting",
+  "url": "/faq.html#fitting/1"
+ },
+ {
+  "title": "What if it doesn’t fit my bike?",
+  "text": "Send it back using the return shipping label in the box. 57 Days to Fall in Love If you’re not obsessed by then, you’ll get your money back. Full terms →",
+  "keywords": "Fitting",
+  "url": "/faq.html#fitting/2"
+ },
+ {
+  "title": "Do I lock it with the app?",
+  "text": "No. Lock it by hand. Use the LAAS app to unlock it over Bluetooth.",
+  "keywords": "Everyday use",
+  "url": "/faq.html#everyday/0"
+ },
+ {
+  "title": "Can I unlock from far away?",
+  "text": "Unlocking uses Bluetooth, so you need to be within approximately 10 metres of your bike.",
+  "keywords": "Everyday use",
+  "url": "/faq.html#everyday/1"
+ },
+ {
+  "title": "What if the shackle is obstructed?",
+  "text": "Check that nothing is obstructing the shackle, such as a wheel spoke.",
+  "keywords": "Everyday use",
+  "url": "/faq.html#everyday/2"
+ },
+ {
+  "title": "How do I lend someone my bike?",
+  "text": "Choose Owner or Guest access in the LAAS app and send an invitation link. The other person opens the link to accept.",
+  "keywords": "Sharing",
+  "url": "/faq.html#sharing/0"
+ },
+ {
+  "title": "Can an invitation link be used twice?",
+  "text": "No. Each invitation can be accepted once. That does not limit the person to one unlock; their access continues until removed.",
+  "keywords": "Sharing",
+  "url": "/faq.html#sharing/1"
+ },
+ {
+  "title": "Can I cancel an invitation?",
+  "text": "Yes. Revoke an unused invitation link in the app. If it has already been accepted, remove that person’s access instead.",
+  "keywords": "Sharing",
+  "url": "/faq.html#sharing/2"
+ },
+ {
+  "title": "What is the difference between Owner and Guest?",
+  "text": "A Guest can unlock. An Owner can also manage the lock and access, including removing other owners. All owners are equal.",
+  "keywords": "Sharing",
+  "url": "/faq.html#sharing/3"
+ },
+ {
+  "title": "Does a guest need an account?",
+  "text": "No. They can accept access without creating an account.",
+  "keywords": "Sharing",
+  "url": "/faq.html#sharing/4"
+ },
+ {
+  "title": "How often does it need charging?",
+  "text": "Roughly every six months.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/0"
+ },
+ {
+  "title": "How do I charge it?",
+  "text": "Lift the rubber cover and plug a USB-C cable into the lock. It can stay on the bike while charging. ▶ Watch the charging animation",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/1"
+ },
+ {
+  "title": "Can I unlock while charging?",
+  "text": "Yes. Connect a USB-C power bank and unlock through the app.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/2"
+ },
+ {
+  "title": "Can I charge it from my phone?",
+  "text": "Yes, if your phone can supply power through USB-C. That includes USB-C Android phones with power output and iPhone 15 or newer.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/3"
+ },
+ {
+  "title": "Can I charge my phone from the lock?",
+  "text": "No. LAAS is not a festival power bank.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/4"
+ },
+ {
+  "title": "Will the app warn me about a low battery?",
+  "text": "Yes. The app provides low-battery notifications.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/5"
+ },
+ {
+  "title": "What else does the app show?",
+  "text": "Your locks, their battery levels, shared access and available firmware updates.",
+  "keywords": "The app",
+  "url": "/faq.html#app/0"
+ },
+ {
+  "title": "How do I update the lock?",
+  "text": "When a firmware update is available, the app notifies you and guides you through it.",
+  "keywords": "The app",
+  "url": "/faq.html#app/1"
+ },
+ {
+  "title": "Where do I download the app?",
+  "text": "Download on the App Store Get it on Google Play",
+  "keywords": "The app",
+  "url": "/faq.html#app/2"
+ },
+ {
+  "title": "How safe is Ring-Lock?",
+  "text": "Ring-Lock has passed Denmark’s strict Varefakta insurance tests. It is insurance approved in Denmark.",
+  "keywords": "Everyday use",
+  "url": "/faq.html#everyday/3"
+ },
+ {
+  "title": "Does it work on Android?",
+  "text": "Yes. Use LAAS on Android to unlock and share your bike. The Android app is available on Google Play. Apple Find My requires an Apple device.",
+  "keywords": "The app",
+  "url": "/faq.html#app/3"
+ },
+ {
+  "title": "What if my phone is lost or replaced?",
+  "text": "Signed in with Apple or Google? Install the LAAS app on another phone. Sign in with the same account. Another Owner has access? Have them invite your new phone — or a phone you borrow. Neither of those works? Contact Support. If you’re the only Owner and weren’t signed in, we’ll verify you using information only you would know. There’s then a six-hour security delay before access is reset. Call +45 31 33 82 13 support@laaslocks.com",
+  "keywords": "The app",
+  "url": "/faq.html#app/4"
+ },
+ {
+  "title": "Do I find and unlock the bike in the same app?",
+  "text": "No. Locate the bike in Apple Find My. Unlock it in the LAAS app.",
+  "keywords": "Find My",
+  "url": "/faq.html#findmy/0"
+ },
+ {
+  "title": "Is Find My live GPS?",
+  "text": "No. Nearby participating Apple devices help update the location. It is not a continuous live GPS feed.",
+  "keywords": "Find My",
+  "url": "/faq.html#findmy/1"
+ },
+ {
+  "title": "Can LAAS see where my bike is?",
+  "text": "No. Your bike’s location is handled through Apple Find My with end-to-end encryption. Neither LAAS nor Apple can see it.",
+  "keywords": "Find My",
+  "url": "/faq.html#findmy/2"
+ },
+ {
+  "title": "What if my bike is missing?",
+  "text": "Check Apple Find My. Open the Apple Find My app , tap Items and select your Ring-Lock. Check the location on the map and the time it was last seen. On Android? Use the iPhone or iPad linked to your lock in Find My. It might have been moved. Look around the place you parked: the next bike rack, the other side of the station, or a nearby parking area. It’s worth checking even if Find My has no new location. No new location? In your Ring-Lock’s details in Find My, turn on Notify When Found . You’ll get a notification when it’s located again. Still missing? Mark it as lost in Find My and add a phone number or email where someone who finds it can reach you. Depending on your version, look for Lost Mode or Show Contact Info .",
+  "keywords": "Find My",
+  "url": "/faq.html#findmy/3"
+ },
+ {
+  "title": "Can I try it before committing?",
+  "text": "57 Days to Fall in Love If you’re not obsessed by then, you’ll get your money back. Full terms →",
+  "keywords": "Returns & support",
+  "url": "/faq.html#support/0"
+ },
+ {
+  "title": "What is the Keep You Moving warranty?",
+  "text": "If our lock is the problem, it’s our job to fix it. We cover a shared bike, public transport or another reasonable option, up to €30. If we have local service, we’ll take care of removing the old lock and installing a new one. If we don’t, we’ll cover up to €30 for removal and installation of the new lock we will send you. For two years from purchase. What isn’t covered? Low battery, phone problems, or anything else unrelated to a failure of your LAAS lock. How do I claim my expenses? Contact Support and send us your receipts. Email your receipts to support@laaslocks.com → Full warranty terms →",
+  "keywords": "Returns & support",
+  "url": "/faq.html#support/1"
+ },
+ {
+  "title": "How long is the warranty?",
+  "text": "Two years.",
+  "keywords": "Returns & support",
+  "url": "/faq.html#support/2"
+ },
+ {
+  "title": "Can I speak to someone?",
+  "text": "Yes. We’re always happy to speak to you, whatever your question. +45 31 33 82 13 support@laaslocks.com",
+  "keywords": "Returns & support",
+  "url": "/faq.html#support/3"
+ },
+ {
+  "title": "What tools do I need for frame mounting?",
+  "text": "The supplied M5 screws and a 4 mm hex key. The hex key is not included.",
+  "keywords": "Fitting",
+  "url": "/faq.html#fitting/3"
+ },
+ {
+  "title": "What tools do I need for Flex-Mount?",
+  "text": "A 4 mm hex key, a flathead screwdriver and pliers or a knife to trim the clamp strips.",
+  "keywords": "Fitting",
+  "url": "/faq.html#fitting/4"
+ },
+ {
+  "title": "How do I know charging is finished?",
+  "text": "The LED on the lock switches off. The app battery percentage may be inaccurate during charging.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/6"
+ },
+ {
+  "title": "Can I charge the lock in freezing weather?",
+  "text": "Do not charge below 2°C. Let the lock warm up first.",
+  "keywords": "Battery",
+  "url": "/faq.html#battery/7"
+ },
+ {
+  "title": "How do I put it in Find My pairing mode?",
+  "text": "Press the button on the side of the lock three times. The LED blinks and pairing mode stays active for ten minutes.",
+  "keywords": "Find My",
+  "url": "/faq.html#findmy/4"
+ },
+ {
+  "title": "My lock won’t open. What should I do?",
+  "text": "Press the button. No light? Plug it in and charge it. The battery might be empty. ▶ Show me Force close the LAAS app. Reopen it and try unlocking again. Show me iPhone ▶ Watch · 0:18 Swipe up from the bottom of the screen and pause. Find LAAS, then swipe its preview up and off the screen. Open LAAS again and try unlocking. Have a Home button? Double-click it to see your open apps. Apple’s instructions ↗ Android ▶ Watch · 0:24 Open Settings → Apps → See all apps → LAAS. Tap Force stop and confirm. Open LAAS again and try unlocking. Menu names can vary between Android phones. Google’s instructions ↗ Illustrated demonstrations. Check that nothing is blocking the lock, such as a wheel spoke. ▶ Show me Call LAAS Support: +45 31 33 82 13 Can’t reach us? Keep it moving. Keep You Moving warranty We cover a shared bike, public transport or another reasonable option, up to €30. If we have local service, we’ll take care of removing the old lock and installing a new one. If we don’t, we’ll cover up to €30 for removal and installation of the new lock we will send you. For two years from purchase. What isn’t covered? Low battery, phone problems, or anything else unrelated to a failure of your LAAS lock. How do I claim my expenses? Contact Support and send us your receipts. Email your receipts to support@laaslocks.com →",
+  "keywords": "Everyday use",
+  "url": "/faq.html#everyday/4"
+ }
 ]

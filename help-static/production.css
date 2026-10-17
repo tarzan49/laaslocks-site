@@ -4,7 +4,7 @@
 /* A compact footer keeps short help pages focused on their instructions. */
 @media screen {
   .supporting-page .footer,
-  .help-clean #contact {
+  .help-clean footer#contact {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
@@ -53,7 +53,7 @@
 }
 @media screen and (min-width: 900px) {
   .supporting-page .footer,
-  .help-clean #contact {
+  .help-clean footer#contact {
     grid-template-columns: 160px minmax(0, 1fr) auto;
     gap: 6px 36px;
     padding: 26px var(--desktop-gutter);

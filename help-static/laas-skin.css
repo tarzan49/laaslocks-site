@@ -774,8 +774,8 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 #ls#ls { --ls-pt: 148px; --ls-px: var(--gutter); --ls-pb: clamp(72px, 8vw, 128px); }
 @media (max-width: 1100px) { #ls#ls { --ls-pt: 124px; } }
 @media (max-width: 760px) { #ls#ls { --ls-pt: 92px; --ls-pb: 64px; } }
-/* very wide screens: the info pages keep their 32 px edge */
-@media (min-width: 1600px) { #ls#ls { --ls-px: 32px; } }
+/* very wide screens: the home page's shared edge, the content capped at 1536 px and centred under the bar */
+@media (min-width: 1600px) { #ls#ls { --ls-px: max(32px, calc((100vw - 1536px) / 2)); } }
 #ls#ls main, #ls#ls.ls-guides main, #ls#ls.ls-help-videos main, #ls#ls.ls-help-animations main, #ls#ls.ls-terms main, #ls#ls.ls-privacy main, #ls#ls.ls-terms-trial main, #ls#ls.ls-pin main {
   max-width: none; width: 100%; margin: 0; padding: var(--ls-pt) var(--ls-px) var(--ls-pb);
 }

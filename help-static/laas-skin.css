@@ -618,3 +618,80 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 #ls#ls main .access-roles { margin: 16px 0 0; }
 #ls#ls main .urgent-call span { text-decoration: none; border: 0; }
 @media (max-width: 600px) { #ls#ls :where(.guide-video-dialog, .laas-animation-dialog) { border-radius: 0; } }
+
+/* ---------------------------------------------------------------- 4. design pass (18 Oct): the last gaps to the main site */
+/* the bar keeps the main site's shape on every page: help/animations' old stylesheet styles any <header>
+   (padding, a hairline, space-between) and colours every link like its text */
+#ls .nav { padding: calc(12px + env(safe-area-inset-top, 0px)) calc(var(--gutter) - 12px) 0; border: 0; justify-content: center; align-items: stretch; }
+@media (max-width: 760px) { #ls .nav { padding: calc(10px + env(safe-area-inset-top, 0px)) 10px 0; } }
+#ls .nav__buy, #ls .nav__buy:hover { color: #FFFFFF; }
+
+/* the page head always stands 28 px (phone 20 px) above the first card, as on About, FAQ and Shipping */
+#ls#ls main > .support-opening > :where(.guide-steps, .help-hub-choices) { margin-top: 28px; }
+#ls#ls main > .support-opening > .focused-intro + :where(.guide-steps, .help-hub-choices) { margin-top: 28px; }
+@media (max-width: 760px) { #ls#ls main > .support-opening > :where(.guide-steps, .help-hub-choices) { margin-top: 20px; } }
+
+/* a photo in the page head is the column's width with the main site's rounded corners (About's hero) */
+#ls#ls main .mount-hole-reference { display: block; width: 100%; max-width: none; margin: 24px 0 0; padding: 0; border: 0; border-radius: 24px; overflow: hidden; background: #DADDDC; }
+#ls#ls main .mount-hole-reference img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 49%; border-radius: 0; }
+@media (max-width: 760px) { #ls#ls main .mount-hole-reference { border-radius: 20px; } #ls#ls main .mount-hole-reference img { aspect-ratio: 4 / 3; } }
+
+/* the drawn animations: centred in their card and never bigger than a phone screen */
+#ls#ls main .laas-animation { width: 100%; max-width: 440px; margin: 20px auto 0; }
+#ls#ls main .laas-animation-controls { padding: 0; gap: 8px; }
+#ls#ls main .laas-animation-controls button { min-height: 44px; padding: 0 18px; white-space: nowrap; }
+
+/* everyday use on /guides/: the three films start on one line at the top and their titles end on one line at the bottom */
+#ls#ls main .everyday-film > [data-inline-animation] { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 12px; }
+#ls#ls main .everyday-film .laas-animation { margin: 0 auto; }
+@media (min-width: 900px) and (max-width: 1100px) { #ls#ls main .everyday-film { padding: 16px; } #ls#ls main .everyday-film .laas-animation-controls button { padding: 0 14px; } }
+
+/* the call pill: on a phone the number goes onto its own line instead of breaking the label word by word */
+#ls#ls main .urgent-call { flex-wrap: wrap; column-gap: .4em; row-gap: 2px; }
+@media (max-width: 560px) { #ls#ls main .urgent-call { padding: 12px 26px; } }
+
+/* sharing: Guest and Owner as the main site's small headings, split by dashed hairlines */
+#ls#ls main .access-roles { display: block; margin: 16px 0 0; padding: 0; border: 0; }
+#ls#ls main .access-roles > div { margin: 0; padding: 16px 0; border: 0; border-top: 1px dashed var(--line); background: none; }
+#ls#ls main .access-roles > div:last-child { padding-bottom: 0; }
+#ls#ls main .access-roles dt { margin: 0; font: 600 18px/1.25 var(--display); letter-spacing: -0.01em; color: var(--ink); }
+#ls#ls main .access-roles dd { margin: 6px 0 0; font-size: 16px; line-height: 1.6; color: var(--ink-2); }
+
+/* the search: the whole hint fits on a phone */
+@media (max-width: 560px) { #ls#ls main .support-search input { padding: 0 52px 0 18px; } }
+
+/* round 2, after the critic pass */
+/* the kicker above a page head is always the small grey label (terms and privacy styled it as their lead) */
+#ls#ls main > :where(.support-heading, .support-opening, .page-intro) > .eyebrow { margin: 0 0 10px; max-width: 100%; font: 500 12px/1.2 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* three quick guides: one column until there is room for three, and the three cards end on one line */
+@media (max-width: 899px) { #ls#ls main .animation-review-grid { grid-template-columns: minmax(0, 1fr); } }
+#ls#ls main .animation-review-grid > article { display: flex; flex-direction: column; }
+#ls#ls main .animation-review-grid > article > .laas-animation { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+#ls#ls main .animation-review-grid .animation-guide-link { align-self: flex-start; }
+
+/* illustrated steps side by side: every picture in the same Chalk frame, so a row starts and ends on one line
+   (the whole picture stays visible; phone screenshots stand in the frame as in the visual steps) */
+@media (min-width: 761px) {
+  #ls#ls main .visual-guide-steps .step-image-link img,
+  #ls#ls main .visual-guide-steps .blinking-example video { width: 100%; height: auto; max-height: none; aspect-ratio: 27 / 35; object-fit: contain; background: #ECECEA; }
+}
+#ls#ls main .setup-compatibility a { white-space: nowrap; }
+
+/* the step numbers of the visual steps: the main site's 32 px circles, all on one row, still a 44 px tap */
+#ls#ls main .manual-motion-steps { gap: 4px; }
+#ls#ls main .manual-motion-steps button { position: relative; width: 32px; height: 32px; font: 500 12px/1 var(--display); }
+#ls#ls main .manual-motion-steps button::after { content: ""; position: absolute; inset: -6px -2px; }
+
+/* on a phone a pill button is as wide as its card, as the main site's buttons are */
+@media (max-width: 560px) { #ls#ls main :where(.download-manual, .button, .watch-guide-button) { width: 100%; } }
+
+/* video guides: a drawing stands in the same Chalk box as the visual steps beside it */
+#ls#ls main .video-library > article > .laas-animation { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; max-width: none; margin: 0; padding: 20px 18px; border-radius: 20px; background: #ECECEA; }
+#ls#ls main .video-library > article > .laas-animation .laas-animation-stage { max-width: 320px; margin-inline: auto; }
+/* round 3 */
+/* three quick guides on a landscape tablet: a little less card padding keeps both pills on one row */
+@media (min-width: 900px) and (max-width: 1100px) { #ls#ls main .animation-review-grid > article { padding: 28px 22px; } }
+/* troubleshooting, step 4: the number sits on the middle of the call pill */
+#ls#ls main .guide-steps > li.urgent-last-step::before { top: 33px; }
+@media (max-width: 560px) { #ls#ls main .guide-steps > li.urgent-last-step::before { top: 39px; } }

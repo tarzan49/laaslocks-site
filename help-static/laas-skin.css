@@ -695,3 +695,230 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 /* troubleshooting, step 4: the number sits on the middle of the call pill */
 #ls#ls main .guide-steps > li.urgent-last-step::before { top: 33px; }
 @media (max-width: 560px) { #ls#ls main .guide-steps > li.urgent-last-step::before { top: 39px; } }
+
+/* =====================================================================================================================
+   5. round 2 (18 Oct): the info pages' layout (About, FAQ, Shipping, Terms, Privacy on the full preview)
+   From gutter to gutter; on a computer or a landscape tablet the page head (kicker, title, lead) sits on the left and
+   stays in view while the cards scroll on the right; on a portrait tablet and a phone one column, the head on top.
+   The home page's chapter title size, the info pages' kicker, lead, card corner and padding, and plain reading text
+   on Terms and Privacy. Only the page body: the bar, the menu and the footer are not touched here.
+   ===================================================================================================================== */
+#ls#ls { --ls-h1: clamp(38px, 4.4vw, 70px); --ls-head-top: 132px; }
+@media (max-width: 760px) { #ls#ls { --ls-h1: clamp(32px, 8.6vw, 40px); } }
+
+/* the page: gutter to gutter, the info pages' padding */
+#ls#ls { --ls-pt: 148px; --ls-px: var(--gutter); --ls-pb: clamp(72px, 8vw, 128px); }
+@media (max-width: 1100px) { #ls#ls { --ls-pt: 124px; } }
+@media (max-width: 760px) { #ls#ls { --ls-pt: 92px; --ls-pb: 64px; } }
+/* very wide screens: the info pages keep their 32 px edge */
+@media (min-width: 1600px) { #ls#ls { --ls-px: 32px; } }
+#ls#ls main, #ls#ls.ls-guides main, #ls#ls.ls-help-videos main, #ls#ls.ls-help-animations main, #ls#ls.ls-terms main, #ls#ls.ls-privacy main, #ls#ls.ls-terms-trial main, #ls#ls.ls-pin main {
+  max-width: none; width: 100%; margin: 0; padding: var(--ls-pt) var(--ls-px) var(--ls-pb);
+}
+
+/* the head: kicker, title, lead (the info pages' .pr__kicker, h1.cart__h, .pr__lead) */
+#ls#ls main h1 { margin: 0; font: 600 var(--ls-h1)/1 var(--display); letter-spacing: -0.04em; color: var(--ink); text-wrap: balance; }
+@media (max-width: 760px) { #ls#ls main h1 { line-height: 1.04; } }
+#ls#ls main :is(.support-opening, .support-heading, .page-intro, .warranty-intro) > :is(.back-help, .eyebrow) { margin: 0 0 18px; }
+#ls#ls main :is(.support-opening, .support-heading, .page-intro) > .back-help:has(+ .eyebrow) { margin-bottom: 8px; }
+#ls#ls main :is(.support-opening, .support-heading, .page-intro) > .back-help + .eyebrow { margin-top: 0; }
+@media (max-width: 760px) { #ls#ls main :is(.support-opening, .support-heading, .page-intro, .warranty-intro) > :is(.back-help, .eyebrow) { margin-bottom: 12px; } }
+#ls#ls main :is(.support-opening, .support-heading, .page-intro, .warranty-intro) > p:not(.eyebrow),
+#ls#ls main .focused-intro {
+  margin: 22px 0 0; max-width: 26em; font: 400 clamp(18px, 1.35vw, 21px)/1.38 var(--body); letter-spacing: -0.012em; color: var(--ink-2); text-wrap: pretty;
+}
+@media (max-width: 760px) {
+  #ls#ls main :is(.support-opening, .support-heading, .page-intro, .warranty-intro) > p:not(.eyebrow), #ls#ls main .focused-intro { margin-top: 14px; font-size: 17px; }
+}
+#ls#ls main :is(.support-opening, .support-heading, .page-intro, .warranty-intro) { margin: 0; padding: 0; }
+/* the store badges and the Find My badge under the title */
+#ls#ls main .support-opening > :is(.setup-app-badges, .findmy-official-badge) { margin-top: 28px; }
+#ls#ls main .warranty-intro .warranty-logo-heading { margin: 0; }
+#ls#ls main .warranty-intro .warranty-logo-heading img { width: clamp(180px, 16vw, 240px); }
+
+/* the cards: the info pages' corner and padding, one rhythm apart */
+#ls#ls main :where(.story-section:not(.help-return), .policy, .legal-copy, .download-panel, .help-hub-choices, .manual-guide-launch, .guide-directory, .support-opening > .guide-steps, .warranty-intro, .animation-review-grid > article, .video-library > article) {
+  border-radius: 20px; padding: clamp(24px, 2.6vw, 40px);
+}
+@media (max-width: 760px) {
+  #ls#ls main :where(.story-section:not(.help-return), .policy, .legal-copy, .download-panel, .help-hub-choices, .manual-guide-launch, .guide-directory, .support-opening > .guide-steps, .animation-review-grid > article, .video-library > article) { padding: 22px 18px; border-radius: 20px; }
+}
+#ls#ls main :where(.story-section, .guide-directory, .manual-guide-launch) > h2,
+#ls#ls main .download-panel h2 { font: 600 clamp(24px, 2.1vw, 32px)/1.1 var(--display); letter-spacing: -0.03em; }
+@media (max-width: 760px) { #ls#ls main :where(.story-section, .guide-directory, .manual-guide-launch) > h2, #ls#ls main .download-panel h2 { font-size: clamp(22px, 6.4vw, 26px); } }
+#ls#ls main .warranty-intro { background: none; padding: 0; border-radius: 0; }
+
+/* one column (portrait tablet, phone): the head, then the cards 36 px (phone 28 px) below it */
+#ls#ls main > :is(.support-opening, .support-heading, .page-intro, .warranty-opening) { margin: 0 0 36px; }
+#ls#ls main > .support-opening > :is(.guide-steps, .help-hub-choices) { margin-top: 36px; }
+#ls#ls main > .support-opening > .mount-hole-reference { margin-top: 36px; }
+#ls#ls.ls-help-animations main > h1 { margin: 0 0 36px; }
+@media (max-width: 760px) {
+  #ls#ls main > :is(.support-opening, .support-heading, .page-intro, .warranty-opening) { margin-bottom: 28px; }
+  #ls#ls main > .support-opening > :is(.guide-steps, .help-hub-choices, .mount-hole-reference) { margin-top: 28px; }
+  #ls#ls.ls-help-animations main > h1 { margin-bottom: 28px; }
+}
+#ls#ls main > :is(.story-section, .guide-directory, .manual-guide-launch, .policy, .legal-copy, .download-grid, .video-library, .animation-review-grid) + :is(.story-section, .guide-directory, .manual-guide-launch, .policy, .legal-copy, .download-grid, .video-library) { margin-top: 16px; }
+@media (max-width: 760px) { #ls#ls main > :is(.story-section, .guide-directory, .manual-guide-launch, .policy, .legal-copy) + :is(.story-section, .guide-directory, .manual-guide-launch, .policy, .legal-copy) { margin-top: 12px; } }
+#ls#ls main .warranty-opening .warranty-photo { margin: 0 0 16px; }
+#ls#ls main .warranty-photo img { border-radius: 20px; }
+
+/* two columns: a computer, and a tablet held sideways */
+@media (min-width: 1101px), (min-width: 761px) and (min-aspect-ratio: 1/1) {
+  #ls#ls main, #ls#ls.ls-guides main {
+    display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr); column-gap: clamp(32px, 5vw, 90px); row-gap: 0;
+    align-items: start; align-content: start;
+  }
+  #ls#ls main > *, #ls#ls.ls-guides main > *, #ls#ls.ls-guides main > :is(#manual, #questions) { grid-column: 2; min-width: 0; }
+  /* the head on the left, in view while the page scrolls */
+  #ls#ls main > :is(.support-opening, .support-heading, .page-intro), #ls#ls.ls-help-animations main > h1 {
+    grid-column: 1; grid-row: 1 / span 60; position: sticky; top: var(--ls-head-top); margin: 0;
+  }
+  #ls#ls main > :is(.support-opening, .support-heading, .page-intro, .warranty-opening) + *, #ls#ls.ls-help-animations main > h1 + * { margin-top: 0; }
+  /* where the head holds the first card (the help front door, the focused helps, the frame photo, the warranty):
+     the head's lines stack on the left, the card starts at the top on the right */
+  #ls#ls:is(.ls-help, .ls-help-lost-phone, .ls-help-missing-bike, .ls-help-troubleshooting) main { grid-template-rows: repeat(5, auto) 1fr; }
+  #ls#ls:is(.ls-help, .ls-help-lost-phone, .ls-help-missing-bike, .ls-help-troubleshooting) main > .support-opening { display: contents; }
+  #ls#ls:is(.ls-help, .ls-help-lost-phone, .ls-help-missing-bike, .ls-help-troubleshooting) main > .support-opening > * { grid-column: 1; min-width: 0; }
+  #ls#ls:is(.ls-help, .ls-help-lost-phone, .ls-help-missing-bike, .ls-help-troubleshooting) main > .support-opening > :is(.guide-steps, .help-hub-choices, .mount-hole-reference) { grid-column: 2; grid-row: 1 / 7; margin: 0; }
+  #ls#ls:is(.ls-help, .ls-help-lost-phone, .ls-help-missing-bike, .ls-help-troubleshooting) main > .support-opening ~ * { grid-column: 2; margin-top: 16px; }
+  #ls#ls:is(.ls-help, .ls-help-lost-phone, .ls-help-missing-bike, .ls-help-troubleshooting) main > .support-opening ~ .help-return { margin-top: 20px; }
+  /* the warranty: the logo and its line stay on the left, the photo and the terms on the right */
+  /* the frame photo stays under the title on the left */
+  #ls#ls main > .support-opening > .mount-hole-reference { margin-top: 28px; }
+  #ls#ls.ls-terms-warranty main > .warranty-opening { display: contents; }
+  #ls#ls.ls-terms-warranty main > .warranty-opening > .warranty-intro { grid-column: 1; grid-row: 1 / span 60; position: sticky; top: var(--ls-head-top); }
+  #ls#ls.ls-terms-warranty main > .warranty-opening > .warranty-photo { grid-column: 2; margin: 0 0 16px; }
+  #ls#ls.ls-terms-warranty main > .policy { grid-column: 2; margin-top: 0; }
+}
+@media (min-width: 761px) and (max-width: 1100px) and (min-aspect-ratio: 1/1) {
+  #ls#ls { --ls-head-top: 112px; }
+  #ls#ls main, #ls#ls.ls-guides main { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); column-gap: 40px; }
+}
+/* the campaign page has no head to put on the left: its poster stays one centred picture */
+#ls#ls.ls-pin main { display: block; }
+#ls#ls.ls-pin .campaign { max-width: 860px; margin: 0 auto; border-radius: 20px; }
+
+/* the cards' insides follow the width of their column, not the window */
+#ls#ls main :is(.story-section, .guide-directory, .video-library, .animation-review-grid, .download-grid) { container-type: inline-size; }
+#ls#ls main .visual-guide-steps { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 600px) { #ls#ls main .visual-guide-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } #ls#ls main .visual-guide-steps > li { display: flex; flex-direction: column; } #ls#ls main .visual-guide-steps .step-image-link, #ls#ls main .visual-guide-steps .blinking-example { margin-top: auto; padding-top: 16px; } }
+@container (min-width: 420px) and (max-width: 599px) { #ls#ls main .visual-guide-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } #ls#ls main .visual-guide-steps > li { display: flex; flex-direction: column; } #ls#ls main .visual-guide-steps .step-image-link, #ls#ls main .visual-guide-steps .blinking-example { margin-top: auto; padding-top: 16px; } }
+/* the 27:35 frame is for pictures side by side; one under the other they keep their own shape */
+@container (max-width: 419px) { #ls#ls main .visual-guide-steps .step-image-link img, #ls#ls main .visual-guide-steps .blinking-example video { aspect-ratio: auto; max-height: 510px; } }
+#ls#ls main .video-library { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 900px) { #ls#ls main .video-library { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+#ls#ls main .animation-review-grid { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 860px) { #ls#ls main .animation-review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+#ls#ls main .everyday-film-grid { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 640px) { #ls#ls main .everyday-film-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; } #ls#ls main .everyday-film { padding: 14px; } #ls#ls main .everyday-film .laas-animation-controls button { padding: 0 12px; font-size: 13px; } }
+#ls#ls main .setup-step-body { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 620px) { #ls#ls main .setup-step-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 28px; align-items: start; } }
+#ls#ls main .download-grid { grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 520px) { #ls#ls main .download-grid { grid-template-columns: 1fr 1fr; } }
+
+/* reading text in the cards: the info pages' card voice */
+@media (min-width: 761px) { #ls#ls main :where(.story-section, .manual-guide-launch, .download-panel) > p { font-size: 17px; line-height: 1.55; } }
+
+/* Terms, Privacy, the trial and the warranty: plain reading text on Chalk, as terms.html and privacy.html */
+#ls#ls main :is(.legal-copy, .policy) { padding: 0; border-radius: 0; background: none; }
+#ls#ls main :is(.legal-copy, .policy) h2 { margin: 48px 0 12px; font: 600 clamp(20px, 1.6vw, 24px)/1.25 var(--display); letter-spacing: -0.02em; color: var(--ink); }
+#ls#ls main :is(.legal-copy, .policy) > h2:first-child, #ls#ls main .policy > .prototype-label + h2, #ls#ls main .policy > section:first-child > h2 { margin-top: 0; }
+#ls#ls main :is(.legal-copy, .policy) h3 { margin: 28px 0 8px; font: 600 18px/1.3 var(--display); letter-spacing: -0.01em; }
+#ls#ls main :is(.legal-copy, .policy) :is(p, li) { max-width: 40em; font-size: 17px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; }
+#ls#ls main .policy > section + section { margin-top: 48px; padding-top: 0; border-top: 0; }
+#ls#ls main .policy .quiet-note { max-width: 40em; background: #FFFFFF; }
+#ls#ls main .policy .prototype-label { background: #FFFFFF; }
+@media (max-width: 760px) {
+  #ls#ls main :is(.legal-copy, .policy) h2 { margin-top: 36px; font-size: 20px; }
+  #ls#ls main :is(.legal-copy, .policy) :is(p, li) { font-size: 16px; }
+  #ls#ls main .policy > section + section { margin-top: 36px; }
+}
+/* /guides/ in the right column: copy above the pictures until the card is wide, the three films one under the other */
+@container (min-width: 620px) { #ls#ls main .setup-step-body { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+@container (min-width: 760px) { #ls#ls main .setup-step-body { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 28px; } }
+@container (min-width: 640px) { #ls#ls main .everyday-film-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; } #ls#ls main .everyday-film { padding: 18px; } #ls#ls main .everyday-film .laas-animation-controls button { padding: 0 18px; font-size: 14px; } }
+@container (min-width: 800px) { #ls#ls main .everyday-film-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } #ls#ls main .everyday-film { padding: 14px; } #ls#ls main .everyday-film .laas-animation-controls button { padding: 0 12px; font-size: 13px; } }
+#ls#ls main .everyday-film .laas-animation { max-width: 320px; }
+/* the "something in the way" drawing ends in a straight cut at its own right edge: that edge now meets the card's
+   edge, so the bike rolls in from outside the card instead of stopping at a line inside it */
+#ls#ls main [data-inline-animation="jammed"].laas-animation { max-width: none; }
+#ls#ls main [data-inline-animation="jammed"] .laas-animation-stage { width: min(100%, 440px); margin: 0 calc(-1 * clamp(24px, 2.6vw, 40px)) 0 auto; }
+@media (max-width: 760px) { #ls#ls main [data-inline-animation="jammed"] .laas-animation-stage { margin-right: -18px; } }
+
+/* round 2, critic 1 ------------------------------------------------------------------------------------------------- */
+/* the drawn animations: beside their words wherever the card is wide enough, so the card is not one big empty frame */
+#ls#ls main :is(.animation-review-grid > article, .video-library > article, .everyday-film) { container-type: inline-size; }
+@container (min-width: 540px) {
+  #ls#ls#ls main .laas-animation {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 1fr auto auto 1fr; column-gap: 32px; flex: none; padding: 0;
+    align-items: center; width: 100%; max-width: none; margin: 20px 0 0;
+  }
+  #ls#ls#ls main .laas-animation > .laas-animation-stage { grid-column: 1; grid-row: 1 / 5; width: 100%; max-width: 280px; justify-self: center; margin: 0; }
+  #ls#ls#ls main .laas-animation > .laas-animation-caption { grid-column: 2; grid-row: 2; margin: 0 !important; text-align: left; }
+  #ls#ls#ls main .laas-animation > .laas-animation-controls { grid-column: 2; grid-row: 3; justify-content: flex-start; margin: 14px 0 0; }
+  #ls#ls#ls main .laas-animation:not(:has(> .laas-animation-caption)) > .laas-animation-controls { grid-row: 2 / 4; margin: 0; }
+  /* the bike drawing stands on the right, its cut edge on the card's edge */
+  #ls#ls#ls main [data-inline-animation="jammed"].laas-animation > .laas-animation-stage { grid-column: 2; justify-self: end; margin: 0 calc(-1 * clamp(24px, 2.6vw, 40px)) 0 0; }
+  #ls#ls#ls main [data-inline-animation="jammed"].laas-animation > :is(.laas-animation-caption, .laas-animation-controls) { grid-column: 1; }
+  #ls#ls#ls main .everyday-film [data-inline-animation].laas-animation { margin: 0; }
+  #ls#ls#ls main .video-library > article > .laas-animation { padding: 24px; margin: 0; }
+}
+/* the app page: the two stores side by side once there is room */
+@media (min-width: 600px) { #ls#ls main .download-grid { grid-template-columns: 1fr 1fr; } }
+/* the help front door on a phone: the warranty mark under its line, not squeezing it */
+@media (max-width: 480px) {
+  #ls#ls main .help-hub-lock-link { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; align-items: center; }
+  #ls#ls main .help-hub-lock-link > span:first-child { grid-column: 1; grid-row: 1; }
+  #ls#ls main .help-hub-lock-link .support-warranty-logo { grid-column: 1; grid-row: 2; justify-self: start; width: 64px; margin: 6px 0 0; }
+  #ls#ls main .help-hub-lock-link > span:last-child { grid-column: 2; grid-row: 1 / 3; }
+}
+@media (min-width: 761px) { #ls#ls main .help-hub-lock-link .support-warranty-logo { width: 88px; } }
+/* the campaign poster fits the first screen */
+#ls#ls.ls-pin .campaign { width: min(100%, 860px, calc(100svh - 200px)); }
+/* troubleshooting on a phone: the warranty box uses the card's full width */
+@media (max-width: 600px) { #ls#ls main .guide-steps > li > div > .urgent-coverage { margin-left: -48px; } }
+/* "Next: ..." and its button on one row when the card is wide */
+@container (min-width: 480px) {
+  #ls#ls main .setup-next:has(> .button) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+  #ls#ls main .setup-next:has(> .button) > :is(h2, h3) { margin: 0; }
+}
+/* the warranty on one column: the photo one rhythm below its line */
+#ls#ls main .warranty-opening > .warranty-photo { margin-top: 28px; }
+
+/* round 2, critic 2 ------------------------------------------------------------------------------------------------- */
+/* illustrated steps side by side: rows that come out even (3 steps in three columns, 4 in two or four, 5 as 3 + 2),
+   never one step alone under a full row */
+@container (min-width: 420px) {
+  #ls#ls#ls main .visual-guide-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  #ls#ls#ls main .visual-guide-steps:has(> li:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #ls#ls#ls main .visual-guide-steps > li { display: flex; flex-direction: column; }
+  #ls#ls#ls main .visual-guide-steps :is(.step-image-link, .blinking-example) { margin-top: auto; padding-top: 16px; }
+  #ls#ls#ls main .visual-guide-steps .step-image-link img, #ls#ls#ls main .visual-guide-steps .blinking-example video { aspect-ratio: 27 / 35; max-height: none; object-fit: contain; background: #ECECEA; }
+}
+@container (min-width: 760px) { #ls#ls#ls main .visual-guide-steps:has(> li:nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* narrow step columns: the copy a size down so a title does not break on every word */
+@container (min-width: 420px) and (max-width: 620px) { #ls#ls#ls main .visual-step-copy { padding-left: 0; } #ls#ls#ls main .visual-step-number { position: static; margin: 0 0 8px; } #ls#ls#ls main .visual-step-copy h3 { font-size: 16px; } #ls#ls#ls main .visual-step-copy p { font-size: 14px; } }
+
+/* the app page: the two store cards alike, their badges on one line */
+#ls#ls main .download-panel { display: flex; flex-direction: column; }
+#ls#ls main .download-panel h2 { text-wrap: balance; }
+#ls#ls main .download-panel .app-downloads { margin-top: auto; }
+
+/* the campaign poster sits in the content column, as every other page's content does */
+@media (min-width: 1101px), (min-width: 761px) and (min-aspect-ratio: 1/1) {
+  #ls#ls.ls-pin main { display: grid; }
+  #ls#ls.ls-pin main > .campaign { grid-column: 2; margin: 0; }
+}
+
+/* /guides/, "Keep this one handy": the manual's cover on the left, the title and the download on the right */
+@media (min-width: 1101px), (min-width: 640px) and (max-aspect-ratio: 1/1) {
+  #ls#ls#ls main .manual-feature { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); grid-template-rows: 1fr auto auto auto 1fr; column-gap: 36px; align-items: start; }
+  #ls#ls#ls main .manual-feature > .manual-preview { grid-column: 1; grid-row: 1 / 6; margin: 0; max-width: none; }
+  #ls#ls#ls main .manual-feature > .eyebrow { grid-column: 2; grid-row: 2; }
+  #ls#ls#ls main .manual-feature > h2 { grid-column: 2; grid-row: 3; }
+  #ls#ls#ls main .manual-feature > .download-manual { grid-column: 2; grid-row: 4; justify-self: start; margin: 20px 0 0; padding: 0 24px; font-size: 16px; }
+}
+/* the manual's cover tile: "Open manual →" stays on one line, under the caption when the tile is narrow */
+#ls#ls main .manual-bottom { flex-wrap: wrap; row-gap: 4px; }
+#ls#ls main .manual-bottom > span { white-space: nowrap; }

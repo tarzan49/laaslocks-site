@@ -947,7 +947,7 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 /* the campaign poster fits the first screen */
 #ls#ls.ls-pin .campaign { width: min(100%, 860px, calc(100svh - 200px)); }
 /* troubleshooting on a phone: the warranty box uses the card's full width */
-@media (max-width: 600px) { #ls#ls main .guide-steps > li > div > .urgent-coverage { margin-left: -48px; } }
+/* (phones: see 'round 4' below) */
 /* "Next: ..." and its button on one row when the card is wide */
 @container (min-width: 480px) {
   #ls#ls main .setup-next:has(> .button) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
@@ -994,3 +994,27 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 #ls#ls main .manual-bottom > span { white-space: nowrap; }
 /* warranty: the photo has no caption any more (Eric 18 Oct), so it keeps the caption's air before "What we cover" */
 #ls#ls#ls.ls-terms-warranty .warranty-photo { margin-bottom: 40px; }
+
+/* round 4 (18 Oct): on a phone a box under a numbered step is centred in its card --------------------------------- */
+/* the number and the step's words stay side by side; a box below them (the visual steps, the mount choice, a note,
+   the contact box, the restart choices, an opened "Show me") takes the card's full width, same inset left and right */
+@media (max-width: 760px) {
+  /* /guides/: the four first steps */
+  #ls#ls#ls main .new-lock-flow > li { grid-template-columns: 32px minmax(0, 1fr); column-gap: 16px; row-gap: 16px; }
+  #ls#ls#ls main .new-lock-flow > li::before { grid-column: 1; grid-row: 1; }
+  #ls#ls#ls main .new-lock-flow .setup-step-body { display: contents; }
+  #ls#ls#ls main .new-lock-flow .setup-step-body > .setup-step-copy,
+  #ls#ls#ls main .new-lock-flow .setup-step-body > .setup-app-badges { grid-column: 2; min-width: 0; }
+  #ls#ls#ls main .new-lock-flow .setup-step-body > :is([data-manual-motion], [data-inline-animation], .mount-picture-choices) { grid-column: 1 / -1; min-width: 0; margin: 0; }
+  /* lost phone, missing bike, troubleshooting */
+  #ls#ls#ls main .guide-steps > li > div > :is(.recovery-contact, .focused-note, .urgent-coverage, .guide-note),
+  #ls#ls#ls main .guide-steps > li > div > details > :not(summary) { margin-left: -48px; }
+}
+/* the visual-steps box in a "watch / read" row: the row's full width, not just as wide as its contents */
+@media (max-width: 760px) { #ls#ls#ls main .guide-format-choice > .manual-motion { flex: 1 1 100%; } }
+@media (max-width: 639px) {
+  /* /guides/: the manual's cover tile and its button as wide as the card, the search too */
+  #ls#ls#ls main .manual-feature > .manual-preview { max-width: none; }
+  #ls#ls#ls main .manual-feature > .download-manual { width: 100%; }
+  #ls#ls#ls main .support-search { max-width: none; }
+}

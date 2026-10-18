@@ -1,10 +1,20 @@
-/* LAAS help centre: the main site's bar, menu and footer behaviour (after cart-nav.js on laaslocks.com).
+/* LAAS help centre: the main site's bar, menu and footer behaviour.
    - the Menu button opens and closes #menu (Escape and a tap on a link close it too)
-   - the bar floats as a glass capsule once the page scrolls and something sits under it (html.nav-float / html.nav-clear)
-   - the footer rises into place once, when it comes into view */
+   - the EN / DA switch remembers the choice, as on the main site (DA goes to /da/: there is no Danish help centre)
+   - the bag, the floating glass bar and the footer's entrance come from the main site's /cart-nav.js, loaded just
+     before this file; only if it is missing does this file float the bar and raise the footer itself */
 (() => {
   'use strict';
   const root = document.documentElement;
+  // the main site's script owns the bar and the footer; its own Menu handler stands back when this is set
+  window.LAAS_UI = true;
+  const main = !!window.LAAS_SITE;
+
+  // the language switch: remember the choice, so the Danish pages do not send you back to English
+  document.querySelectorAll('.lang a[data-lang]').forEach(a => a.addEventListener('click', e => {
+    try { localStorage.setItem('laas-lang', a.dataset.lang); } catch (_) {}
+    if (a.getAttribute('aria-current') === 'true') e.preventDefault();
+  }));
 
   // the menu
   const btn = document.getElementById('menu-open'), menu = document.getElementById('menu');
@@ -22,6 +32,8 @@
     menu.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
     addEventListener('resize', () => { if (!menu.hidden && innerWidth > 760) set(false); });
   }
+
+  if (main) return;
 
   // the footer's entrance
   const f = document.querySelector('.foot2');

@@ -992,3 +992,5 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 /* the manual's cover tile: "Open manual →" stays on one line, under the caption when the tile is narrow */
 #ls#ls main .manual-bottom { flex-wrap: wrap; row-gap: 4px; }
 #ls#ls main .manual-bottom > span { white-space: nowrap; }
+/* warranty: the photo has no caption any more (Eric 18 Oct), so it keeps the caption's air before "What we cover" */
+#ls#ls#ls.ls-terms-warranty .warranty-photo { margin-bottom: 40px; }

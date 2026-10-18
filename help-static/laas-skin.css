@@ -1018,3 +1018,34 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
   #ls#ls#ls main .manual-feature > .download-manual { width: 100%; }
   #ls#ls#ls main .support-search { max-width: none; }
 }
+
+/* round 5 (18 Oct): phones, everything that stands as a box is centred ------------------------------------------- */
+/* the search on /guides/: the FAQ page's field, a white pill with the magnifier on the left (the search button,
+   its glyph kept for screen readers and drawn as the FAQ's icon), the same at every size */
+#ls#ls#ls main .support-search { position: relative; display: block; width: 100%; max-width: 560px; margin: 4px 0 0; }
+@media (max-width: 760px) { #ls#ls#ls main .support-search { max-width: none; } }
+#ls#ls#ls main .support-search input { display: block; width: 100%; height: 52px; margin: 0; padding: 0 18px 0 52px; border: 0; border-radius: 999px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--line-2); font: 400 16px/1 var(--body); color: var(--ink); }
+#ls#ls#ls main .support-search input:focus, #ls#ls#ls main .support-search input:focus-visible { outline: none; box-shadow: inset 0 0 0 1.5px var(--green); }
+#ls#ls#ls main .support-search button {
+  position: absolute; left: 4px; top: 4px; translate: none; right: auto; width: 44px; height: 44px; margin: 0; padding: 0; border: 0; border-radius: 50%;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23606A74' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6.5'/%3E%3Cpath d='m16 16 4 4'/%3E%3C/svg%3E") 50% 50% / 19px 19px no-repeat;
+  color: transparent; font-size: 0; cursor: pointer; transition: background-color .2s;
+}
+#ls#ls#ls main .support-search button:hover { background-color: #ECECEA; }
+#ls#ls#ls main .support-search button:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
+
+@media (max-width: 760px) {
+  /* the topic chips (videos, manual): two even columns across the card's width instead of a ragged row */
+  #ls#ls#ls main .guide-chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  #ls#ls#ls main .guide-chips a { min-width: 0; width: 100%; padding: 6px 10px; text-align: center; line-height: 1.2; }
+  /* the manual's two buttons: both as wide as the page column */
+  #ls#ls#ls main .manual-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  #ls#ls#ls main .manual-actions > * { width: 100%; }
+}
+@media (max-width: 359px) { #ls#ls#ls main .guide-chips a { padding: 6px 6px; font-size: 13px; } }
+@media (max-width: 760px) {
+  /* an opened "Show me" drawing under a numbered step: the card's full width, the drawing and its buttons centred */
+  #ls#ls#ls main .guide-steps > li > div > details > [data-inline-animation].laas-animation { width: calc(100% + 48px); max-width: none; margin: 16px 0 0 -48px; }
+  #ls#ls#ls main .guide-steps > li > div > details > [data-inline-animation]:not([data-inline-animation="jammed"]) .laas-animation-stage { width: min(100%, 260px); margin: 0 auto; }
+  #ls#ls#ls main .guide-steps > li > div > details > [data-inline-animation] .laas-animation-controls { justify-content: center; }
+}

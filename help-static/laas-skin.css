@@ -1097,3 +1097,103 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
 /* the phone and the lock in the visual steps: the lock render carries white space on its right, so on a phone the pair
    is moved over by that much and reads centred in its box */
 @media (max-width: 760px) { #ls#ls#ls main .mm-product-pair .mm-product img { translate: 12% 0; } }
+
+/* =====================================================================================================================
+   The help front door (/help/), laid out as About LAAS (31 Oct, after the about page Eric approved): the title centred
+   at About's size, the three helps under it in one centred column on Chalk, a staggered strip of photos from the
+   Copenhagen shoot running edge to edge (the tallest in the middle), then the manual built as Marcus's section on
+   About: the heading on the left, its line in the right-hand column, then two photos and the Deep Teal LAAS card in one
+   row. tools/help-skin.py adds the strip and the row; the words are Marcus's, unchanged.
+   ===================================================================================================================== */
+#ls#ls.ls-help { --hb-g: clamp(8px, 1vw, 16px); --hb-g2: clamp(16px, 3vw, 48px); }
+#ls#ls.ls-help main { display: block; }
+
+/* the title, centred */
+#ls#ls.ls-help main > .support-opening {
+  display: grid; justify-items: center; position: static; margin: 0; text-align: center;
+}
+#ls#ls.ls-help main > .support-opening > * { grid-column: 1; grid-row: auto; }
+#ls#ls.ls-help main > .support-opening > h1 { max-width: 11em; font-size: clamp(44px, 6.2vw, 112px); line-height: .96; letter-spacing: -0.045em; }
+
+/* the three helps: one centred column, dashed rows on Chalk, no card */
+#ls#ls.ls-help main > .support-opening > .help-hub-choices {
+  grid-column: 1; grid-row: auto; width: min(100%, 860px); margin: clamp(40px, 4.4vw, 72px) 0 0; padding: 0;
+  border: 0; border-top: 1px dashed var(--line); border-radius: 0; background: none; text-align: left;
+}
+#ls#ls.ls-help main .help-hub-link { min-height: clamp(84px, 7vw, 108px); padding: 16px 0; border-bottom: 1px dashed var(--line); font-size: clamp(21px, 2vw, 30px); letter-spacing: -0.03em; }
+#ls#ls.ls-help main .help-hub-link:last-child { border-bottom: 1px dashed var(--line); }
+#ls#ls.ls-help main .help-hub-link > span:last-child { width: 52px; height: 52px; font-size: 20px; }
+
+/* the strip: six photos, tallest in the middle, the outer two running off the edges */
+#ls#ls.ls-help main > .hbx__strip {
+  container-type: inline-size; display: flex; align-items: flex-end; justify-content: center; gap: var(--hb-g);
+  margin: clamp(72px, 8vw, 136px) calc(-1 * var(--ls-px)) 0; overflow: clip;
+}
+#ls#ls.ls-help main .hbx__strip figure {
+  --w: calc((100cqw - 5 * var(--hb-g)) / 5.4);
+  flex: 0 0 var(--w); height: min(calc(var(--w) * 1.5 * var(--h)), calc(76svh * var(--h)));
+  margin: 0; overflow: hidden; border-radius: 20px; background: #DADDDC;
+}
+#ls#ls.ls-help main .hbx__strip figure:nth-child(1) { --h: .76; --i: 2; }
+#ls#ls.ls-help main .hbx__strip figure:nth-child(2) { --h: .54; --i: 1; }
+#ls#ls.ls-help main .hbx__strip figure:nth-child(3) { --h: .8;  --i: 1; }
+#ls#ls.ls-help main .hbx__strip figure:nth-child(4) { --h: 1;   --i: 0; }
+#ls#ls.ls-help main .hbx__strip figure:nth-child(5) { --h: .56; --i: 1; }
+#ls#ls.ls-help main .hbx__strip figure:nth-child(6) { --h: .72; --i: 2; }
+#ls#ls.ls-help main :is(.hbx__strip, .hbx__pics) img { display: block; width: 100%; height: 100%; max-width: none; margin: 0; border-radius: 0; object-fit: cover; }
+@media (prefers-reduced-motion: no-preference) {
+  #ls#ls.ls-help main .hbx__strip figure { animation: hbx-rise .9s var(--ease) both; animation-delay: calc(160ms + var(--i) * 90ms); }
+}
+@keyframes hbx-rise { from { opacity: 0; transform: translateY(40px); } }
+
+/* the manual, as Marcus's section on About: heading left, its line in the right-hand column, then the picture row */
+#ls#ls.ls-help main > .manual-guide-launch { margin: clamp(96px, 11vw, 184px) 0 0; padding: 0; border-radius: 0; background: none; }
+#ls#ls.ls-help main > .manual-guide-launch > a:not(.hbx__pics) {
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--hb-g2); align-items: start; justify-content: stretch;
+}
+#ls#ls.ls-help main > .manual-guide-launch > a > div { display: contents; }
+#ls#ls.ls-help main .manual-guide-launch h2 { grid-column: 1 / span 8; margin: 0; max-width: 12em; font: 600 var(--ls-h1)/1 var(--display); letter-spacing: -0.04em; }
+#ls#ls.ls-help main .manual-guide-launch p {
+  grid-column: 5 / -1; margin: clamp(40px, 5vw, 88px) 0 0; max-width: 32em;
+  font: 400 clamp(18px, 1.45vw, 23px)/1.5 var(--body); letter-spacing: -0.012em; color: var(--ink-2); text-wrap: pretty;
+}
+#ls#ls.ls-help main .manual-guide-launch .guide-launch-arrow { grid-column: 5; justify-self: start; width: 56px; height: 56px; margin-top: 28px; }
+#ls#ls.ls-help main .manual-guide-launch a:hover h2 { color: var(--green); }
+#ls#ls.ls-help main .hbx__pics {
+  display: grid; grid-template-columns: 1fr 1.15fr .7fr; gap: var(--hb-g); align-items: stretch;
+  height: clamp(300px, 30vw, 520px); margin-top: clamp(56px, 6vw, 104px);
+}
+#ls#ls.ls-help main .hbx__pics figure { margin: 0; min-height: 0; overflow: hidden; border-radius: 20px; background: #DADDDC; }
+#ls#ls.ls-help main .hbx__pics figure:first-child img { object-position: 50% 62%; }
+#ls#ls.ls-help main .hbx__pics .hbx__mark { display: grid; place-items: center; background: var(--green); }
+#ls#ls.ls-help main .hbx__mark svg { width: max(120px, 58%); height: auto; fill: #FFFFFF; }
+
+/* a portrait tablet: the manual in one column under its heading */
+@media (max-width: 1100px) and (max-aspect-ratio: 1/1) {
+  #ls#ls.ls-help main .manual-guide-launch :is(h2, p) { grid-column: 1 / -1; }
+  #ls#ls.ls-help main .manual-guide-launch .guide-launch-arrow { grid-column: 1; }
+}
+
+/* a phone */
+@media (max-width: 760px) {
+  #ls#ls.ls-help { --hb-g: 8px; }
+  #ls#ls.ls-help main > .support-opening > h1 { font-size: clamp(38px, 11.4vw, 50px); line-height: 1; }
+  #ls#ls.ls-help main > .support-opening > .help-hub-choices { margin-top: 28px; }
+  #ls#ls.ls-help main .help-hub-link { min-height: 76px; padding: 14px 0; font-size: clamp(19px, 5.4vw, 22px); }
+  #ls#ls.ls-help main .help-hub-link > span:last-child { width: 44px; height: 44px; font-size: 18px; }
+  /* three photos, the tallest whole in the middle, the two beside it running off the edges */
+  #ls#ls.ls-help main > .hbx__strip { margin-top: 56px; }
+  #ls#ls.ls-help main .hbx__strip figure { --w: calc((100cqw - 2 * var(--hb-g)) / 2.5); border-radius: 16px; }
+  #ls#ls.ls-help main .hbx__strip figure:nth-child(-n+2), #ls#ls.ls-help main .hbx__strip figure:nth-child(6) { display: none; }
+  #ls#ls.ls-help main .hbx__strip figure:nth-child(3) { --h: .78; }
+  #ls#ls.ls-help main .hbx__strip figure:nth-child(5) { --h: .7; }
+  #ls#ls.ls-help main > .manual-guide-launch { margin-top: 88px; }
+  #ls#ls.ls-help main .manual-guide-launch :is(h2, p) { grid-column: 1 / -1; }
+  #ls#ls.ls-help main .manual-guide-launch h2 { font-size: clamp(32px, 8.6vw, 40px); line-height: 1.04; }
+  #ls#ls.ls-help main .manual-guide-launch p { margin-top: 20px; font-size: 17px; }
+  #ls#ls.ls-help main .manual-guide-launch .guide-launch-arrow { grid-column: 1; width: 52px; height: 52px; margin-top: 22px; }
+  /* the hands tall on the left, the stairwell and the mark stacked beside it */
+  #ls#ls.ls-help main .hbx__pics { grid-template-columns: 1.1fr 1fr; grid-template-rows: 1fr 1fr; height: auto; aspect-ratio: 1 / 1; margin-top: 36px; }
+  #ls#ls.ls-help main .hbx__pics figure:first-child { grid-row: 1 / span 2; }
+  #ls#ls.ls-help main .hbx__pics figure { border-radius: 16px; }
+}

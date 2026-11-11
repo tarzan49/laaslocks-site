@@ -28,7 +28,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/inter-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../images/lock/steel-00-800.webp" as="image" type="image/webp">
+<link rel="preload" href="../images/spin/steel/1200/06.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="../darkroom.css?v=1031tp">
 <link rel="stylesheet" href="../buy.css?v=1018m5">
 <link rel="stylesheet" href="../tactile.css?v=1111ai">
@@ -93,7 +93,7 @@
 
     <div class="pdp__stage">
       <div class="lock3d" id="lock3d" tabindex="0" role="group" aria-roledescription="3D view" aria-label="The Ring-Lock in Steel. Drag, or use the arrow keys, to turn it.">
-        <img class="lock3d__still" id="lock-still" src="../images/lock/steel-00-800.webp" width="800" height="800" alt="LAAS Ring-Lock i Steel, en nøglefri ringlås til baghjulet" fetchpriority="high" decoding="async">
+        <img class="lock3d__still" id="lock-still" src="../images/spin/steel/1200/06.webp" width="1200" height="1200" alt="LAAS Ring-Lock i Steel, en nøglefri ringlås til baghjulet" fetchpriority="high" decoding="async">
         <i class="lock3d__floor" aria-hidden="true"></i>
       </div>
       <p class="pdp__turn"><button class="ghost turn" type="button" data-turn="-1" aria-label="Drej til venstre"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button><span class="label lock3d__hint" id="lock-hint" aria-hidden="true">Træk for at dreje</span><button class="ghost turn" type="button" data-turn="1" aria-label="Drej til højre"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button></p>
@@ -125,34 +125,6 @@
         <ul class="paywall" aria-label="Betalingsmetoder"><li><img src="../images/icons/mobilepay-mark.svg" alt="MobilePay" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/applepay.svg" alt="Apple Pay" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/googlepay.svg" alt="Google Pay" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/klarna.svg" alt="Klarna" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/visa.svg" alt="Visa" width="38" height="24" loading="lazy"></li><li><img src="../images/icons/mastercard.svg" alt="Mastercard" width="38" height="24" loading="lazy"></li></ul>
         <div class="badges"><a class="badge badge--trial" href="promises.html#trial"><span>57 dages prøvetid:</span><span>Forelsk dig, eller få pengene tilbage</span></a><a class="badge badge--kym" href="promises.html#keep-moving" aria-label="Keep You Moving-garantien: sådan virker det"><b>Keep You Moving</b><i aria-hidden="true"></i><span>garanti</span></a><a class="badge badge--vf" href="./#insurance" aria-label="Forsikringsgodkendt i Danmark (Varefakta)"><img src="../images/varefakta-badge.webp?v=2" width="96" height="96" alt="Varefakta kontrolleret" loading="lazy" decoding="async"></a><a class="badge badge--tp" href="https://dk.trustpilot.com/review/laaslocks.com" target="_blank" rel="noopener"><span class="badge__tp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.8 6.6 7.2.6-5.5 4.7 1.7 7-6.2-3.8-6.2 3.8 1.7-7L2 9.7l7.2-.6z"/></svg>Trustpilot</span><span>Læs vores anmeldelser</span></a></div>
       </div>
-    </div>
-  </section>
-
-  <!-- the EU harmonised notice on the legal guarantee, required before the purchase (Directive 2011/83/EU art. 6(1)(l) and 22a,
-       Implementing Regulation (EU) 2025/1960), shown in full directly below the buy box -->
-  <section class="lgn-sec" id="legal-guarantee">
-    <div>
-    <!-- EU harmonised notice on the legal guarantee of conformity, DA. Design and content: Commission Implementing Regulation (EU) 2025/1960 of 25 September 2025, Annex I (OJ L, 2025/1960, 2.10.2025), applies from 27 September 2026. Source: https://eur-lex.europa.eu/eli/reg_impl/2025/1960/oj (text DA from https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32025R1960). The text is the official text, word for word; Annex I note 1: none of its elements can be edited. Colours: Annex I note 2. QR code: the one in the official artwork, it leads to https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_da.htm -->
-    <aside class="lgn" lang="da" aria-labelledby="lgn-h">
-      <div class="lgn__band"><svg class="lgn__emblem" viewBox="0 0 210 300" aria-hidden="true" focusable="false"><path d="M0 0H210V258Q210 268 200 272L105 300 10 272Q0 268 0 258Z" fill="#003399"/><path d="M8 0V256Q8 263 15 266L105 292 195 266Q202 263 202 256V0" fill="none" stroke="#FFFFFF" stroke-width="4"/><path d="M105.0,72.0 107.6,79.4 115.5,79.6 109.2,84.4 111.5,91.9 105.0,87.4 98.5,91.9 100.8,84.4 94.5,79.6 102.4,79.4ZM145.0,82.7 147.6,90.2 155.5,90.3 149.2,95.1 151.5,102.6 145.0,98.1 138.5,102.6 140.8,95.1 134.5,90.3 142.4,90.2ZM174.3,112.0 176.9,119.4 184.7,119.6 178.5,124.4 180.7,131.9 174.3,127.4 167.8,131.9 170.1,124.4 163.8,119.6 171.7,119.4ZM185.0,152.0 187.6,159.4 195.5,159.6 189.2,164.4 191.5,171.9 185.0,167.4 178.5,171.9 180.8,164.4 174.5,159.6 182.4,159.4ZM174.3,192.0 176.9,199.4 184.7,199.6 178.5,204.4 180.7,211.9 174.3,207.4 167.8,211.9 170.1,204.4 163.8,199.6 171.7,199.4ZM145.0,221.3 147.6,228.7 155.5,228.9 149.2,233.6 151.5,241.2 145.0,236.7 138.5,241.2 140.8,233.6 134.5,228.9 142.4,228.7ZM105.0,232.0 107.6,239.4 115.5,239.6 109.2,244.4 111.5,251.9 105.0,247.4 98.5,251.9 100.8,244.4 94.5,239.6 102.4,239.4ZM65.0,221.3 67.6,228.7 75.5,228.9 69.2,233.6 71.5,241.2 65.0,236.7 58.5,241.2 60.8,233.6 54.5,228.9 62.4,228.7ZM35.7,192.0 38.3,199.4 46.2,199.6 39.9,204.4 42.2,211.9 35.7,207.4 29.3,211.9 31.5,204.4 25.3,199.6 33.1,199.4ZM25.0,152.0 27.6,159.4 35.5,159.6 29.2,164.4 31.5,171.9 25.0,167.4 18.5,171.9 20.8,164.4 14.5,159.6 22.4,159.4ZM35.7,112.0 38.3,119.4 46.2,119.6 39.9,124.4 42.2,131.9 35.7,127.4 29.3,131.9 31.5,124.4 25.3,119.6 33.1,119.4ZM65.0,82.7 67.6,90.2 75.5,90.3 69.2,95.1 71.5,102.6 65.0,98.1 58.5,102.6 60.8,95.1 54.5,90.3 62.4,90.2Z" fill="#FFED00"/><path d="M157 140Q111 120 66 138V170Q70 201 105 219Q141 201 146 170V160H112" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg><h2 class="lgn__title" id="lgn-h">RETLIG<br>GARANTI</h2></div>
-      <div class="lgn__grid">
-        <div class="lgn__main">
-          <p class="lgn__box"><b>Retlig garanti på mindst to år</b> for varer, der sælges i Den Europæiske Union.</p>
-          <p class="lgn__p">Forbrugere kan gøre deres rettigheder gældende under henvisning til den retlige garanti for kontraktmæssighed, f.eks. hvis varer:</p>
-          <ul class="lgn__ticks"><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>ikke svarer til beskrivelsen</li><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>ikke fungerer efter hensigten.</li></ul>
-          <p class="lgn__p"><b>Sælgerne er ansvarlige</b> for enhver mangel, der eksisterede på det tidspunkt, hvor varerne blev leveret, og som viser sig inden for den retlige garantiperiode. Sælgere skal i en sådan situation tilbyde:</p>
-          <ul class="lgn__ticks"><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>gratis reparation</b> eller <b>gratis omlevering</b></li><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>i nogle tilfælde et <b>forholdsmæssigt afslag i prisen</b> eller <b>fuld tilbagebetaling</b>.</li></ul>
-        </div>
-        <div class="lgn__side">
-          <p class="lgn__p">Nogle lande har en længere retlig garantiperiode. For brugte varer kan der gælde en kortere periode, dog mindst et år.</p>
-          <p class="lgn__p">Hvis du vil vide mere om dine rettigheder i et bestemt land, kan du scanne QR-koden nedenfor eller spørge sælgeren.</p>
-          <a class="lgn__qr" href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_da.htm" target="_blank" rel="noopener"><img src="../images/legal/eu-legal-guarantee-qr-da.png" width="124" height="124" alt="QR-kode til europa.eu/youreurope/garantier" decoding="async"></a>
-          <p class="lgn__url"><a href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_da.htm" target="_blank" rel="noopener">europa.eu/youreurope/garantier</a></p>
-        </div>
-      </div>
-      <div class="lgn__todo"><h3 class="lgn__todo-h">Hvad skal du gøre,<span>hvis du modtager mangelfulde varer:</span></h3><ol class="lgn__steps"><li class="lgn__li">Kontakt sælgeren så hurtigt som muligt for at gøre opmærksom på problemet</li><li class="lgn__li">Fremlæg bevis for købet, f.eks. i form af en kvittering, en faktura eller et kontoudtog.</li></ol></div>
-      <div class="lgn__garan"><p class="lgn__garan-mark" aria-hidden="true">GARAN<svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="6.5" fill="none" stroke="#000000" stroke-width="2"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></p><p class="lgn__garan-p">Sælgere og producenter kan også tilbyde handelsmæssige garantier, som gælder uafhængigt af den retlige garanti. For eksempel kan du se dette GARAN-mærke, der giver en <b>handelsmæssig garanti for holdbarhed</b>, som producenten tilbyder uden yderligere omkostninger, og som omfatter hele varen.</p></div>
-    </aside>
     </div>
   </section>
 
@@ -257,6 +229,34 @@
     </ul>
   </section>
 
+  <!-- the EU harmonised notice on the legal guarantee, required before the purchase (Directive 2011/83/EU art. 6(1)(l) and 22a,
+       Implementing Regulation (EU) 2025/1960), shown in full, unedited, at the end of the page before the footer (smaller, Eric 11 Nov) -->
+  <section class="lgn-sec" id="legal-guarantee">
+    <div>
+    <!-- EU harmonised notice on the legal guarantee of conformity, DA. Design and content: Commission Implementing Regulation (EU) 2025/1960 of 25 September 2025, Annex I (OJ L, 2025/1960, 2.10.2025), applies from 27 September 2026. Source: https://eur-lex.europa.eu/eli/reg_impl/2025/1960/oj (text DA from https://eur-lex.europa.eu/legal-content/DA/TXT/?uri=CELEX:32025R1960). The text is the official text, word for word; Annex I note 1: none of its elements can be edited. Colours: Annex I note 2. QR code: the one in the official artwork, it leads to https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_da.htm -->
+    <aside class="lgn" lang="da" aria-labelledby="lgn-h">
+      <div class="lgn__band"><svg class="lgn__emblem" viewBox="0 0 210 300" aria-hidden="true" focusable="false"><path d="M0 0H210V258Q210 268 200 272L105 300 10 272Q0 268 0 258Z" fill="#003399"/><path d="M8 0V256Q8 263 15 266L105 292 195 266Q202 263 202 256V0" fill="none" stroke="#FFFFFF" stroke-width="4"/><path d="M105.0,72.0 107.6,79.4 115.5,79.6 109.2,84.4 111.5,91.9 105.0,87.4 98.5,91.9 100.8,84.4 94.5,79.6 102.4,79.4ZM145.0,82.7 147.6,90.2 155.5,90.3 149.2,95.1 151.5,102.6 145.0,98.1 138.5,102.6 140.8,95.1 134.5,90.3 142.4,90.2ZM174.3,112.0 176.9,119.4 184.7,119.6 178.5,124.4 180.7,131.9 174.3,127.4 167.8,131.9 170.1,124.4 163.8,119.6 171.7,119.4ZM185.0,152.0 187.6,159.4 195.5,159.6 189.2,164.4 191.5,171.9 185.0,167.4 178.5,171.9 180.8,164.4 174.5,159.6 182.4,159.4ZM174.3,192.0 176.9,199.4 184.7,199.6 178.5,204.4 180.7,211.9 174.3,207.4 167.8,211.9 170.1,204.4 163.8,199.6 171.7,199.4ZM145.0,221.3 147.6,228.7 155.5,228.9 149.2,233.6 151.5,241.2 145.0,236.7 138.5,241.2 140.8,233.6 134.5,228.9 142.4,228.7ZM105.0,232.0 107.6,239.4 115.5,239.6 109.2,244.4 111.5,251.9 105.0,247.4 98.5,251.9 100.8,244.4 94.5,239.6 102.4,239.4ZM65.0,221.3 67.6,228.7 75.5,228.9 69.2,233.6 71.5,241.2 65.0,236.7 58.5,241.2 60.8,233.6 54.5,228.9 62.4,228.7ZM35.7,192.0 38.3,199.4 46.2,199.6 39.9,204.4 42.2,211.9 35.7,207.4 29.3,211.9 31.5,204.4 25.3,199.6 33.1,199.4ZM25.0,152.0 27.6,159.4 35.5,159.6 29.2,164.4 31.5,171.9 25.0,167.4 18.5,171.9 20.8,164.4 14.5,159.6 22.4,159.4ZM35.7,112.0 38.3,119.4 46.2,119.6 39.9,124.4 42.2,131.9 35.7,127.4 29.3,131.9 31.5,124.4 25.3,119.6 33.1,119.4ZM65.0,82.7 67.6,90.2 75.5,90.3 69.2,95.1 71.5,102.6 65.0,98.1 58.5,102.6 60.8,95.1 54.5,90.3 62.4,90.2Z" fill="#FFED00"/><path d="M157 140Q111 120 66 138V170Q70 201 105 219Q141 201 146 170V160H112" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg><h2 class="lgn__title" id="lgn-h">RETLIG<br>GARANTI</h2></div>
+      <div class="lgn__grid">
+        <div class="lgn__main">
+          <p class="lgn__box"><b>Retlig garanti på mindst to år</b> for varer, der sælges i Den Europæiske Union.</p>
+          <p class="lgn__p">Forbrugere kan gøre deres rettigheder gældende under henvisning til den retlige garanti for kontraktmæssighed, f.eks. hvis varer:</p>
+          <ul class="lgn__ticks"><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>ikke svarer til beskrivelsen</li><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>ikke fungerer efter hensigten.</li></ul>
+          <p class="lgn__p"><b>Sælgerne er ansvarlige</b> for enhver mangel, der eksisterede på det tidspunkt, hvor varerne blev leveret, og som viser sig inden for den retlige garantiperiode. Sælgere skal i en sådan situation tilbyde:</p>
+          <ul class="lgn__ticks"><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>gratis reparation</b> eller <b>gratis omlevering</b></li><li class="lgn__li"><svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="7" fill="#000000"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>i nogle tilfælde et <b>forholdsmæssigt afslag i prisen</b> eller <b>fuld tilbagebetaling</b>.</li></ul>
+        </div>
+        <div class="lgn__side">
+          <p class="lgn__p">Nogle lande har en længere retlig garantiperiode. For brugte varer kan der gælde en kortere periode, dog mindst et år.</p>
+          <p class="lgn__p">Hvis du vil vide mere om dine rettigheder i et bestemt land, kan du scanne QR-koden nedenfor eller spørge sælgeren.</p>
+          <a class="lgn__qr" href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_da.htm" target="_blank" rel="noopener"><img src="../images/legal/eu-legal-guarantee-qr-da.png" width="124" height="124" alt="QR-kode til europa.eu/youreurope/garantier" decoding="async"></a>
+          <p class="lgn__url"><a href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_da.htm" target="_blank" rel="noopener">europa.eu/youreurope/garantier</a></p>
+        </div>
+      </div>
+      <div class="lgn__todo"><h3 class="lgn__todo-h">Hvad skal du gøre,<span>hvis du modtager mangelfulde varer:</span></h3><ol class="lgn__steps"><li class="lgn__li">Kontakt sælgeren så hurtigt som muligt for at gøre opmærksom på problemet</li><li class="lgn__li">Fremlæg bevis for købet, f.eks. i form af en kvittering, en faktura eller et kontoudtog.</li></ol></div>
+      <div class="lgn__garan"><p class="lgn__garan-mark" aria-hidden="true">GARAN<svg viewBox="0 0 19 17" aria-hidden="true" focusable="false"><circle cx="7.5" cy="9.5" r="6.5" fill="none" stroke="#000000" stroke-width="2"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#000000" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.6 10.4 7 13.4 16.6 3" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></p><p class="lgn__garan-p">Sælgere og producenter kan også tilbyde handelsmæssige garantier, som gælder uafhængigt af den retlige garanti. For eksempel kan du se dette GARAN-mærke, der giver en <b>handelsmæssig garanti for holdbarhed</b>, som producenten tilbyder uden yderligere omkostninger, og som omfatter hele varen.</p></div>
+    </aside>
+    </div>
+  </section>
+
   <footer class="foot">
     <!-- after 21st.dev "Footer section 1": the mark, one row of links, the socials, a hatched band, the copyright -->
     <div class="foot2">
@@ -284,7 +284,7 @@
 <p class="visually-hidden" id="buy-status" role="status" aria-live="polite"></p>
 
 <script src="../i18n.js?v=1031cp"></script>
-<script src="../buy.js?v=1018dp3" defer></script>
+<script src="../buy.js?v=1111spin" defer></script>
 <script src="../cart-nav.js?v=1018t4"></script>
 </body>
 </html>

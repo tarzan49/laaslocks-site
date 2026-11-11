@@ -1145,3 +1145,38 @@ html:has(> #ls) { background: #ECECEA; scroll-padding-top: 96px; scroll-behavior
   #ls#ls.ls-help main .manual-guide-launch p { margin-top: 6px; font-size: 16px; }
   #ls#ls.ls-help main .manual-guide-launch .guide-launch-arrow { width: 44px; height: 44px; font-size: 18px; }
 }
+
+/* =====================================================================================================================
+   One column on every help page (Eric, 11 Nov: the title should not stand in a column of its own on the left).
+   The head is on top and centred, as on the help front door: the way back, the title, its line. Everything else
+   follows in one centred column, 860 px (reading pages 680 px). The cards keep their insides. Phones are as they were.
+   ===================================================================================================================== */
+@media (min-width: 761px) {
+  #ls#ls#ls:not(.ls-help, .ls-pin) { --ls-one: 860px; }
+  #ls#ls#ls:is(.ls-terms, .ls-privacy, .ls-terms-trial) { --ls-one: 680px; }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main { display: block; }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > * { width: min(100%, var(--ls-one)); margin-left: auto; margin-right: auto; }
+
+  /* the head: no longer pinned on the left */
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > :is(.support-opening, .support-heading, .page-intro, .warranty-opening),
+  #ls#ls#ls.ls-help-animations main > h1 {
+    display: block; position: static; margin-top: 0; margin-bottom: clamp(36px, 4vw, 60px); text-align: center;
+  }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > :is(.support-opening, .support-heading, .page-intro) > :is(h1, p),
+  #ls#ls#ls.ls-terms-warranty main .warranty-intro > * { margin-left: auto; margin-right: auto; }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > :is(.support-opening, .support-heading, .page-intro) > p,
+  #ls#ls#ls.ls-terms-warranty main .warranty-intro > p { max-width: 34em; text-wrap: balance; }
+  /* what the head carries besides its words (the focused helps' steps, the frame photo, the app badges): under the
+     words, in the column, read from the left */
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > .support-opening > :is(.guide-steps, .mount-hole-reference, .recovery-contact) {
+    margin: clamp(32px, 3.6vw, 52px) 0 0; text-align: left;
+  }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > .support-opening > :is(.setup-app-badges, .guide-download-badges, .findmy-badge, .apple-badge) { justify-content: center; margin-left: auto; margin-right: auto; }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > .support-opening ~ * { margin-top: 16px; }
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > .support-opening ~ .help-return { margin-top: 24px; text-align: center; }
+  /* the manual's buttons and the chips under a centred head are centred too */
+  #ls#ls#ls:not(.ls-help, .ls-pin) main > :is(.manual-actions, .guide-chips) { justify-content: center; }
+  /* the warranty: its mark and line centred, then the photo, then the terms */
+  #ls#ls#ls.ls-terms-warranty main .warranty-intro { position: static; display: grid; justify-items: center; }
+  #ls#ls#ls.ls-terms-warranty main .warranty-photo { margin: clamp(28px, 3vw, 44px) 0 0; }
+}

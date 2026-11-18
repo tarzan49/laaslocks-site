@@ -273,8 +273,8 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
   const KEY = 'laas.cart.v1.en';
   const I = () => window.LAAS_I18N || { lang: 'en', P: { lock: 129, flex: 9.99, ship: 9, free: 250 }, money: n => '€' + n };
   const read = () => { try { const v = JSON.parse(localStorage.getItem(KEY)); return Array.isArray(v) ? v.filter(Boolean) : []; } catch { return []; } };
-  const W = da => da ? { cart: 'Din kurv', empty: 'Din kurv er tom.', shop: 'Se Ring-Lock', sub: 'Subtotal', left: () => 'Tilføj en Ring-Lock mere, og få gratis fragt', free: 'Gratis fragt', go: 'Gå til kassen', view: 'Se kurven', items: n => n === 1 ? '1 vare' : n + ' varer', rm: 'Fjern', less: 'Færre', more: 'Flere' }
-    : { cart: 'Your cart', empty: 'Your cart is empty.', shop: 'See the Ring-Lock', sub: 'Subtotal', left: () => 'Add a second Ring-Lock and get free shipping', free: 'Free shipping', go: 'Check out', view: 'View cart', items: n => n === 1 ? '1 item' : n + ' items', rm: 'Remove', less: 'Fewer', more: 'More' };
+  const W = da => da ? { cart: 'Din kurv', empty: 'Din kurv er tom.', shop: 'Se Ring-Lock', sub: 'Subtotal', pair: 'Tilbud på lås nummer to', left: () => 'Tilføj en Ring-Lock mere, og få gratis fragt', free: 'Gratis fragt', go: 'Gå til kassen', view: 'Se kurven', items: n => n === 1 ? '1 vare' : n + ' varer', rm: 'Fjern', less: 'Færre', more: 'Flere' }
+    : { cart: 'Your cart', empty: 'Your cart is empty.', shop: 'See the Ring-Lock', sub: 'Subtotal', pair: 'Second-lock offer', left: () => 'Add a second Ring-Lock and get free shipping', free: 'Free shipping', go: 'Check out', view: 'View cart', items: n => n === 1 ? '1 item' : n + ' items', rm: 'Remove', less: 'Fewer', more: 'More' };
   const pop = document.createElement('div');
   pop.className = 'minicart'; pop.hidden = true; pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Cart');
   document.body.append(pop);
@@ -285,7 +285,9 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
     const n = items.reduce((s, i) => s + (+i.qty || 1), 0);
     // every second lock at the second-lock price, and two locks ship free (as the cart counts it)
     const locks = items.reduce((s, i) => s + (isFlex(i) ? 0 : (+i.qty || 1)), 0);
-    const sub = items.reduce((s, i) => s + unit(i) * (+i.qty || 1), 0) - (window.LAAS_I18N && window.LAAS_I18N.lockSum ? locks * P.lock - window.LAAS_I18N.lockSum(locks) : 0);
+    // the lines stay at list price; the second-lock offer comes off as its own row, as on the cart page (Marcus, 16 Oct)
+    const disc = window.LAAS_I18N && window.LAAS_I18N.lockSum ? locks * P.lock - window.LAAS_I18N.lockSum(locks) : 0;
+    const sub = items.reduce((s, i) => s + unit(i) * (+i.qty || 1), 0) - disc;
     if (!items.length) { pop.innerHTML = `<p class="minicart__h">${w.cart}</p><p class="minicart__empty">${w.empty}</p><a class="buy-btn minicart__go" href="${LAAS_SITE.shop}buy.html">${w.shop}</a>`; return; }
     const pct = Math.min(1, locks / 2);
     pop.innerHTML = `<p class="minicart__h">${w.cart} <span>${w.items(n)}</span></p><ul class="minicart__lines">` + items.map((i, k) => {
@@ -294,7 +296,9 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
       const q = +i.qty || 1, name = isFlex(i) ? 'Flex-Mount' : 'Ring-Lock';
       return `<li data-line="${k}"><img src="${img}" alt="" width="48" height="48"><span><b>${name}</b>${isFlex(i) ? '' : `<small>${i.finish}</small>`}<em>${money(Math.round(unit(i) * q * 100) / 100)}</em></span>`
         + `<span class="minicart__qty"><button type="button" data-d="-1" class="${q === 1 ? 'is-bin' : ''}" aria-label="${q === 1 ? w.rm : w.less} ${name}">${q === 1 ? '' : '−'}</button><b aria-live="polite">${q}</b><button type="button" data-d="1" aria-label="${w.more} ${name}">+</button></span></li>`;
-    }).join('') + `</ul><p class="minicart__sub"><span>${w.sub}</span><b>${money(sub)}</b></p>`
+    }).join('') + `</ul>`
+      + (disc > 0 ? `<p class="minicart__sub" style="margin-bottom:0;color:var(--muted)"><span>${w.pair}</span><span>−${money(disc)}</span></p>` : '')
+      + `<p class="minicart__sub"${disc > 0 ? ' style="margin-top:6px"' : ''}><span>${w.sub}</span><b>${money(sub)}</b></p>`
       + `<p class="minicart__ship"><span>${pct >= 1 ? w.free : w.left()}</span><i style="--p:${pct}"></i></p>`
       + `<div class="minicart__btns"><a class="buy-btn minicart__go" href="${LAAS_SITE.shop}checkout-v2.html">${w.go}</a><a class="minicart__view" href="${LAAS_SITE.shop}cart-v2.html">${w.view}</a></div>`;
   };

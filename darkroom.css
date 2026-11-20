@@ -965,6 +965,8 @@ html.in-buy .nav__buy { display: none; }
 .foot2__nav a::before { content: ""; position: absolute; inset: 6px 0; z-index: -1; border-radius: 999px; background: rgba(236, 236, 234, .1); scale: 0; opacity: 0; transition: scale .35s cubic-bezier(.34, 1.56, .64, 1), opacity .25s; }
 .foot2__nav a:hover::before, .foot2__nav a:focus-visible::before { scale: 1; opacity: 1; }
 .foot2__nav a:active { scale: .96; }
+/* the call arrow is drawn, not written: search engines and copy-paste read "Call LAAS", not "Call LAAS ↗" */
+.foot2__nav a[href^="tel:"]::after { content: "\00a0\2197"; content: "\00a0\2197" / ""; }
 .foot2__reach { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; }
 .foot2__reach a { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; font: 400 14px/1 var(--body); color: rgba(236, 236, 234, .72); transition: color .2s; }
 .foot2__reach a:hover { color: #ECECEA; }

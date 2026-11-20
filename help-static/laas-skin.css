@@ -135,6 +135,7 @@ html.nav-float .nav__shell { max-width: 1240px; height: 64px; padding: 0 8px 0 2
 @media (max-width: 560px) { .foot2__nav a[href$="#trial"] { padding-inline: 0; white-space: nowrap; font-size: 14px; } }
 .foot2__nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font: 500 15px/1 var(--display); color: #ECECEA; isolation: isolate; transition: color .25s; }
 .foot2__nav a::before { content: ""; position: absolute; inset: 6px 0; z-index: -1; border-radius: 999px; background: rgba(236, 236, 234, .1); scale: 0; opacity: 0; transition: scale .35s cubic-bezier(.34, 1.56, .64, 1), opacity .25s; }
+.foot2__nav a[href^="tel:"]::after { content: "\00a0\2197"; content: "\00a0\2197" / ""; }
 .foot2__nav a:hover::before, .foot2__nav a:focus-visible::before { scale: 1; opacity: 1; }
 .foot2__nav a:active { scale: .96; }
 .foot2__band { display: block; height: 44px; border-block: 1px solid rgba(236, 236, 234, .1); background: repeating-linear-gradient(315deg, rgba(236, 236, 234, .1) 0 1px, transparent 0 50%) 0 0 / 10px 10px; }

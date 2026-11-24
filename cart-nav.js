@@ -35,6 +35,14 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
   const L = () => window.LAAS_I18N || { lang: 'en', P: { lock: PRICE }, money: n => '€' + n, t: s => s };
   const read = () => { try { const v = JSON.parse(localStorage.getItem(KEY)); return Array.isArray(v) ? v : []; } catch { return []; } };
   const count = () => read().reduce((n, i) => n + ((i && +i.qty) || 1), 0);
+  // finishes with none in stock (Shopify: 0, no overselling; Eric, 24 Nov: Copper sold out). The dots still show
+  // them, Buy says Sold out, nothing goes in the cart, and a line left in a saved cart is taken out.
+  // Keep in step with SOLD_OUT in tools/build.py (the schema's availability).
+  const SOLD = window.LAAS_SOLD_OUT = ['copper'];
+  try {
+    const c = read(), keep = c.filter(i => !(i && /^Ring-Lock/.test(i.name) && SOLD.some(f => NAME[f] === i.finish)));
+    if (keep.length !== c.length) localStorage.setItem(KEY, JSON.stringify(keep));
+  } catch { /* private mode */ }
 
   // after a real order: the checkout is Shopify's (shop.laaslocks.com), and its pixel (Shopify admin → Customer events,
   // tools/shopify-pixel.js) sets the cookie laas_ordered=<time> for all of laaslocks.com when an order is placed.
@@ -124,6 +132,7 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
 // kroner on the Danish pages and the other way round, merged by name + finish, at most 15 locks
   const add = (finish, qty) => {
     if (!NAME[finish]) finish = 'steel';
+    if (SOLD.includes(finish)) return 0;
     const items = read(), name = 'Ring-Lock', fin = NAME[finish];
     const want = Math.max(1, qty | 0 || 1);
     const locks = items.reduce((n, i) => n + (i && /^Ring-Lock/.test(i.name) ? (+i.qty || 1) : 0), 0);
@@ -202,7 +211,7 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
     onPick = done; dlg.returnValue = ''; dlg.showModal();
   };
   // the whole Buy: ask, then put the locks (and the Flex-Mount) in the cart; then(n) after
-  const buy = (finish, qty, then) => ask(flex => { const n = add(finish, qty); if (flex && n) addFlex(n === true ? qty : n); then && then(n); });
+  const buy = (finish, qty, then) => SOLD.includes(finish) ? then && then(0) : ask(flex => { const n = add(finish, qty); if (flex && n) addFlex(n === true ? qty : n); then && then(n); });
   // the Flex-Mount on its own (the accessory on the buy page): n more, at most 15, no question first; the card says so
   const addFlexOnly = n => {
     const items = read(), f = items.find(i => i && /Flex/.test(i.name)), have = f ? (+f.qty || 1) : 0;

@@ -128,7 +128,7 @@ const DA = {
   'Steel. Copper. Black.': 'Steel. Copper. Black.', 'Same lock, same price, three finishes. Pick the one that suits your bike.': 'Samme lås, samme pris, tre udgaver. Vælg den, der passer til din cykel.',
   'Drag to turn': 'Træk for at dreje', 'Intro price until 31 Dec 2026': 'Intropris til 31. dec. 2026',
   'Price until 31 Dec 2026': 'Pris til 31. dec. 2026', 'from 1 Jan 2027': 'fra 1. jan. 2027',
-  'Buy now': 'Køb nu', 'Added': 'Tilføjet', 'promise': 'løfte', 'Shipping €9, free over €250': 'Fragt 75 kr, gratis over 1.900 kr',
+  'Buy now': 'Køb nu', 'Sold out': 'Udsolgt', 'Added': 'Tilføjet', 'promise': 'løfte', 'Shipping €9, free over €250': 'Fragt 75 kr, gratis over 1.900 kr',
   'From Trustpilot, shortened where marked […]. LAAS does not check them; Trustpilot shows all reviews, including the less positive ones. Most are from our Kickstarter backers.': 'Fra Trustpilot, forkortet hvor der står […]. LAAS kontrollerer dem ikke; Trustpilot viser alle anmeldelser, også de mindre positive. De fleste er fra vores Kickstarter-backere.',
   '57-day returns': '57 dages returret', 'Day trial': 'dages prøvetid', 'Promise': 'Løfte', 'Read our reviews': 'Læs vores anmeldelser', 'In stock: delivered in 4–6 days': 'På lager: sendes fra København', 'See how it mounts on your bike': 'Se hvordan den monteres på cyklen', 'Cancel before it ships and get all your money back (your legal right)': 'Annullér, før den sendes, og få alle pengene tilbage (din ret efter loven)', '3.7': '3,7', 'Free shipping over €250': 'Gratis fragt over 1.900 kr', '7 reviews': '7 anmeldelser', 'LAAS on Trustpilot: 3.7 out of 5 from 7 reviews': 'LAAS på Trustpilot: 3,7 ud af 5 fra 7 anmeldelser', 'Ringo W., Germany': 'Ringo W., Tyskland', 'D. A., Switzerland': 'D. A., Schweiz', 'R. I., United Kingdom': 'R. I., Storbritannien', 'Two-year right to complain': '2 års reklamationsret',
   // 06 faq
@@ -953,20 +953,23 @@ let qty = 1;
 const C = () => window.LAAS_CART;
 const inCart = () => (C() && C().qtyOf ? C().qtyOf(finish) : 0);
 let added = 0; // the moment the locks went in: the button says Added for a beat before it turns into Check out
+const isSold = () => (window.LAAS_SOLD_OUT || []).includes(finish);
 function renderBuy() {
-  const n = inCart();
+  const n = inCart(), sold = isSold();
   $('#qty-value').textContent = n || qty;
   const minus = $('[data-qty="-1"]'), plus = $('[data-qty="1"]');
-  minus.disabled = !n && qty <= 1; plus.disabled = (n || qty) >= 15;
+  minus.disabled = sold || (!n && qty <= 1); plus.disabled = sold || (n || qty) >= 15;
   minus.classList.toggle('is-trash', n === 1);
   minus.setAttribute('aria-label', t(n === 1 ? 'Remove from cart' : 'Decrease quantity'));
   $('.qty-row').classList.toggle('is-cart', !!n);
   const just = n && Date.now() - added < 1600;
   $('#buy-label').classList.toggle('is-added', !!just);
-  $('#buy-label').textContent = t(just ? 'Added' : n ? 'Check out' : 'Buy now');
+  $('#buy-label').textContent = t(sold ? 'Sold out' : just ? 'Added' : n ? 'Check out' : 'Buy now');
+  $('#buy-label').classList.toggle('is-sold', sold);
+  if (sold) $('#buy-label').setAttribute('aria-disabled', 'true'); else $('#buy-label').removeAttribute('aria-disabled');
   // the link is the fallback when the cart script is missing: the buy page, with the choice
   $('#buy-label').href = n ? 'checkout-v2.html' : `buy.html?finish=${finish}&qty=${qty}`;
-  $('#finish-name').textContent = FIN_NAME[finish];
+  $('#finish-name').textContent = sold ? FIN_NAME[finish] + ' · ' + t('Sold out') : FIN_NAME[finish];
 }
 $$('[data-qty]').forEach(b => b.addEventListener('click', () => {
   const d = +b.dataset.qty, n = inCart();
@@ -978,6 +981,7 @@ addEventListener('laas-cart', renderBuy);
 addEventListener('storage', renderBuy);
 // Buy: one question (the Flex-Mount), then the locks go in the cart right here; in the cart already, Check out
 $('#buy-label').addEventListener('click', e => {
+  if (isSold()) { e.preventDefault(); return; }
   if (inCart() || !C() || !C().buy) return;
   e.preventDefault();
   C().buy(finish, qty, () => { qty = 1; if (inCart()) { added = Date.now(); setTimeout(renderBuy, 1600); } renderBuy(); });
@@ -986,7 +990,7 @@ $('#buy-label').addEventListener('click', e => {
 // then one lock in the chosen finish (steel until another is picked) goes in the cart and the card offers Check out.
 // With that finish in the cart already, Buy is the checkout. Without the cart script the link still glides to the card.
 $$('.hero__buy, .nav__buy').forEach(a => a.addEventListener('click', e => {
-  if (!C() || !C().buy || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+  if (isSold() || !C() || !C().buy || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
   e.preventDefault();
   if (inCart()) { location.href = (window.LAAS_SITE ? LAAS_SITE.shop : '') + 'checkout-v2.html'; return; }
   C().buy(finish, 1, () => { if (inCart()) { added = Date.now(); setTimeout(renderBuy, 1600); } renderBuy(); });

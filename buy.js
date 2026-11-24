@@ -49,22 +49,24 @@
   };
 
   function render(first) {
-    const name = NAME[finish];
+    const name = NAME[finish], sold = (window.LAAS_SOLD_OUT || []).includes(finish);
     $$('[data-finish]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.finish === finish)));
-    $('#finish-name').textContent = name;
+    $('#finish-name').textContent = sold ? name + ' · ' + tr('Sold out') : name;
     // the bar's button just says Buy, so the price sits beside the finish
-    $('#buybar-finish').textContent = name + ' · ' + (qty > 1 ? qty + ' × ' : '') + I.money(I.P.lock);
+    $('#buybar-finish').textContent = sold ? name + ' · ' + tr('Sold out') : name + ' · ' + (qty > 1 ? qty + ' × ' : '') + I.money(I.P.lock);
     // once this finish is in the cart, the stepper shows and sets the cart, and the button goes to the checkout
     const n = inCart();
     $('#qty-value').textContent = n || qty;
     const minus = $('[data-qty="-1"]'), plus = $('[data-qty="1"]');
-    minus.disabled = !n && qty <= 1; plus.disabled = (n || qty) >= 15;
+    minus.disabled = sold || (!n && qty <= 1); plus.disabled = sold || (n || qty) >= 15;
     minus.classList.toggle('is-trash', n === 1);
     minus.setAttribute('aria-label', tr(n === 1 ? 'Remove from cart' : 'Decrease quantity'));
     $('.qty-row').classList.toggle('is-cart', !!n);
-    const label = tr(n ? 'Check out' : 'Buy now');
+    const label = tr(sold ? 'Sold out' : n ? 'Check out' : 'Buy now');
     $('#buy-btn').textContent = label;
     $('#buybar-btn').textContent = label;
+    $('#buy-btn').disabled = $('#buybar-btn').disabled = sold;
+    $('#buy-btn').classList.toggle('is-sold', sold); $('#buybar-btn').classList.toggle('is-sold', sold);
     $('#buy').dataset.metal = finish;
     stage.setAttribute('aria-label', tr('The LAAS Ring-Lock in') + ' ' + name + '. ' + tr('Drag, or use the arrow keys, to turn it.'));
     syncTabs();
@@ -217,6 +219,7 @@
   // Flex-Mount); cart-nav.js shows what was added, with Check out one tap away
   // first one question, the Flex-Mount (cart-nav.js asks it, on every page that sells)
   const buy = () => {
+    if ((window.LAAS_SOLD_OUT || []).includes(finish)) return;
     if (inCart()) { location.href = 'checkout-v2.html'; return; }
     if (C() && C().ask) C().ask(put); else put(false);
   };

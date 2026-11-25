@@ -43,6 +43,9 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
     const c = read(), keep = c.filter(i => !(i && /^Ring-Lock/.test(i.name) && SOLD.some(f => NAME[f] === i.finish)));
     if (keep.length !== c.length) localStorage.setItem(KEY, JSON.stringify(keep));
   } catch { /* private mode */ }
+  // the dot of a sold-out finish is greyed and struck through (tactile.css .is-sold)
+  const markSold = () => document.querySelectorAll('.finishes [data-finish]').forEach(b => b.classList.toggle('is-sold', SOLD.includes(b.dataset.finish)));
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', markSold); else markSold();
 
   // after a real order: the checkout is Shopify's (shop.laaslocks.com), and its pixel (Shopify admin → Customer events,
   // tools/shopify-pixel.js) sets the cookie laas_ordered=<time> for all of laaslocks.com when an order is placed.

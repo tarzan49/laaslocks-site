@@ -148,9 +148,9 @@
       if (j < 0 || !cv.width) return;
       const big = got[finish + j + 'b'], im = big || got[finish + j], id = finish + j + (big ? 'b' : '') + cv.width;
       if (id !== shown) {
-        // the renders frame the lock 5% larger and a little lower than the cut-outs: draw them to the cut-out's size
-        const W = cv.width * 0.95, x = (cv.width - W) / 2, y = (cv.height - W) / 2 - cv.height * 0.035;
-        ctx.clearRect(0, 0, cv.width, cv.height); ctx.drawImage(im, x, y, W, W); shown = id;
+        // the still is the turn's own front frame: draw every frame exactly over it, so the hand-over never moves the lock
+        const W = cv.width, y = (cv.height - W) / 2;
+        ctx.clearRect(0, 0, cv.width, cv.height); ctx.drawImage(im, 0, y, W, W); shown = id;
         stage.classList.add('is-3d');
       }
       clearTimeout(bigT);

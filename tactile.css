@@ -326,3 +326,7 @@ html.in-tale .nav__bag, html.in-tale .nav .nav__menu { background: #202F30; bord
 
 /* sold-out finish (LAAS_SOLD_OUT in cart-nav.js): Buy says Sold out and does nothing (24 Nov) */
 .buy-btn.is-sold, .buy-btn.is-sold:hover { background: var(--t-teal); opacity: .45; box-shadow: none; cursor: default; transform: none; }
+/* its finish dot: light grey and struck through (Eric, 25 Nov). ::after is the selected ring, so it also carries the line */
+.finishes button.is-sold::before { filter: grayscale(1) brightness(1.15); opacity: .45; }
+.finishes button.is-sold::after { opacity: 1; box-shadow: none; background: linear-gradient(to top right, transparent calc(50% - .75px), #9A9FA1 calc(50% - .75px), #9A9FA1 calc(50% + .75px), transparent calc(50% + .75px)); }
+.finishes button.is-sold[aria-checked="true"]::after { box-shadow: 0 0 0 1px var(--ink); }

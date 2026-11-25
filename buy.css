@@ -523,3 +523,6 @@ html.reveal-on .hood [data-reveal] { transition: opacity .7s var(--ease), transf
 /* the stage's keyboard focus (arrow keys turn the lock): drawn on the stage's own edge in the cards' shape (24 px
    corners, a faint teal wash), so it reads as the stage lighting up, evenly inset, not as a stray outline 8 px inside */
 .lock3d:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; border-radius: 24px; background: rgba(29, 95, 99, .05); }
+
+/* the turn takes over from the still in one frame: the same picture in the same place, no fade, no twitch (25 Nov) */
+.lock3d canvas, .lock3d__still, .lock3d.is-3d canvas, .lock3d.is-3d .lock3d__still { transition: none; }

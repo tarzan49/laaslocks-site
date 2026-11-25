@@ -96,6 +96,13 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
   const show = (finish, qty, note) => {
     // the cart preview is open: it already shows what was added, so no second card on top of it
     if (document.querySelector('.minicart.is-on')) return;
+    // Buy opens the big cart (the lines, the total, the free-shipping bar) right where the visitor is (Eric, 25 Nov);
+    // the small card is left for the 15-lock limit note
+    if (qty && !note && window.LAAS_MINICART) {
+      window.LAAS_MINICART.open();
+      if (a && !reduce) { a.classList.remove('is-bump'); void a.offsetWidth; a.classList.add('is-bump'); }
+      return;
+    }
     if (!card) {
       card = document.createElement('div');
       card.className = 'added'; card.setAttribute('role', 'status'); card.setAttribute('aria-live', 'polite');
@@ -281,7 +288,9 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
 (() => {
   const bag = document.querySelector('.nav__bag');
   // not on the cart or the checkout themselves: the whole cart is already on the page
-  if (!bag || /(cart|checkout)-v2\.html$/.test(location.pathname) || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (!bag || /(cart|checkout)-v2\.html$/.test(location.pathname)) return;
+  // hovering only where there is a mouse; Buy opens it everywhere (window.LAAS_MINICART.open)
+  const hover = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const KEY = 'laas.cart.v1.en';
   const I = () => window.LAAS_I18N || { lang: 'en', P: { lock: 129, flex: 9.99, ship: 9, free: 250 }, money: n => '€' + n };
   const read = () => { try { const v = JSON.parse(localStorage.getItem(KEY)); return Array.isArray(v) ? v.filter(Boolean) : []; } catch { return []; } };
@@ -321,8 +330,14 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
     const added = document.querySelector('.added.is-on'); if (added) { added.classList.remove('is-on'); setTimeout(() => { if (!added.classList.contains('is-on')) added.hidden = true; }, 300); }
     render(); place(); pop.hidden = false; requestAnimationFrame(() => pop.classList.add('is-on')); };
   const close = () => { clearTimeout(t); t = setTimeout(() => { if (pop.matches(':hover') || bag.matches(':hover')) return; pop.classList.remove('is-on'); setTimeout(() => { if (!pop.classList.contains('is-on')) pop.hidden = true; }, 250); }, 300); };
-  bag.addEventListener('pointerenter', open); bag.addEventListener('pointerleave', close);
-  pop.addEventListener('pointerenter', () => clearTimeout(t)); pop.addEventListener('pointerleave', close);
+  const shut = () => { clearTimeout(t); pop.classList.remove('is-on'); setTimeout(() => { if (!pop.classList.contains('is-on')) pop.hidden = true; }, 250); };
+  window.LAAS_MINICART = { open, close: shut };
+  // opened by Buy it stays until a tap or click outside it (or Esc)
+  addEventListener('pointerdown', e => { if (!pop.hidden && !pop.contains(e.target) && !bag.contains(e.target) && !e.target.closest('dialog')) shut(); });
+  if (hover) {
+    bag.addEventListener('pointerenter', open); bag.addEventListener('pointerleave', close);
+    pop.addEventListener('pointerenter', () => clearTimeout(t)); pop.addEventListener('pointerleave', close);
+  }
   bag.addEventListener('focus', open); bag.addEventListener('blur', e => { if (!pop.contains(e.relatedTarget)) close(); });
   // a click on − or + redraws the line and drops focus for a moment: that is not leaving, so it stays open
   pop.addEventListener('focusout', e => { if (!e.relatedTarget || pop.contains(e.relatedTarget) || e.relatedTarget === bag || pop.matches(':hover')) return; close(); });

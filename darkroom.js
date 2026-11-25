@@ -373,10 +373,10 @@ setTimeout(() => { progress.img = 1; progress.glb = 1; }, 7000);
 const stage = $('#stage'), sheetEl = $('#sheet');
 const backdrop = $('#backdrop');
 // the render's own geometry (measured on the front view): the ring's centre and outer radius as shares of the frame
-const RING = { cx: 0.4997, cy: 0.5093, r: 0.4314 };
+const RING = { cx: 0.5115, cy: 0.5272, r: 0.4159 };
 // every other view: the centre and half the largest extent of the lock in its frame, so each angle stands as big
-const GEO = { '00': { cx: 0.5128, cy: 0.4881, r: 0.3787 }, '01': RING, '02': { cx: 0.4844, cy: 0.4878, r: 0.3803 },
-  '03': { cx: 0.5228, cy: 0.4872, r: 0.3972 }, '04': { cx: 0.5109, cy: 0.4866, r: 0.3884 }, '05': { cx: 0.4862, cy: 0.48, r: 0.3912 } };
+const GEO = { '00': { cx: 0.5449, cy: 0.5268, r: 0.4016 }, '01': RING, '02': { cx: 0.4674, cy: 0.5266, r: 0.4008 },
+  '03': { cx: 0.5481, cy: 0.5254, r: 0.4066 }, '04': { cx: 0.4622, cy: 0.5199, r: 0.3948 }, '05': { cx: 0.4598, cy: 0.5259, r: 0.4036 } };
 // in turning order round the lock (left 3/4, front, hero, side, from behind, from above), starting on the hero view
 const ANGLES = ['00', '03', '04', '05', '02', '01'];
 // The buy chapter's own turn: 72 studio frames per finish, every 5° all the way round, rendered from the v8 model

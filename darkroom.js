@@ -407,16 +407,17 @@ function show(f) {
   finish = f;
   stage.dataset.metal = f; $('#buy').dataset.metal = f;
   // the angles in view first, then the rest of the turn
+  spinFront(f);
   return Promise.all(['00', '01'].map(a => fetchImg(srcOf(f, a)))).then(() => { ANGLES.forEach(a => fetchImg(srcOf(f, a)).catch(() => {})); });
 }
 // steel first: it is the bestseller and the one the page opens on
 {
   progress.glb = 1; // the lock only comes forward in the shop: the page no longer waits for it
-  const loadLock = () => fetchImg(srcOf('steel', '00')).then(() => { lockReady = true; }, () => { lockEl.remove(); });
+  const loadLock = () => fetchImg(srcOf('steel', '00')).then(() => { lockReady = true; spinFront('steel'); }, () => { lockEl.remove(); });
   if (location.hash === '#buy' || document.readyState === 'complete') loadLock();
   else addEventListener('load', () => (window.requestIdleCallback ? requestIdleCallback(loadLock, { timeout: 1500 }) : loadLock()), { once: true });
 }
-const loadOthers = () => ['copper', 'black'].forEach(f => fetchImg(srcOf(f, '00')).catch(() => {}));
+const loadOthers = () => ['copper', 'black'].forEach(f => { fetchImg(srcOf(f, '00')).catch(() => {}); spinFront(f); });
 $$('[data-finish]').forEach(b => ['pointerenter', 'focus', 'touchstart'].forEach(ev => b.addEventListener(ev, loadOthers, { passive: true })));
 
 /* ---------------------------------------------------------------- the poses */
@@ -1029,7 +1030,9 @@ function spinFill(f) {
   };
   next();
 }
-// the frame to show: the nearest one that has arrived; the front studio render until the first one has
+// the turn's own front frame, fetched early, so the buy chapter opens on it and never swaps in from another picture
+function spinFront(f) { const k = spinKey(SPIN_FRONT); fetchImg(srcOf(f, k)).then(() => spin.ok.add(f + k), () => {}); }
+// the frame to show: the nearest one that has arrived; the turn's front frame until then
 function spinView() {
   const i = spinWrap(Math.round(spin.pos));
   for (let d = 0; d <= SPIN_N / 2; d++) for (const j of [i + d, i - d]) {
@@ -1042,7 +1045,7 @@ function spinView() {
       return key;
     }
   }
-  return '01';
+  return spinKey(SPIN_FRONT);
 }
 function spinHome() {
   clearTimeout(spin.homeT);

@@ -761,6 +761,23 @@ function loop(now) {
     const maxX = Math.max(0, (W / 2 - target.size * lerp(H * 0.62, Math.min(W * 0.95, H * 1.32) * 0.44, pr) - 24) / H);
     target.x = clamp(target.x, -maxX, maxX);
   }
+  // the buy chapter: the lock stands still on its front view and comes and goes with the page, like a picture
+  // in it (no fade, no cross-fade, no drift), and never shows outside the chapter
+  const inBuy = productIdx >= 0 && (i === productIdx || i + 1 === productIdx);
+  if (inBuy) {
+    const P = poses[productIdx];
+    KEYS.forEach(k => { target[k] = P[k]; });
+    if (phone()) { target.size = P.msize ?? P.size; target.x = P.mx ?? P.x; target.y = P.my ?? P.y; target.roll = P.mroll ?? P.roll; }
+    else {
+      const maxX = Math.max(0, (W / 2 - target.size * Math.min(W * 0.95, H * 1.32) * 0.44 - 24) / H);
+      target.x = clamp(target.x, -maxX, maxX);
+    }
+    target.y += (M.centers[productIdx] - mid) / H;
+    const r = rects[productIdx];
+    setVar(lockEl, 'clip-path', `inset(${Math.max(0, r.top).toFixed(0)}px 0 ${Math.max(0, H - r.bottom).toFixed(0)}px 0)`);
+    // the chapter's own light ground comes in with it, under the lock
+    setVar(lockEl, 'background-color', sections[productIdx].dataset.bg || '#ECECEA');
+  } else { setVar(lockEl, 'clip-path', 'none'); setVar(lockEl, 'background-color', 'transparent'); }
 
   // keyless: open by itself once, a moment after you arrive
   const wk = keylessIdx < 0 ? 0 : clamp(1 - Math.abs(centers[keylessIdx] - mid) / (H * 0.45));
@@ -785,7 +802,7 @@ function loop(now) {
 
   // follow, with weight (snappier for the macro, so the logo never smears)
   const k = reduce ? 1e3 : 7;
-  KEYS.forEach(key => { cur[key] = damp(cur[key], target[key], k, dt); });
+  KEYS.forEach(key => { cur[key] = inBuy ? target[key] : damp(cur[key], target[key], k, dt); });
   swap.sweep = damp(swap.sweep, 0, 2.2, dt);
 
   // the entrance: the macro drifts in from a little closer and settles
@@ -812,20 +829,21 @@ function loop(now) {
   // size: the ring's diameter on screen
   let px = phone() ? (cur.mpx || Math.min(W * 0.84, H * 0.47) * (cur.size / 0.44)) : Math.min(W * 0.95, H * 1.32) * cur.size * 0.88;
   if (!phone()) {
-    const sw = lerp(M.widths[i] || W, M.widths[Math.min(i + 1, slots.length - 1)] || W, t);
+    const sw = inBuy ? M.widths[productIdx] || W : lerp(M.widths[i] || W, M.widths[Math.min(i + 1, slots.length - 1)] || W, t);
     px = Math.min(px, lerp(sw * 1.02, px, clamp(cur.free + cur.logo)));
   }
   // it breathes a little and leans with the page; the face-on chapters (the seal, the tyre) hold still
   const still = Math.max(cur.seal, cur.fit);
-  const bob = reduce ? 0 : Math.sin(time * 0.8) * px * 0.006 * (1 - still);
-  const dx = cur.x * H + (reduce ? 0 : user.mx * 6 * (1 - still)), dy = cur.y * H + bob + (reduce ? 0 : user.my * 4 * (1 - still));
-  const roll = cur.roll + user.roll * (1 - still);
+  const calm = reduce || inBuy;
+  const bob = calm ? 0 : Math.sin(time * 0.8) * px * 0.006 * (1 - still);
+  const dx = cur.x * H + (calm ? 0 : user.mx * 6 * (1 - still)), dy = cur.y * H + bob + (calm ? 0 : user.my * 4 * (1 - still));
+  const roll = cur.roll + (inBuy ? 0 : user.roll * (1 - still));
   setVar(stage, '--lx', dx.toFixed(1) + 'px'); setVar(stage, '--ly', dy.toFixed(1) + 'px'); setVar(stage, '--lr', (px / 2).toFixed(0) + 'px');
   // the angle: each chapter names its view; in the buy chapter your own turn picks it; between two, a cross-fade
-  const angOf = (P, idx) => idx === productIdx ? spinView() : (P.img || '00');
+  const angOf = (P, idx) => inBuy || idx === productIdx ? spinView() : (P.img || '00');
   const iB = Math.min(i + 1, poses.length - 1), aA = angOf(a, i), aB = angOf(b, iB);
   // the lock is steel everywhere; only the buy chapter shows the finish you pick
-  const fA = i === productIdx ? finish : 'steel', fB = iB === productIdx ? finish : 'steel';
+  const fA = inBuy || i === productIdx ? finish : 'steel', fB = inBuy || iB === productIdx ? finish : 'steel';
   const same = aA === aB && fA === fB, mixB = same ? 0 : t;
   const place = { W, H, dx, dy, px, roll };
   paintLayer(layers[0], aA, 1 - mixB, place, fA);

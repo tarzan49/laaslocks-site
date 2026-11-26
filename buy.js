@@ -68,6 +68,7 @@
     $('#buy-btn').disabled = $('#buybar-btn').disabled = sold;
     $('#buy-btn').classList.toggle('is-sold', sold); $('#buybar-btn').classList.toggle('is-sold', sold);
     $('#buy').dataset.metal = finish;
+    $$('[data-stock]').forEach(el => { el.hidden = sold; });
     stage.setAttribute('aria-label', tr('The LAAS Ring-Lock in') + ' ' + name + '. ' + tr('Drag, or use the arrow keys, to turn it.'));
     syncTabs();
     if (first) {

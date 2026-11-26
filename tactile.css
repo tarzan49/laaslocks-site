@@ -330,3 +330,6 @@ html.in-tale .nav__bag, html.in-tale .nav .nav__menu { background: #202F30; bord
 .finishes button.is-sold::before { filter: grayscale(1) brightness(1.15); opacity: .45; }
 .finishes button.is-sold::after { opacity: 1; box-shadow: none; background: linear-gradient(to top right, transparent calc(50% - .75px), #9A9FA1 calc(50% - .75px), #9A9FA1 calc(50% + .75px), transparent calc(50% + .75px)); }
 .finishes button.is-sold[aria-checked="true"]::after { box-shadow: 0 0 0 1px var(--ink); }
+
+/* the "In stock" line hides when the chosen finish is sold out (buy.js, darkroom.js; live stock in cart-nav.js) */
+[data-stock][hidden] { display: none !important; }

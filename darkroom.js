@@ -989,6 +989,7 @@ function renderBuy() {
   // the link is the fallback when the cart script is missing: the buy page, with the choice
   $('#buy-label').href = n ? 'checkout-v2.html' : `buy.html?finish=${finish}&qty=${qty}`;
   $('#finish-name').textContent = sold ? FIN_NAME[finish] + ' · ' + t('Sold out') : FIN_NAME[finish];
+  $$('[data-stock]').forEach(el => { el.hidden = sold; });
 }
 $$('[data-qty]').forEach(b => b.addEventListener('click', () => {
   const d = +b.dataset.qty, n = inCart();

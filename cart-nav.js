@@ -35,17 +35,41 @@ window.LAAS_SITE = window.LAAS_SITE || (() => {
   const L = () => window.LAAS_I18N || { lang: 'en', P: { lock: PRICE }, money: n => '€' + n, t: s => s };
   const read = () => { try { const v = JSON.parse(localStorage.getItem(KEY)); return Array.isArray(v) ? v : []; } catch { return []; } };
   const count = () => read().reduce((n, i) => n + ((i && +i.qty) || 1), 0);
-  // finishes with none in stock (Shopify: 0, no overselling; Eric, 24 Nov: Copper sold out). The dots still show
-  // them, Buy says Sold out, nothing goes in the cart, and a line left in a saved cart is taken out.
-  // Keep in step with SOLD_OUT in tools/build.py (the schema's availability).
+  // finishes with none in stock. The dots still show them (greyed, struck through), Buy says Sold out, nothing goes in
+  // the cart, a line left in a saved cart is taken out, and the "In stock" line hides. The list below is the start
+  // (Eric, 24 Nov: Copper sold out); on load the page asks Shopify (shop.laaslocks.com/products/<handle>.js,
+  // open to every site) and a finish at 0 there (no overselling, 26 Nov) joins the list on its own, one back in
+  // stock leaves it. Keep the start list in step with SOLD_OUT in tools/build.py (the schema's availability).
   const SOLD = window.LAAS_SOLD_OUT = ['copper'];
-  try {
-    const c = read(), keep = c.filter(i => !(i && /^Ring-Lock/.test(i.name) && SOLD.some(f => NAME[f] === i.finish)));
-    if (keep.length !== c.length) localStorage.setItem(KEY, JSON.stringify(keep));
-  } catch { /* private mode */ }
+  const prune = () => {
+    try {
+      const c = read(), keep = c.filter(i => !(i && /^Ring-Lock/.test(i.name) && SOLD.some(f => NAME[f] === i.finish)));
+      if (keep.length !== c.length) localStorage.setItem(KEY, JSON.stringify(keep));
+    } catch { /* private mode */ }
+  };
+  prune();
   // the dot of a sold-out finish is greyed and struck through (tactile.css .is-sold)
   const markSold = () => document.querySelectorAll('.finishes [data-finish]').forEach(b => b.classList.toggle('is-sold', SOLD.includes(b.dataset.finish)));
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', markSold); else markSold();
+  // the live stock, from Shopify; kept 5 minutes in this tab so every page doesn't ask again
+  const setSold = live => {
+    const next = Object.keys(NAME).filter(f => live[f] === false || (live[f] === undefined && SOLD.includes(f)));
+    if (next.join() === SOLD.join()) return;
+    SOLD.splice(0, SOLD.length, ...next);
+    prune(); markSold();
+    dispatchEvent(new Event('laas-cart'));
+  };
+  (async () => {
+    const SKEY = 'laas.stock';
+    try { const c = JSON.parse(sessionStorage.getItem(SKEY)); if (c && Date.now() - c.t < 3e5) { setSold(c.s); return; } } catch {}
+    const live = {};
+    await Promise.all(Object.keys(NAME).map(f => fetch(`https://shop.laaslocks.com/products/ring-lock-${f}.js`)
+      .then(r => (r.ok ? r.json() : null)).then(d => { if (d && d.variants) live[f] = d.variants.some(v => v.available); })
+      .catch(() => {})));
+    if (!Object.keys(live).length) return;
+    try { sessionStorage.setItem(SKEY, JSON.stringify({ t: Date.now(), s: live })); } catch {}
+    setSold(live);
+  })();
 
   // after a real order: the checkout is Shopify's (shop.laaslocks.com), and its pixel (Shopify admin → Customer events,
   // tools/shopify-pixel.js) sets the cookie laas_ordered=<time> for all of laaslocks.com when an order is placed.
